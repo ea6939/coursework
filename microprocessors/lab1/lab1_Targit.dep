@@ -1,0 +1,9 @@
+Dependencies for Project 'lab1', Target 'Targit': (DO NOT MODIFY !)
+F (.\startup_stm32f40xx.s)(0x52EAB371)(--cpu Cortex-M4.fp --pd "__EVAL SETA 1" -g --apcs=interwork -I "C:\Program Files\Keil\ARM\RV31\INC"-I "C:\Program Files\Keil\ARM\CMSIS\Include"-I "C:\Program Files\Keil\ARM\Inc\ST\STM32F4xx"--list .\startup_stm32f40xx.lst --xref -o .\startup_stm32f40xx.o --depend .\startup_stm32f40xx.d)
+F (.\fermatAssem.s)(0x52EAB1E9)(--cpu Cortex-M4.fp --pd "__EVAL SETA 1" -g --apcs=interwork -I "C:\Program Files\Keil\ARM\RV31\INC"-I "C:\Program Files\Keil\ARM\CMSIS\Include"-I "C:\Program Files\Keil\ARM\Inc\ST\STM32F4xx"--list .\fermatassem.lst --xref -o .\fermatassem.o --depend .\fermatassem.d)
+F (.\fermatTestbench.s)(0x52EAA182)(--cpu Cortex-M4.fp --pd "__EVAL SETA 1" -g --apcs=interwork -I "C:\Program Files\Keil\ARM\RV31\INC"-I "C:\Program Files\Keil\ARM\CMSIS\Include"-I "C:\Program Files\Keil\ARM\Inc\ST\STM32F4xx"--list .\fermattestbench.lst --xref -o .\fermattestbench.o --depend .\fermattestbench.d)
+F (.\main.c)(0x52EAB91F)(-c --cpu Cortex-M4.fp -D__EVAL -g -O0 --apcs=interwork -I "C:\Program Files\Keil\ARM\RV31\INC"-I "C:\Program Files\Keil\ARM\CMSIS\Include"-I "C:\Program Files\Keil\ARM\Inc\ST\STM32F4xx"-DSTM32F40XX-o .\main.o --omf_browse .\main.crf --depend .\main.d)
+I (C:\Program Files\Keil\ARM\ARMCC\include\math.h)(0x51C86E14)
+I (C:\Program Files\Keil\ARM\ARMCC\include\stdint.h)(0x51C86E14)
+I (C:\Program Files\Keil\ARM\ARMCC\include\stdio.h)(0x51C86E14)
+I (C:\Program Files\Keil\ARM\ARMCC\include\stdlib.h)(0x51C86E14)

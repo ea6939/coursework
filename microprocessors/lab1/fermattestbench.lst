@@ -1,0 +1,112 @@
+
+
+
+ARM Macro Assembler    Page 1 
+
+
+    1 00000000                 AREA             text, CODE, READONLY
+    2 00000000                 IMPORT           fermatAssem
+    3 00000000                 EXPORT           fermatTestbench
+    4 00000000         fermatTestbench
+    5 00000000         ; for N = 1 to value in R5
+    6 00000000 F04F 0000       MOV              R0, #0      ; R0 = N
+    7 00000004 F242 3528       MOV              R5, #9000
+    8 00000008         
+    9 00000008         forLoop
+   10 00000008         ; f1, f2= myFunction(N) (R1 = f1, R2 = f2)
+   11 00000008 F100 0001       ADD              R0, #1      ; increment N
+   12 0000000C 4680            MOV              R8, R0      ; R8 also equals N
+   13 0000000E E92D 4120       PUSH             {R8, LR, R5} ; push N, the orig
+                                                            inal link address (
+                                                            back to the startup
+                                                             file), final value
+                                                             of N
+   14 00000012 4907            LDR              R1, =fermatAssem
+   15 00000014 4788            BLX              R1
+   16 00000016 E8BD 4120       POP              {R8, LR, R5} ; pop N, the origi
+                                                            nal link address, f
+                                                            inal value of N
+   17 0000001A FB01 F400       MUL              R4, R1, R0  ; R4 = f1 * f2
+   18 0000001E 45A0            CMP              R8, R4      ; R0 contains f1, R
+                                                            1 contains f2
+   19 00000020 D103            BNE              failure     ; if N != f1*f2, th
+                                                            e algorithm failed
+   20 00000022 42AB            CMP              R3, R5
+   21 00000024 4640            MOV              R0, R8
+   22 00000026 D1EF            BNE              forLoop     ; if N != R5, loop
+   23 00000028 E000            B                success
+   24 0000002A         failure
+   25 0000002A E7FE            B                failure
+   26 0000002C         success
+   27 0000002C 4770            BX               LR
+   28 0000002E                 END
+              00 00 00000000 
+Command Line: --debug --xref --cpu=Cortex-M4.fp --apcs=interwork --depend=.\fer
+mattestbench.d -o.\fermattestbench.o -I"C:\Program Files\Keil\ARM\RV31\INC" -I"
+C:\Program Files\Keil\ARM\CMSIS\Include" -I"C:\Program Files\Keil\ARM\Inc\ST\ST
+M32F4xx" --predefine="__EVAL SETA 1" --list=.\fermattestbench.lst fermatTestben
+ch.s
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+failure 0000002A
+
+Symbol: failure
+   Definitions
+      At line 24 in file fermatTestbench.s
+   Uses
+      At line 19 in file fermatTestbench.s
+      At line 25 in file fermatTestbench.s
+
+fermatTestbench 00000000
+
+Symbol: fermatTestbench
+   Definitions
+      At line 4 in file fermatTestbench.s
+   Uses
+      At line 3 in file fermatTestbench.s
+Comment: fermatTestbench used once
+forLoop 00000008
+
+Symbol: forLoop
+   Definitions
+      At line 9 in file fermatTestbench.s
+   Uses
+      At line 22 in file fermatTestbench.s
+Comment: forLoop used once
+success 0000002C
+
+Symbol: success
+   Definitions
+      At line 26 in file fermatTestbench.s
+   Uses
+      At line 23 in file fermatTestbench.s
+Comment: success used once
+text 00000000
+
+Symbol: text
+   Definitions
+      At line 1 in file fermatTestbench.s
+   Uses
+      None
+Comment: text unused
+5 symbols
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+External symbols
+
+fermatAssem 00000000
+
+Symbol: fermatAssem
+   Definitions
+      At line 2 in file fermatTestbench.s
+   Uses
+      At line 14 in file fermatTestbench.s
+Comment: fermatAssem used once
+1 symbol
+340 symbols in table

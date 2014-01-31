@@ -1,0 +1,243 @@
+
+
+
+ARM Macro Assembler    Page 1 
+
+
+    1 00000000                 AREA             text, CODE, READONLY
+    2 00000000                 EXPORT           myFunction
+    3 00000000         myFunction
+    4 00000000         ; put F1 in R1 and F2 in R2
+    5 00000000         ; MOV R3, #8217 ; dummy value of N
+    6 00000000         ; POP {R3} ; assumes that the top of the stack is N
+    7 00000000 E92D 1FF0       PUSH             {R4-R12}
+    8 00000004 4603            MOV              R3, R0
+    9 00000006 2B00            CMP              R3, #0
+   10 00000008 DD04            BLE              nonPositiveCase
+   11 0000000A F003 0401       AND              R4, R3, #0x00000001
+   12 0000000E 2C01            CMP              R4, #1
+   13 00000010 D105            BNE              evenCase    ; if the last bit o
+                                                            f R3 isn't 1, R3 is
+                                                             even
+   14 00000012 E009            B                oddCase
+   15 00000014         nonPositiveCase
+   16 00000014         ; if N <= 0, f1 := f2 := 0
+   17 00000014 F04F 0100       MOV              R1, #0
+   18 00000018 F04F 0200       MOV              R2, #0
+   19 0000001C E050            B                branchBack
+   20 0000001E         evenCase
+   21 0000001E         ; if N even, f1 := 2, f2 := N/2
+   22 0000001E F04F 0102       MOV              R1, #2
+   23 00000022 FB93 F2F1       SDIV             R2, R3, R1
+   24 00000026 E04B            B                branchBack
+   25 00000028         oddCase
+   26 00000028         ; check whether 1 * 1 < R3, then 2 * 2, etc.
+   27 00000028         ; if R5^2 > R3, ceil(sqrt(R3)) = R5 = x
+   28 00000028 F04F 0500       MOV              R5, #0      ; R5 = x
+   29 0000002C         findX
+   30 0000002C F105 0501       ADD              R5, R5, #1  ; increment
+   31 00000030 FB05 F605       MUL              R6, R5, R5
+   32 00000034 429E            CMP              R6, R3
+   33 00000036 DBF9            BLT              findX       ; keep incrementing
+                                                             until x^2 < R3
+   34 00000038 EBA6 0703       SUB              R7, R6, R3  ; R7 = y^2 = x^2 - 
+                                                            N
+   35 0000003C         
+   36 0000003C         ; now we know initial values of "x" and "y^2"
+   37 0000003C         ; increment x and change y^2 until y^2 is a square
+   38 0000003C         ; check whether y^2 is a square
+   39 0000003C         checkSquare
+   40 0000003C B500            PUSH             {LR}
+   41 0000003E F000 F80B       BL               isYSquare   ; if yes, R0 = 1, i
+                                                            f no, 0
+   42 00000042 F85D EB04       POP              {LR}
+   43 00000046 2801            CMP              R0, #1
+   44 00000048 D02C            BEQ              calculateY
+   45 0000004A F105 0501       ADD              R5, R5, #1  ; x++
+   46 0000004E FB05 F605       MUL              R6, R5, R5
+   47 00000052 EBA6 0703       SUB              R7, R6, R3  ; y^2 = x*x - N
+   48 00000056 E7F1            B                checkSquare
+   49 00000058         
+   50 00000058         ; once y^2 is a perfect square, use y to compute f1 and 
+                       f2
+   51 00000058         ; (first compute sqrt(y^2))
+   52 00000058         
+   53 00000058         ; put result into R0
+
+
+
+ARM Macro Assembler    Page 2 
+
+
+   54 00000058         isYSquare                            ; assume y^2 is in 
+                                                            R7
+   55 00000058 B500            PUSH             {LR}        ; this value of LR 
+                                                            is the next instruc
+                                                            tion in the startup
+                                                             file
+   56 0000005A EE00 7A10       VMOV.F32         S0, R7      ; copy integer repr
+                                                            esentation into FP 
+                                                            reg
+   57 0000005E EEB8 0AC0       VCVT.F32.S32     S0, S0      ; convert int to fl
+                                                            oat
+   58 00000062         
+   59 00000062 EEF1 8A10       MRS              R8, FPSCR
+   60 00000066 F428 0880       AND              R8, #0xffbfffff
+   61 0000006A F448 0800       ORR              R8, #0x00800000
+   62 0000006E EEE1 8A10       MSR              FPSCR, R8
+   63 00000072         
+   64 00000072 EEF1 0AC0       VSQRT.F32        S1, S0
+   65 00000076 EEFD 0A60       VCVTR.S32.F32    S1, S1
+   66 0000007A         
+   67 0000007A         ; change Rmode to ceiling
+   68 0000007A EEF1 8A10       MRS              R8, FPSCR
+   69 0000007E F428 0800       AND              R8, #0xff7fffff
+   70 00000082 F448 0880       ORR              R8, #0x00400000
+   71 00000086 EEE1 8A10       MSR              FPSCR, R8
+   72 0000008A         
+   73 0000008A EEB1 1AC0       VSQRT.F32        S2, S0
+   74 0000008E EEBD 1A41       VCVTR.S32.F32    S2, S2
+   75 00000092 EE10 8A90       VMOV.F32         R8, S1
+   76 00000096 EE11 9A10       VMOV.F32         R9, S2
+   77 0000009A 45C8            CMP              R8,R9
+   78 0000009C         
+   79 0000009C BF0C 2001       MOVEQ            R0, #1
+   80 000000A0 2000            MOVNE            R0, #0
+   81 000000A2 BD00            POP              {PC}        ; this makes the ne
+                                                            xt instruction to e
+                                                            xecute the instruct
+                                                            ion we linked from
+   82 000000A4         
+   83 000000A4         calculateY
+   84 000000A4 EE00 7A10       VMOV.F32         S0, R7      ; copy integer repr
+                                                            esentation into FP 
+                                                            reg
+   85 000000A8 EEB8 0AC0       VCVT.F32.S32     S0, S0      ; convert int to fl
+                                                            oat
+   86 000000AC EEB1 0AC0       VSQRT.F32        S0, S0
+   87 000000B0 EEBD 0AC0       VCVT.S32.F32     S0, S0      ; convert float to 
+                                                            int
+   88 000000B4 EE10 8A10       VMOV.F32         R8, S0      ; now R8 contains y
+                                                            
+   89 000000B8         computeFactors
+   90 000000B8 EB05 0108       ADD              R1, R5, R8  ; f1 = x+y
+   91 000000BC EBA5 0208       SUB              R2, R5, R8  ; f2 = x-y
+   92 000000C0         
+   93 000000C0         branchBack
+   94 000000C0         ; PUSH {R3, R1, R2}
+   95 000000C0 E8BD 1FF0       POP              {R4-R12}
+   96 000000C4 4770            BX               LR
+   97 000000C6                 END
+
+
+
+ARM Macro Assembler    Page 3 
+
+
+Command Line: --debug --xref --cpu=Cortex-M4.fp --apcs=interwork --depend=.\myf
+unction.d -o.\myfunction.o -I"C:\Program Files\Keil\ARM\RV31\INC" -I"C:\Program
+ Files\Keil\ARM\CMSIS\Include" -I"C:\Program Files\Keil\ARM\Inc\ST\STM32F4xx" -
+-predefine="__EVAL SETA 1" --list=.\myfunction.lst myFunction.s
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+branchBack 000000C0
+
+Symbol: branchBack
+   Definitions
+      At line 93 in file myFunction.s
+   Uses
+      At line 19 in file myFunction.s
+      At line 24 in file myFunction.s
+
+calculateY 000000A4
+
+Symbol: calculateY
+   Definitions
+      At line 83 in file myFunction.s
+   Uses
+      At line 44 in file myFunction.s
+Comment: calculateY used once
+checkSquare 0000003C
+
+Symbol: checkSquare
+   Definitions
+      At line 39 in file myFunction.s
+   Uses
+      At line 48 in file myFunction.s
+Comment: checkSquare used once
+computeFactors 000000B8
+
+Symbol: computeFactors
+   Definitions
+      At line 89 in file myFunction.s
+   Uses
+      None
+Comment: computeFactors unused
+evenCase 0000001E
+
+Symbol: evenCase
+   Definitions
+      At line 20 in file myFunction.s
+   Uses
+      At line 13 in file myFunction.s
+Comment: evenCase used once
+findX 0000002C
+
+Symbol: findX
+   Definitions
+      At line 29 in file myFunction.s
+   Uses
+      At line 33 in file myFunction.s
+Comment: findX used once
+isYSquare 00000058
+
+Symbol: isYSquare
+   Definitions
+      At line 54 in file myFunction.s
+   Uses
+      At line 41 in file myFunction.s
+Comment: isYSquare used once
+myFunction 00000000
+
+
+
+
+ARM Macro Assembler    Page 2 Alphabetic symbol ordering
+Relocatable symbols
+
+Symbol: myFunction
+   Definitions
+      At line 3 in file myFunction.s
+   Uses
+      At line 2 in file myFunction.s
+Comment: myFunction used once
+nonPositiveCase 00000014
+
+Symbol: nonPositiveCase
+   Definitions
+      At line 15 in file myFunction.s
+   Uses
+      At line 10 in file myFunction.s
+Comment: nonPositiveCase used once
+oddCase 00000028
+
+Symbol: oddCase
+   Definitions
+      At line 25 in file myFunction.s
+   Uses
+      At line 14 in file myFunction.s
+Comment: oddCase used once
+text 00000000
+
+Symbol: text
+   Definitions
+      At line 1 in file myFunction.s
+   Uses
+      None
+Comment: text unused
+11 symbols
+343 symbols in table

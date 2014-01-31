@@ -1,0 +1,1 @@
+.\fermattestbench.o: fermatTestbench.s

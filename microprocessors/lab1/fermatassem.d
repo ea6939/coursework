@@ -1,0 +1,1 @@
+.\fermatassem.o: fermatAssem.s
