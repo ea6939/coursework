@@ -1,0 +1,43 @@
+---------------------------------
+-- Copyright 2013
+-- Loren Lugosch 260404057, loren.lugosch@mail.mcgill.ca
+-- Lulan Shen 260449509
+--
+-- This circuit maps "loudness" of notes to volumes which the circuit understands.
+-- 
+-- Revision 1.0
+---------------------------------
+
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+
+entity g27_volume_calculator is 
+	port ( loud : in std_logic_vector(3 downto 0);
+		 volume : out std_logic_vector(22 downto 0));
+end g27_volume_calculator;
+
+architecture inside of g27_volume_calculator is
+begin
+
+-- convert loudness from song ROM to 23-bit format
+with loud select
+	volume <= "00000000000000011111111" when "0000",
+	          "00000000000000111111111" when "0001",
+	          "00000000000001111111111" when "0010",
+	          "00000000000011111111111" when "0011",
+	          "00000000000111111111111" when "0100",
+	          "00000000001111111111111" when "0101",
+	          "00000000011111111111111" when "0110",
+	          "00000000111111111111111" when "0111",
+	          "00000001111111111111111" when "1000",
+	          "00000011111111111111111" when "1001",
+	          "00000111111111111111111" when "1010",
+	          "00001111111111111111111" when "1011",
+	          "00011111111111111111111" when "1100",
+	          "00111111111111111111111" when "1101",
+	          "01111111111111111111111" when "1110",
+	          "11111111111111111111111" when "1111",
+	          "00000000000000000000000" when others;
+	          
+end inside;	          

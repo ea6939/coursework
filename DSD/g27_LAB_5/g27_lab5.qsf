@@ -1,0 +1,145 @@
+# -------------------------------------------------------------------------- #
+#
+# Copyright (C) 1991-2010 Altera Corporation
+# Your use of Altera Corporation's design tools, logic functions 
+# and other software and tools, and its AMPP partner logic 
+# functions, and any output files from any of the foregoing 
+# (including device programming or simulation files), and any 
+# associated documentation or information are expressly subject 
+# to the terms and conditions of the Altera Program License 
+# Subscription Agreement, Altera MegaCore Function License 
+# Agreement, or other applicable license agreement, including, 
+# without limitation, that your use is for the sole purpose of 
+# programming logic devices manufactured by Altera and sold by 
+# Altera or its authorized distributors.  Please refer to the 
+# applicable agreement for further details.
+#
+# -------------------------------------------------------------------------- #
+#
+# Quartus II 64-Bit
+# Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Full Version
+# Date created = 15:10:59  November 18, 2013
+#
+# -------------------------------------------------------------------------- #
+#
+# Notes:
+#
+# 1) The default values for assignments are stored in the file:
+#		g27_lab5_assignment_defaults.qdf
+#    If this file doesn't exist, see file:
+#		assignment_defaults.qdf
+#
+# 2) Altera recommends that you do not modify this file. This
+#    file is updated automatically by the Quartus II software
+#    and any changes you make may be lost or overwritten.
+#
+# -------------------------------------------------------------------------- #
+
+
+set_global_assignment -name FAMILY "Cyclone II"
+set_global_assignment -name DEVICE EP2C20F484C7
+set_global_assignment -name TOP_LEVEL_ENTITY g27_complete_design
+set_global_assignment -name ORIGINAL_QUARTUS_VERSION "9.1 SP2"
+set_global_assignment -name PROJECT_CREATION_TIME_DATE "15:10:59  NOVEMBER 18, 2013"
+set_global_assignment -name LAST_QUARTUS_VERSION "9.1 SP2"
+set_global_assignment -name USE_GENERATED_PHYSICAL_CONSTRAINTS OFF -section_id eda_blast_fpga
+set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
+set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
+set_global_assignment -name LL_ROOT_REGION ON -entity g27_lab5 -section_id "Root Region"
+set_global_assignment -name LL_MEMBER_STATE LOCKED -entity g27_lab5 -section_id "Root Region"
+set_global_assignment -name MISC_FILE "P:/dsd/projects/lab5/g27_lab5.dpf"
+set_location_assignment PIN_U11 -to bpm[4]
+set_location_assignment PIN_V12 -to bpm[1]
+set_location_assignment PIN_T22 -to restart
+set_location_assignment PIN_R22 -to Audio
+set_location_assignment PIN_L22 -to loop_mode
+set_location_assignment PIN_R17 -to L9
+set_location_assignment PIN_R18 -to L8
+set_location_assignment PIN_U18 -to L7
+set_location_assignment PIN_Y18 -to L6
+set_location_assignment PIN_V19 -to L5
+set_location_assignment PIN_T18 -to L4
+set_location_assignment PIN_Y19 -to L3
+set_location_assignment PIN_U19 -to L2
+set_location_assignment PIN_R19 -to L1
+set_location_assignment PIN_R20 -to L0
+set_location_assignment PIN_L1 -to clk50
+set_location_assignment PIN_A12 -to clk24
+set_location_assignment PIN_A4 -to AUD_BCLK
+set_location_assignment PIN_A5 -to AUD_DACLRCK
+set_location_assignment PIN_B5 -to AUD_DACDAT
+set_location_assignment PIN_B4 -to AUD_XCK
+set_location_assignment PIN_A3 -to I2C_SCLK
+set_location_assignment PIN_B3 -to I2C_SDAT
+set_global_assignment -name SIMULATION_MODE TIMING
+set_location_assignment PIN_U22 -to GATE
+set_location_assignment PIN_T21 -to reset1
+set_location_assignment PIN_Y21 -to BEAT_GATE
+set_location_assignment PIN_M1 -to bpm[6]
+set_location_assignment PIN_M2 -to bpm[5]
+set_location_assignment PIN_W12 -to bpm[2]
+set_location_assignment PIN_U12 -to bpm[3]
+set_location_assignment PIN_M22 -to bpm[0]
+set_global_assignment -name INCREMENTAL_VECTOR_INPUT_SOURCE g27_note_timer_simulation.vwf
+set_location_assignment PIN_L21 -to song_select
+set_global_assignment -name MISC_FILE "P:/lab5 V2/lab5/g27_lab5.dpf"
+set_location_assignment PIN_L2 -to envelope_switch
+set_location_assignment PIN_J2 -to SS0[0]
+set_location_assignment PIN_J1 -to SS0[1]
+set_location_assignment PIN_H2 -to SS0[2]
+set_location_assignment PIN_H1 -to SS0[3]
+set_location_assignment PIN_F2 -to SS0[4]
+set_location_assignment PIN_F1 -to SS0[5]
+set_location_assignment PIN_E2 -to SS0[6]
+set_location_assignment PIN_E1 -to SS1[0]
+set_location_assignment PIN_H6 -to SS1[1]
+set_location_assignment PIN_H5 -to SS1[2]
+set_location_assignment PIN_H4 -to SS1[3]
+set_location_assignment PIN_G3 -to SS1[4]
+set_location_assignment PIN_D2 -to SS1[5]
+set_location_assignment PIN_D1 -to SS1[6]
+set_location_assignment PIN_G5 -to SS2[0]
+set_location_assignment PIN_G6 -to SS2[1]
+set_location_assignment PIN_C2 -to SS2[2]
+set_location_assignment PIN_C1 -to SS2[3]
+set_location_assignment PIN_E3 -to SS2[4]
+set_location_assignment PIN_E4 -to SS2[5]
+set_location_assignment PIN_D3 -to SS2[6]
+set_location_assignment PIN_F4 -to SS3[0]
+set_location_assignment PIN_D5 -to SS3[1]
+set_location_assignment PIN_D6 -to SS3[2]
+set_location_assignment PIN_J4 -to SS3[3]
+set_location_assignment PIN_L8 -to SS3[4]
+set_location_assignment PIN_F3 -to SS3[5]
+set_location_assignment PIN_D4 -to SS3[6]
+set_global_assignment -name VHDL_FILE g00_audio_interface.vhd
+set_global_assignment -name VHDL_FILE g00_decimator.vhd
+set_global_assignment -name VHDL_FILE g27_Envelope.vhd
+set_global_assignment -name VHDL_FILE g27_level_display.vhd
+set_global_assignment -name SOURCE_FILE g27_lpm_mult.cmp
+set_global_assignment -name VHDL_FILE g27_note_timer.vhd
+set_global_assignment -name VHDL_FILE g27_square_wave.vhd
+set_global_assignment -name VHDL_FILE g27_tempo.vhd
+set_global_assignment -name VHDL_FILE g27_updater.vhd
+set_global_assignment -name MIF_FILE g00_demo_song.mif
+set_global_assignment -name BDF_FILE g27_complete_design.bdf
+set_global_assignment -name QIP_FILE g27_lpm_mult.qip
+set_global_assignment -name VHDL_FILE g27_musicbox_controller.vhd
+set_global_assignment -name VHDL_FILE ../Lab4/g27_volume_calculator.vhd
+set_global_assignment -name VHDL_FILE g27_volume_calculator.vhd
+set_global_assignment -name VECTOR_WAVEFORM_FILE g27_state_simulation.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE g27_simulation2.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE g27_state_simulation2.vwf
+set_global_assignment -name VHDL_FILE g27_musicbox_controller2.vhd
+set_global_assignment -name VECTOR_WAVEFORM_FILE g27_state_simulation3.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE g27_note_timer_simulation.vwf
+set_global_assignment -name MIF_FILE g27_demo_song.mif
+set_global_assignment -name VHDL_FILE g27_rest_calculator.vhd
+set_global_assignment -name MIF_FILE g27_demo_song2.mif
+set_global_assignment -name VHDL_FILE g27_envelope_controller.vhd
+set_global_assignment -name VHDL_FILE g27_status_display_controller.vhd
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_global_assignment -name LL_ROOT_REGION ON -section_id "Root Region"
+set_global_assignment -name LL_MEMBER_STATE LOCKED -section_id "Root Region"
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

@@ -1,0 +1,265 @@
+Simulator report for g27_lab5
+Tue Nov 26 15:01:51 2013
+Quartus II 64-Bit Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Simulator Summary
+  3. Simulator Settings
+  4. Simulation Waveforms
+  5. Coverage Summary
+  6. Complete 1/0-Value Coverage
+  7. Missing 1-Value Coverage
+  8. Missing 0-Value Coverage
+  9. Simulator INI Usage
+ 10. Simulator Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2010 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------+
+; Simulator Summary                          ;
++-----------------------------+--------------+
+; Type                        ; Value        ;
++-----------------------------+--------------+
+; Simulation Start Time       ; 0 ps         ;
+; Simulation End Time         ; 1.0 ms       ;
+; Simulation Netlist Size     ; 61 nodes     ;
+; Simulation Coverage         ;      55.07 % ;
+; Total Number of Transitions ; 391661       ;
+; Simulation Breakpoints      ; 0            ;
+; Family                      ; Cyclone II   ;
+; Device                      ; EP2C20F484C7 ;
++-----------------------------+--------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------+
+; Simulator Settings                                                                                                                         ;
++--------------------------------------------------------------------------------------------+-------------------------------+---------------+
+; Option                                                                                     ; Setting                       ; Default Value ;
++--------------------------------------------------------------------------------------------+-------------------------------+---------------+
+; Simulation mode                                                                            ; Timing                        ; Timing        ;
+; Start time                                                                                 ; 0 ns                          ; 0 ns          ;
+; Simulation results format                                                                  ; CVWF                          ;               ;
+; Vector input source                                                                        ; g27_note_timer_simulation.vwf ;               ;
+; Add pins automatically to simulation output waveforms                                      ; On                            ; On            ;
+; Check outputs                                                                              ; Off                           ; Off           ;
+; Report simulation coverage                                                                 ; On                            ; On            ;
+; Display complete 1/0 value coverage report                                                 ; On                            ; On            ;
+; Display missing 1-value coverage report                                                    ; On                            ; On            ;
+; Display missing 0-value coverage report                                                    ; On                            ; On            ;
+; Detect setup and hold time violations                                                      ; Off                           ; Off           ;
+; Detect glitches                                                                            ; Off                           ; Off           ;
+; Disable timing delays in Timing Simulation                                                 ; Off                           ; Off           ;
+; Generate Signal Activity File                                                              ; Off                           ; Off           ;
+; Generate VCD File for PowerPlay Power Analyzer                                             ; Off                           ; Off           ;
+; Group bus channels in simulation results                                                   ; Off                           ; Off           ;
+; Preserve fewer signal transitions to reduce memory requirements                            ; On                            ; On            ;
+; Trigger vector comparison with the specified mode                                          ; INPUT_EDGE                    ; INPUT_EDGE    ;
+; Disable setup and hold time violations detection in input registers of bi-directional pins ; Off                           ; Off           ;
+; Overwrite Waveform Inputs With Simulation Outputs                                          ; On                            ;               ;
+; Perform Glitch Filtering in Timing Simulation                                              ; Auto                          ; Auto          ;
++--------------------------------------------------------------------------------------------+-------------------------------+---------------+
+
+
++----------------------+
+; Simulation Waveforms ;
++----------------------+
+Waveform report data cannot be output to ASCII.
+Please use Quartus II 64-Bit to view the waveform report data.
+
+
++--------------------------------------------------------------------+
+; Coverage Summary                                                   ;
++-----------------------------------------------------+--------------+
+; Type                                                ; Value        ;
++-----------------------------------------------------+--------------+
+; Total coverage as a percentage                      ;      55.07 % ;
+; Total nodes checked                                 ; 61           ;
+; Total output ports checked                          ; 69           ;
+; Total output ports with complete 1/0-value coverage ; 38           ;
+; Total output ports with no 1/0-value coverage       ; 31           ;
+; Total output ports with no 1-value coverage         ; 31           ;
+; Total output ports with no 0-value coverage         ; 31           ;
++-----------------------------------------------------+--------------+
+
+
+The following table displays output ports that toggle between 1 and 0 during simulation.
++---------------------------------------------------------------------------------------+
+; Complete 1/0-Value Coverage                                                           ;
++------------------------------+-------------------------------------+------------------+
+; Node Name                    ; Output Port Name                    ; Output Port Type ;
++------------------------------+-------------------------------------+------------------+
+; |g27_note_timer|count[0]     ; |g27_note_timer|count[0]            ; regout           ;
+; |g27_note_timer|count[1]     ; |g27_note_timer|count[1]            ; regout           ;
+; |g27_note_timer|LessThan1~3  ; |g27_note_timer|LessThan1~3         ; cout             ;
+; |g27_note_timer|LessThan1~5  ; |g27_note_timer|LessThan1~5         ; cout             ;
+; |g27_note_timer|LessThan1~7  ; |g27_note_timer|LessThan1~7         ; cout             ;
+; |g27_note_timer|LessThan1~9  ; |g27_note_timer|LessThan1~9         ; cout             ;
+; |g27_note_timer|LessThan1~11 ; |g27_note_timer|LessThan1~11        ; cout             ;
+; |g27_note_timer|LessThan1~13 ; |g27_note_timer|LessThan1~13        ; cout             ;
+; |g27_note_timer|LessThan1~14 ; |g27_note_timer|LessThan1~14        ; combout          ;
+; |g27_note_timer|count[0]~9   ; |g27_note_timer|count[0]~9          ; combout          ;
+; |g27_note_timer|count[0]~9   ; |g27_note_timer|count[0]~10         ; cout             ;
+; |g27_note_timer|count[1]~11  ; |g27_note_timer|count[1]~11         ; combout          ;
+; |g27_note_timer|count[1]~11  ; |g27_note_timer|count[1]~12         ; cout             ;
+; |g27_note_timer|count[2]~13  ; |g27_note_timer|count[2]~13         ; combout          ;
+; |g27_note_timer|count[2]~13  ; |g27_note_timer|count[2]~14         ; cout             ;
+; |g27_note_timer|count[3]~16  ; |g27_note_timer|count[3]~16         ; combout          ;
+; |g27_note_timer|count[3]~16  ; |g27_note_timer|count[3]~17         ; cout             ;
+; |g27_note_timer|count[4]~18  ; |g27_note_timer|count[4]~18         ; combout          ;
+; |g27_note_timer|count[4]~18  ; |g27_note_timer|count[4]~19         ; cout             ;
+; |g27_note_timer|count[5]~20  ; |g27_note_timer|count[5]~20         ; combout          ;
+; |g27_note_timer|count[5]~20  ; |g27_note_timer|count[5]~21         ; cout             ;
+; |g27_note_timer|count[6]~22  ; |g27_note_timer|count[6]~22         ; combout          ;
+; |g27_note_timer|count[6]~22  ; |g27_note_timer|count[6]~23         ; cout             ;
+; |g27_note_timer|count[7]~24  ; |g27_note_timer|count[7]~24         ; combout          ;
+; |g27_note_timer|count[7]~24  ; |g27_note_timer|count[7]~25         ; cout             ;
+; |g27_note_timer|count[8]~26  ; |g27_note_timer|count[8]~26         ; combout          ;
+; |g27_note_timer|GATE~reg0    ; |g27_note_timer|GATE~reg0           ; regout           ;
+; |g27_note_timer|Equal0~2     ; |g27_note_timer|Equal0~2            ; combout          ;
+; |g27_note_timer|GATE~3       ; |g27_note_timer|GATE~3              ; combout          ;
+; |g27_note_timer|GATE~4       ; |g27_note_timer|GATE~4              ; combout          ;
+; |g27_note_timer|GATE~5       ; |g27_note_timer|GATE~5              ; combout          ;
+; |g27_note_timer|GATE~6       ; |g27_note_timer|GATE~6              ; combout          ;
+; |g27_note_timer|GATE~7       ; |g27_note_timer|GATE~7              ; combout          ;
+; |g27_note_timer|count[8]~15  ; |g27_note_timer|count[8]~15         ; combout          ;
+; |g27_note_timer|GATE         ; |g27_note_timer|GATE                ; padio            ;
+; |g27_note_timer|tempo_enable ; |g27_note_timer|tempo_enable~corein ; combout          ;
+; |g27_note_timer|clk          ; |g27_note_timer|clk~corein          ; combout          ;
+; |g27_note_timer|clk~clkctrl  ; |g27_note_timer|clk~clkctrl         ; outclk           ;
++------------------------------+-------------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 1 during simulation.
++-----------------------------------------------------------------------------------------------+
+; Missing 1-Value Coverage                                                                      ;
++----------------------------------+-----------------------------------------+------------------+
+; Node Name                        ; Output Port Name                        ; Output Port Type ;
++----------------------------------+-----------------------------------------+------------------+
+; |g27_note_timer|count[2]         ; |g27_note_timer|count[2]                ; regout           ;
+; |g27_note_timer|count[3]         ; |g27_note_timer|count[3]                ; regout           ;
+; |g27_note_timer|count[4]         ; |g27_note_timer|count[4]                ; regout           ;
+; |g27_note_timer|count[5]         ; |g27_note_timer|count[5]                ; regout           ;
+; |g27_note_timer|count[6]         ; |g27_note_timer|count[6]                ; regout           ;
+; |g27_note_timer|count[7]         ; |g27_note_timer|count[7]                ; regout           ;
+; |g27_note_timer|count[8]         ; |g27_note_timer|count[8]                ; regout           ;
+; |g27_note_timer|LessThan1~1      ; |g27_note_timer|LessThan1~1             ; cout             ;
+; |g27_note_timer|Equal0~0         ; |g27_note_timer|Equal0~0                ; combout          ;
+; |g27_note_timer|Equal0~1         ; |g27_note_timer|Equal0~1                ; combout          ;
+; |g27_note_timer|Equal1~0         ; |g27_note_timer|Equal1~0                ; combout          ;
+; |g27_note_timer|Mux5~0           ; |g27_note_timer|Mux5~0                  ; combout          ;
+; |g27_note_timer|Mux6~0           ; |g27_note_timer|Mux6~0                  ; combout          ;
+; |g27_note_timer|Mux7~0           ; |g27_note_timer|Mux7~0                  ; combout          ;
+; |g27_note_timer|Equal1~1         ; |g27_note_timer|Equal1~1                ; combout          ;
+; |g27_note_timer|Mux8~0           ; |g27_note_timer|Mux8~0                  ; combout          ;
+; |g27_note_timer|Mux0~0           ; |g27_note_timer|Mux0~0                  ; combout          ;
+; |g27_note_timer|GATE~0           ; |g27_note_timer|GATE~0                  ; combout          ;
+; |g27_note_timer|GATE~1           ; |g27_note_timer|GATE~1                  ; combout          ;
+; |g27_note_timer|GATE~2           ; |g27_note_timer|GATE~2                  ; combout          ;
+; |g27_note_timer|Mux1~0           ; |g27_note_timer|Mux1~0                  ; combout          ;
+; |g27_note_timer|Mux2~0           ; |g27_note_timer|Mux2~0                  ; combout          ;
+; |g27_note_timer|Mux3~0           ; |g27_note_timer|Mux3~0                  ; combout          ;
+; |g27_note_timer|Mux4~0           ; |g27_note_timer|Mux4~0                  ; combout          ;
+; |g27_note_timer|Mux7~0_wirecell  ; |g27_note_timer|Mux7~0_wirecell         ; combout          ;
+; |g27_note_timer|reset            ; |g27_note_timer|reset~corein            ; combout          ;
+; |g27_note_timer|triplet          ; |g27_note_timer|triplet~corein          ; combout          ;
+; |g27_note_timer|note_duration[0] ; |g27_note_timer|note_duration[0]~corein ; combout          ;
+; |g27_note_timer|note_duration[1] ; |g27_note_timer|note_duration[1]~corein ; combout          ;
+; |g27_note_timer|note_duration[2] ; |g27_note_timer|note_duration[2]~corein ; combout          ;
+; |g27_note_timer|reset~clkctrl    ; |g27_note_timer|reset~clkctrl           ; outclk           ;
++----------------------------------+-----------------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 0 during simulation.
++-----------------------------------------------------------------------------------------------+
+; Missing 0-Value Coverage                                                                      ;
++----------------------------------+-----------------------------------------+------------------+
+; Node Name                        ; Output Port Name                        ; Output Port Type ;
++----------------------------------+-----------------------------------------+------------------+
+; |g27_note_timer|count[2]         ; |g27_note_timer|count[2]                ; regout           ;
+; |g27_note_timer|count[3]         ; |g27_note_timer|count[3]                ; regout           ;
+; |g27_note_timer|count[4]         ; |g27_note_timer|count[4]                ; regout           ;
+; |g27_note_timer|count[5]         ; |g27_note_timer|count[5]                ; regout           ;
+; |g27_note_timer|count[6]         ; |g27_note_timer|count[6]                ; regout           ;
+; |g27_note_timer|count[7]         ; |g27_note_timer|count[7]                ; regout           ;
+; |g27_note_timer|count[8]         ; |g27_note_timer|count[8]                ; regout           ;
+; |g27_note_timer|LessThan1~1      ; |g27_note_timer|LessThan1~1             ; cout             ;
+; |g27_note_timer|Equal0~0         ; |g27_note_timer|Equal0~0                ; combout          ;
+; |g27_note_timer|Equal0~1         ; |g27_note_timer|Equal0~1                ; combout          ;
+; |g27_note_timer|Equal1~0         ; |g27_note_timer|Equal1~0                ; combout          ;
+; |g27_note_timer|Mux5~0           ; |g27_note_timer|Mux5~0                  ; combout          ;
+; |g27_note_timer|Mux6~0           ; |g27_note_timer|Mux6~0                  ; combout          ;
+; |g27_note_timer|Mux7~0           ; |g27_note_timer|Mux7~0                  ; combout          ;
+; |g27_note_timer|Equal1~1         ; |g27_note_timer|Equal1~1                ; combout          ;
+; |g27_note_timer|Mux8~0           ; |g27_note_timer|Mux8~0                  ; combout          ;
+; |g27_note_timer|Mux0~0           ; |g27_note_timer|Mux0~0                  ; combout          ;
+; |g27_note_timer|GATE~0           ; |g27_note_timer|GATE~0                  ; combout          ;
+; |g27_note_timer|GATE~1           ; |g27_note_timer|GATE~1                  ; combout          ;
+; |g27_note_timer|GATE~2           ; |g27_note_timer|GATE~2                  ; combout          ;
+; |g27_note_timer|Mux1~0           ; |g27_note_timer|Mux1~0                  ; combout          ;
+; |g27_note_timer|Mux2~0           ; |g27_note_timer|Mux2~0                  ; combout          ;
+; |g27_note_timer|Mux3~0           ; |g27_note_timer|Mux3~0                  ; combout          ;
+; |g27_note_timer|Mux4~0           ; |g27_note_timer|Mux4~0                  ; combout          ;
+; |g27_note_timer|Mux7~0_wirecell  ; |g27_note_timer|Mux7~0_wirecell         ; combout          ;
+; |g27_note_timer|reset            ; |g27_note_timer|reset~corein            ; combout          ;
+; |g27_note_timer|triplet          ; |g27_note_timer|triplet~corein          ; combout          ;
+; |g27_note_timer|note_duration[0] ; |g27_note_timer|note_duration[0]~corein ; combout          ;
+; |g27_note_timer|note_duration[1] ; |g27_note_timer|note_duration[1]~corein ; combout          ;
+; |g27_note_timer|note_duration[2] ; |g27_note_timer|note_duration[2]~corein ; combout          ;
+; |g27_note_timer|reset~clkctrl    ; |g27_note_timer|reset~clkctrl           ; outclk           ;
++----------------------------------+-----------------------------------------+------------------+
+
+
++---------------------+
+; Simulator INI Usage ;
++--------+------------+
+; Option ; Usage      ;
++--------+------------+
+
+
++--------------------+
+; Simulator Messages ;
++--------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit Simulator
+    Info: Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Full Version
+    Info: Processing started: Tue Nov 26 15:01:47 2013
+Info: Command: quartus_sim --read_settings_files=on --write_settings_files=off g27_lab5 -c g27_lab5
+Info: Using vector source file "P:/dsd/projects/lab5 V2/lab5/g27_note_timer_simulation.vwf"
+Info: Overwriting simulation input file with simulation results
+    Info: A backup of g27_note_timer_simulation.vwf called g27_lab5.sim_ori.vwf has been created in the db folder
+Info: Option to preserve fewer signal transitions to reduce memory requirements is enabled
+    Info: Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
+Info: Simulation partitioned into 1 sub-simulations
+Info: Simulation coverage is      55.07 %
+Info: Number of transitions in simulation is 391661
+Info: Vector file g27_note_timer_simulation.vwf is saved in VWF text format. You can compress it into CVWF format in order to reduce file size. For more details please refer to the Quartus II Help.
+Info: Quartus II 64-Bit Simulator was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 184 megabytes
+    Info: Processing ended: Tue Nov 26 15:01:54 2013
+    Info: Elapsed time: 00:00:07
+    Info: Total CPU time (on all processors): 00:00:03
+
+

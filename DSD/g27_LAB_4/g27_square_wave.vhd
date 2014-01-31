@@ -1,0 +1,65 @@
+-- square wave generator
+--
+-- entity name: g27_square_wave
+--
+-- Copyright (C) 2013 Lulan Shen, Loren Lugosch
+-- Version 1.0
+-- Author: Lulan Shen; lulan.shen@mail.mcgill.ca
+--         Loren Lugosch; loren.lugosch@mail.mcgill.ca
+-- Date: November 22, 2013
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+
+entity g27_square_wave is
+ port ( clk, reset : in std_logic;
+		note_number : in std_logic_vector(3 downto 0);
+		octave : in std_logic_vector(2 downto 0);
+		volume : in unsigned(22 downto 0);
+		square : out signed(23 downto 0));
+end g27_square_wave;
+
+architecture inside of g27_square_wave is
+	component g27_exp is
+		port ( note_number  : in std_logic_vector(3 downto 0) ;
+			   pitch_period : out std_logic_vector(19 downto 0));
+	end component;
+	
+	signal I1,I2: std_logic_vector(19 downto 0);
+	signal I3 : std_logic;
+	signal count : integer range 0 to 2000000; -- has to fit 1048575
+	signal factor: integer range 0 to 2000000;
+begin
+	-- g27_exp --
+	inst1: component g27_exp port map (note_number=>note_number, pitch_period=>I1);
+
+	-- barrel shifter --
+	I2 <= to_stdlogicvector(to_bitvector(I1) SRL to_integer(unsigned(octave)));
+	
+	-- frequency divider --
+	factor <= to_integer(unsigned(I2));
+	process (clk, reset)
+	begin
+		if clk'event and clk = '1' then 
+			if count = 0 then
+				count <= factor;
+				--count <= 113637;
+				I3 <= not I3; --implied memory
+			else 
+				count <= count - 1;
+			end if;
+		end if;
+			
+		if reset = '1' then
+			I3 <= '0';
+			count <= 0;
+		end if;
+	end process;
+	
+	-- volume multiplier --
+	with I3 select
+	square <= signed('0' & std_logic_vector(volume)) when '1',
+	          signed(not(unsigned('0' & std_logic_vector(volume))) + 1) when others;
+			-- signed((not(volume)+1)) when others;
+			
+end inside;

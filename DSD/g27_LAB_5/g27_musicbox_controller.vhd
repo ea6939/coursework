@@ -1,0 +1,145 @@
+---------------------------------
+-- Copyright 2013
+-- Loren Lugosch 260404057, loren.lugosch@mail.mcgill.ca
+-- Lulan Shen 260449509
+--
+-- This circuit controls the musicbox datapath using a song ROM.
+-- 
+-- Revision 1.0
+---------------------------------
+
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+
+library lpm;
+use lpm.lpm_components.all; 
+
+entity g27_musicbox_controller is
+		port (	clk        : in std_logic;
+				note_count_up : in std_logic;
+				song_done : in std_logic;
+				song_select : in std_logic;
+				loop_mode : in std_logic;
+				restart : in std_logic;
+				Q          : out std_logic_vector(15 downto 0));	
+				
+end g27_musicbox_controller;
+
+architecture inside of g27_musicbox_controller is
+	
+	signal note_count : std_logic_vector(7 downto 0);
+	signal enable : std_logic;
+	signal clear : std_logic;
+	type state_type is (playFirstNote,loadingNewNote,waitForNextNote);
+	signal current_state, next_state : state_type;
+	signal address : std_logic_vector(7 downto 0);
+	signal Q1, Q2 : std_logic_vector(15 downto 0);
+	
+	begin	
+	
+	 
+	 
+	-- lpm counter: enable 
+	
+		note_counter: component lpm_counter -- copied from wizard file
+		GENERIC MAP (
+			lpm_direction => "UP",
+			lpm_port_updown => "PORT_UNUSED",
+			lpm_type => "LPM_COUNTER",
+			lpm_width => 8
+		)
+		PORT MAP (
+			aclr => clear,
+			clock => not note_count_up,
+			cnt_en => enable,
+			q => note_count
+		);
+	
+	-- Mealy-style FSM; output depends on state and song_done/loop_mode
+	process(note_count_up,current_state) -- next state calculation
+	begin
+	clear <= '0'; -- default values
+	enable <= '1';
+		case current_state is
+			
+			when playFirstNote =>
+				if (note_count_up = '0') then
+					enable <= '1';
+					clear <= '1';
+					next_state <= loadingNewNote;
+				else 
+					enable <= '0';
+					clear <= '1';
+					next_state <= playFirstNote;
+				end if;
+				
+			when loadingNewNote =>
+				if (note_count_up = '0') then
+					next_state <= waitForNextNote;
+				else 
+					-- do nothing
+					next_state <= loadingNewNote;
+				end if;
+			
+			when waitForNextNote =>
+			
+				if song_done = '0' then
+					if (note_count_up = '0') then
+						next_state <= waitForNextNote;
+					else
+						next_state <= loadingNewNote;
+					end if;
+					
+				else
+					---- end of song reached ----
+					if (note_count_up = '0') then
+						if loop_mode = '0' then -- don't play the song again
+							next_state <= waitForNextNote;
+						else	
+							-- play the song again
+							next_state <= playFirstNote;
+						end if;
+						
+					end if;
+					---- /end of song reached ----
+				end if;
+				
+		end case;
+	end process;
+	
+	process(clk, restart) -- flip flops
+	begin
+		-- active low
+		if restart = '0' then
+			current_state <= playFirstNote;
+		elsif (clk'event and clk = '1') then
+			current_state <= next_state;
+		end if;
+	end process;
+	
+	address <= note_count;
+	
+		-- This ROM stores the values of notes
+		song_rom1: lpm_rom
+			generic map (lpm_widthad=>8, 
+				lpm_numwords=>256, 
+				lpm_outdata=>"UNREGISTERED",
+				lpm_address_control=>"REGISTERED",
+				lpm_file => "g00_demo_song.mif",
+				lpm_width => 16)
+			port map (inclock=>clk, address=>address, q=>Q1);
+			
+		song_rom2: lpm_rom
+			generic map (lpm_widthad=>8, 
+				lpm_numwords=>256, 
+				lpm_outdata=>"UNREGISTERED",
+				lpm_address_control=>"REGISTERED",
+				lpm_file => "g27_demo_song2.mif",
+				lpm_width => 16)
+			port map (inclock=>clk, address=>address, q=>Q2);
+
+	with song_select select
+		Q <= Q1 when '0',
+			Q2 when others;
+	end inside;	

@@ -1,0 +1,1378 @@
+Analysis & Synthesis report for g27_lab5
+Mon Dec 02 02:23:40 2013
+Quartus II 64-Bit Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. Analysis & Synthesis RAM Summary
+  9. Analysis & Synthesis DSP Block Usage Summary
+ 10. State Machine - |g27_complete_design|g27_musicbox_controller:inst11|current_state
+ 11. State Machine - |g27_complete_design|g00_audio_interface:inst|state
+ 12. State Machine - |g27_complete_design|g00_audio_interface:inst|state2
+ 13. User-Specified and Inferred Latches
+ 14. Registers Removed During Synthesis
+ 15. General Register Statistics
+ 16. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 17. Source assignments for g27_musicbox_controller:inst11|LPM_COUNTER:note_counter
+ 18. Source assignments for g27_musicbox_controller:inst11|LPM_ROM:song_rom1|altrom:srom|altsyncram:rom_block|altsyncram_eo01:auto_generated
+ 19. Source assignments for g27_musicbox_controller:inst11|LPM_ROM:song_rom2|altrom:srom|altsyncram:rom_block|altsyncram_9q01:auto_generated
+ 20. Source assignments for g27_tempo:inst9|LPM_ROM:inst0|altrom:srom|altsyncram:rom_block|altsyncram_q401:auto_generated
+ 21. Source assignments for g27_tempo:inst9|LPM_COUNTER:inst1
+ 22. Source assignments for g27_tempo:inst9|LPM_COUNTER:inst2
+ 23. Source assignments for g27_updater:inst3|LPM_COUNTER:count
+ 24. Parameter Settings for User Entity Instance: g27_musicbox_controller:inst11|LPM_COUNTER:note_counter
+ 25. Parameter Settings for User Entity Instance: g27_musicbox_controller:inst11|LPM_ROM:song_rom1
+ 26. Parameter Settings for User Entity Instance: g27_musicbox_controller:inst11|LPM_ROM:song_rom2
+ 27. Parameter Settings for User Entity Instance: g27_tempo:inst9|LPM_ROM:inst0
+ 28. Parameter Settings for User Entity Instance: g27_tempo:inst9|LPM_COUNTER:inst1
+ 29. Parameter Settings for User Entity Instance: g27_tempo:inst9|LPM_COUNTER:inst2
+ 30. Parameter Settings for User Entity Instance: g27_tempo:inst9|g27_lpm_ff2:inst3|lpm_ff:lpm_ff_component
+ 31. Parameter Settings for User Entity Instance: g27_lpm_mult:inst16|lpm_mult:lpm_mult_component
+ 32. Parameter Settings for User Entity Instance: g27_Envelope:inst4|I0_mux:mux1|LPM_MUX:lpm_mux_component
+ 33. Parameter Settings for User Entity Instance: g27_Envelope:inst4|I0_mux:mux2|LPM_MUX:lpm_mux_component
+ 34. Parameter Settings for User Entity Instance: g27_Envelope:inst4|LPM_ADD_SUB:sub
+ 35. Parameter Settings for User Entity Instance: g27_Envelope:inst4|lpm_mult:mult
+ 36. Parameter Settings for User Entity Instance: g27_Envelope:inst4|LPM_ADD_SUB:add
+ 37. Parameter Settings for User Entity Instance: g27_Envelope:inst4|lpm_ff:reg
+ 38. Parameter Settings for User Entity Instance: g27_updater:inst3|LPM_COUNTER:count
+ 39. lpm_mult Parameter Settings by Entity Instance
+ 40. Port Connectivity Checks: "g27_Envelope:inst4|I0_mux:mux2"
+ 41. Port Connectivity Checks: "g27_Envelope:inst4|I0_mux:mux1"
+ 42. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2010 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++------------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                       ;
++------------------------------------+-----------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Mon Dec 02 02:23:40 2013         ;
+; Quartus II 64-Bit Version          ; 9.1 Build 350 03/24/2010 SP 2 SJ Full Version ;
+; Revision Name                      ; g27_lab5                                      ;
+; Top-level Entity Name              ; g27_complete_design                           ;
+; Family                             ; Cyclone II                                    ;
+; Total logic elements               ; 1,281                                         ;
+;     Total combinational functions  ; 854                                           ;
+;     Dedicated logic registers      ; 943                                           ;
+; Total registers                    ; 943                                           ;
+; Total pins                         ; 70                                            ;
+; Total virtual pins                 ; 0                                             ;
+; Total memory bits                  ; 11,264                                        ;
+; Embedded Multiplier 9-bit elements ; 4                                             ;
+; Total PLLs                         ; 0                                             ;
++------------------------------------+-----------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                         ;
++----------------------------------------------------------------------------+---------------------+--------------------+
+; Option                                                                     ; Setting             ; Default Value      ;
++----------------------------------------------------------------------------+---------------------+--------------------+
+; Device                                                                     ; EP2C20F484C7        ;                    ;
+; Top-level entity name                                                      ; g27_complete_design ; g27_lab5           ;
+; Family name                                                                ; Cyclone II          ; Stratix II         ;
+; Use Generated Physical Constraints File                                    ; Off                 ;                    ;
+; Use smart compilation                                                      ; Off                 ; Off                ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                  ; On                 ;
+; Enable compact report table                                                ; Off                 ; Off                ;
+; Restructure Multiplexers                                                   ; Auto                ; Auto               ;
+; Create Debugging Nodes for IP Cores                                        ; Off                 ; Off                ;
+; Preserve fewer node names                                                  ; On                  ; On                 ;
+; Disable OpenCore Plus hardware evaluation                                  ; Off                 ; Off                ;
+; Verilog Version                                                            ; Verilog_2001        ; Verilog_2001       ;
+; VHDL Version                                                               ; VHDL_1993           ; VHDL_1993          ;
+; State Machine Processing                                                   ; Auto                ; Auto               ;
+; Safe State Machine                                                         ; Off                 ; Off                ;
+; Extract Verilog State Machines                                             ; On                  ; On                 ;
+; Extract VHDL State Machines                                                ; On                  ; On                 ;
+; Ignore Verilog initial constructs                                          ; Off                 ; Off                ;
+; Iteration limit for constant Verilog loops                                 ; 5000                ; 5000               ;
+; Iteration limit for non-constant Verilog loops                             ; 250                 ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                    ; On                  ; On                 ;
+; Parallel Synthesis                                                         ; On                  ; On                 ;
+; DSP Block Balancing                                                        ; Auto                ; Auto               ;
+; NOT Gate Push-Back                                                         ; On                  ; On                 ;
+; Power-Up Don't Care                                                        ; On                  ; On                 ;
+; Remove Redundant Logic Cells                                               ; Off                 ; Off                ;
+; Remove Duplicate Registers                                                 ; On                  ; On                 ;
+; Ignore CARRY Buffers                                                       ; Off                 ; Off                ;
+; Ignore CASCADE Buffers                                                     ; Off                 ; Off                ;
+; Ignore GLOBAL Buffers                                                      ; Off                 ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                  ; Off                 ; Off                ;
+; Ignore LCELL Buffers                                                       ; Off                 ; Off                ;
+; Ignore SOFT Buffers                                                        ; On                  ; On                 ;
+; Limit AHDL Integers to 32 Bits                                             ; Off                 ; Off                ;
+; Optimization Technique                                                     ; Balanced            ; Balanced           ;
+; Carry Chain Length                                                         ; 70                  ; 70                 ;
+; Auto Carry Chains                                                          ; On                  ; On                 ;
+; Auto Open-Drain Pins                                                       ; On                  ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                      ; Off                 ; Off                ;
+; Auto ROM Replacement                                                       ; On                  ; On                 ;
+; Auto RAM Replacement                                                       ; On                  ; On                 ;
+; Auto Shift Register Replacement                                            ; Auto                ; Auto               ;
+; Auto Clock Enable Replacement                                              ; On                  ; On                 ;
+; Strict RAM Replacement                                                     ; Off                 ; Off                ;
+; Allow Synchronous Control Signals                                          ; On                  ; On                 ;
+; Force Use of Synchronous Clear Signals                                     ; Off                 ; Off                ;
+; Auto RAM to Logic Cell Conversion                                          ; Off                 ; Off                ;
+; Auto Resource Sharing                                                      ; Off                 ; Off                ;
+; Allow Any RAM Size For Recognition                                         ; Off                 ; Off                ;
+; Allow Any ROM Size For Recognition                                         ; Off                 ; Off                ;
+; Allow Any Shift Register Size For Recognition                              ; Off                 ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                        ; On                  ; On                 ;
+; Ignore translate_off and synthesis_off directives                          ; Off                 ; Off                ;
+; Timing-Driven Synthesis                                                    ; Off                 ; Off                ;
+; Show Parameter Settings Tables in Synthesis Report                         ; On                  ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                         ; Off                 ; Off                ;
+; Synchronization Register Chain Length                                      ; 2                   ; 2                  ;
+; PowerPlay Power Optimization                                               ; Normal compilation  ; Normal compilation ;
+; HDL message level                                                          ; Level2              ; Level2             ;
+; Suppress Register Optimization Related Messages                            ; Off                 ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                   ; 5000                ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                  ; 100                 ; 100                ;
+; Clock MUX Protection                                                       ; On                  ; On                 ;
+; Auto Gated Clock Conversion                                                ; Off                 ; Off                ;
+; Block Design Naming                                                        ; Auto                ; Auto               ;
+; SDC constraint protection                                                  ; Off                 ; Off                ;
+; Synthesis Effort                                                           ; Auto                ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal               ; On                  ; On                 ;
+; Analysis & Synthesis Message Level                                         ; Medium              ; Medium             ;
+; Disable Register Merging Across Hierarchies                                ; Auto                ; Auto               ;
+; Resource Aware Inference For Block RAM                                     ; On                  ; On                 ;
++----------------------------------------------------------------------------+---------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 4           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     1 processor            ; 100.0%      ;
+;     2-4 processors         ;   0.0%      ;
++----------------------------+-------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                         ;
++-----------------------------------+-----------------+----------------------------------------+-----------------------------------------------------------------+
+; File Name with User-Entered Path  ; Used in Netlist ; File Type                              ; File Name with Absolute Path                                    ;
++-----------------------------------+-----------------+----------------------------------------+-----------------------------------------------------------------+
+; g00_audio_interface.vhd           ; yes             ; User VHDL File                         ; P:/lab5/g00_audio_interface.vhd                                 ;
+; g00_decimator.vhd                 ; yes             ; User VHDL File                         ; P:/lab5/g00_decimator.vhd                                       ;
+; g27_Envelope.vhd                  ; yes             ; User VHDL File                         ; P:/lab5/g27_Envelope.vhd                                        ;
+; g27_note_timer.vhd                ; yes             ; User VHDL File                         ; P:/lab5/g27_note_timer.vhd                                      ;
+; g27_square_wave.vhd               ; yes             ; User VHDL File                         ; P:/lab5/g27_square_wave.vhd                                     ;
+; g27_tempo.vhd                     ; yes             ; User VHDL File                         ; P:/lab5/g27_tempo.vhd                                           ;
+; g27_updater.vhd                   ; yes             ; User VHDL File                         ; P:/lab5/g27_updater.vhd                                         ;
+; g00_demo_song.mif                 ; yes             ; User Memory Initialization File        ; P:/lab5/g00_demo_song.mif                                       ;
+; g27_complete_design.bdf           ; yes             ; User Block Diagram/Schematic File      ; P:/lab5/g27_complete_design.bdf                                 ;
+; g27_lpm_mult.vhd                  ; yes             ; User Wizard-Generated File             ; P:/lab5/g27_lpm_mult.vhd                                        ;
+; g27_musicbox_controller.vhd       ; yes             ; User VHDL File                         ; P:/lab5/g27_musicbox_controller.vhd                             ;
+; g27_volume_calculator.vhd         ; yes             ; User VHDL File                         ; P:/lab5/g27_volume_calculator.vhd                               ;
+; g27_rest_calculator.vhd           ; yes             ; User VHDL File                         ; P:/lab5/g27_rest_calculator.vhd                                 ;
+; g27_demo_song2.mif                ; yes             ; User Memory Initialization File        ; P:/lab5/g27_demo_song2.mif                                      ;
+; g27_envelope_controller.vhd       ; yes             ; User VHDL File                         ; P:/lab5/g27_envelope_controller.vhd                             ;
+; g27_status_display_controller.vhd ; yes             ; User VHDL File                         ; P:/lab5/g27_status_display_controller.vhd                       ;
+; g27_exp.vhd                       ; yes             ; Auto-Found VHDL File                   ; P:/lab5/g27_exp.vhd                                             ;
+; lpm_counter.tdf                   ; yes             ; Megafunction                           ; c:/altera/91sp2/quartus/libraries/megafunctions/lpm_counter.tdf ;
+; db/cntr_j1k.tdf                   ; yes             ; Auto-Generated Megafunction            ; P:/lab5/db/cntr_j1k.tdf                                         ;
+; lpm_rom.tdf                       ; yes             ; Megafunction                           ; c:/altera/91sp2/quartus/libraries/megafunctions/lpm_rom.tdf     ;
+; altrom.tdf                        ; yes             ; Megafunction                           ; c:/altera/91sp2/quartus/libraries/megafunctions/altrom.tdf      ;
+; altsyncram.tdf                    ; yes             ; Megafunction                           ; c:/altera/91sp2/quartus/libraries/megafunctions/altsyncram.tdf  ;
+; db/altsyncram_eo01.tdf            ; yes             ; Auto-Generated Megafunction            ; P:/lab5/db/altsyncram_eo01.tdf                                  ;
+; db/altsyncram_9q01.tdf            ; yes             ; Auto-Generated Megafunction            ; P:/lab5/db/altsyncram_9q01.tdf                                  ;
+; db/altsyncram_q401.tdf            ; yes             ; Auto-Generated Megafunction            ; P:/lab5/db/altsyncram_q401.tdf                                  ;
+; g27_bpm.mif                       ; yes             ; Auto-Found Memory Initialization File  ; P:/lab5/g27_bpm.mif                                             ;
+; db/cntr_akk.tdf                   ; yes             ; Auto-Generated Megafunction            ; P:/lab5/db/cntr_akk.tdf                                         ;
+; db/cntr_f7l.tdf                   ; yes             ; Auto-Generated Megafunction            ; P:/lab5/db/cntr_f7l.tdf                                         ;
+; g27_lpm_ff2.vhd                   ; yes             ; Auto-Found Wizard-Generated File       ; P:/lab5/g27_lpm_ff2.vhd                                         ;
+; lpm_ff.tdf                        ; yes             ; Megafunction                           ; c:/altera/91sp2/quartus/libraries/megafunctions/lpm_ff.tdf      ;
+; lpm_mult.tdf                      ; yes             ; Megafunction                           ; c:/altera/91sp2/quartus/libraries/megafunctions/lpm_mult.tdf    ;
+; db/mult_k9n.tdf                   ; yes             ; Auto-Generated Megafunction            ; P:/lab5/db/mult_k9n.tdf                                         ;
+; i0_mux.vhd                        ; yes             ; Auto-Found Wizard-Generated File       ; P:/lab5/i0_mux.vhd                                              ;
+; lpm_mux.tdf                       ; yes             ; Megafunction                           ; c:/altera/91sp2/quartus/libraries/megafunctions/lpm_mux.tdf     ;
+; db/mux_83e.tdf                    ; yes             ; Auto-Generated Megafunction            ; P:/lab5/db/mux_83e.tdf                                          ;
+; lpm_add_sub.tdf                   ; yes             ; Megafunction                           ; c:/altera/91sp2/quartus/libraries/megafunctions/lpm_add_sub.tdf ;
+; db/add_sub_mqi.tdf                ; yes             ; Auto-Generated Megafunction            ; P:/lab5/db/add_sub_mqi.tdf                                      ;
+; db/mult_sjp.tdf                   ; yes             ; Auto-Generated Megafunction            ; P:/lab5/db/mult_sjp.tdf                                         ;
+; db/add_sub_52j.tdf                ; yes             ; Auto-Generated Megafunction            ; P:/lab5/db/add_sub_52j.tdf                                      ;
+; db/cntr_6kk.tdf                   ; yes             ; Auto-Generated Megafunction            ; P:/lab5/db/cntr_6kk.tdf                                         ;
++-----------------------------------+-----------------+----------------------------------------+-----------------------------------------------------------------+
+
+
++-----------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary         ;
++---------------------------------------------+-------+
+; Resource                                    ; Usage ;
++---------------------------------------------+-------+
+; Estimated Total logic elements              ; 1,281 ;
+;                                             ;       ;
+; Total combinational functions               ; 854   ;
+; Logic element usage by number of LUT inputs ;       ;
+;     -- 4 input functions                    ; 181   ;
+;     -- 3 input functions                    ; 543   ;
+;     -- <=2 input functions                  ; 130   ;
+;                                             ;       ;
+; Logic elements by mode                      ;       ;
+;     -- normal mode                          ; 355   ;
+;     -- arithmetic mode                      ; 499   ;
+;                                             ;       ;
+; Total registers                             ; 943   ;
+;     -- Dedicated logic registers            ; 943   ;
+;     -- I/O registers                        ; 0     ;
+;                                             ;       ;
+; I/O pins                                    ; 70    ;
+; Total memory bits                           ; 11264 ;
+; Embedded Multiplier 9-bit elements          ; 4     ;
+; Maximum fan-out node                        ; clk50 ;
+; Maximum fan-out                             ; 873   ;
+; Total fan-out                               ; 5869  ;
+; Average fan-out                             ; 3.04  ;
++---------------------------------------------+-------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                ;
++-------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------------------------------------------------------+--------------+
+; Compilation Hierarchy Node                      ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                   ; Library Name ;
++-------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------------------------------------------------------+--------------+
+; |g27_complete_design                            ; 854 (1)           ; 943 (0)      ; 11264       ; 4            ; 2       ; 1         ; 70   ; 0            ; |g27_complete_design                                                                                                                  ; work         ;
+;    |g00_audio_interface:inst|                   ; 148 (148)         ; 94 (94)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g27_complete_design|g00_audio_interface:inst                                                                                         ;              ;
+;    |g00_decimator:inst1|                        ; 379 (379)         ; 742 (742)    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g27_complete_design|g00_decimator:inst1                                                                                              ;              ;
+;    |g27_Envelope:inst4|                         ; 33 (0)            ; 24 (0)       ; 0           ; 1            ; 1       ; 0         ; 0    ; 0            ; |g27_complete_design|g27_Envelope:inst4                                                                                               ;              ;
+;       |lpm_add_sub:sub|                         ; 9 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g27_complete_design|g27_Envelope:inst4|lpm_add_sub:sub                                                                               ;              ;
+;          |add_sub_mqi:auto_generated|           ; 9 (9)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g27_complete_design|g27_Envelope:inst4|lpm_add_sub:sub|add_sub_mqi:auto_generated                                                    ;              ;
+;       |lpm_ff:reg|                              ; 24 (24)           ; 24 (24)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g27_complete_design|g27_Envelope:inst4|lpm_ff:reg                                                                                    ;              ;
+;       |lpm_mult:mult|                           ; 0 (0)             ; 0 (0)        ; 0           ; 1            ; 1       ; 0         ; 0    ; 0            ; |g27_complete_design|g27_Envelope:inst4|lpm_mult:mult                                                                                 ;              ;
+;          |mult_sjp:auto_generated|              ; 0 (0)             ; 0 (0)        ; 0           ; 1            ; 1       ; 0         ; 0    ; 0            ; |g27_complete_design|g27_Envelope:inst4|lpm_mult:mult|mult_sjp:auto_generated                                                         ;              ;
+;    |g27_lpm_mult:inst16|                        ; 26 (0)            ; 0 (0)        ; 0           ; 3            ; 1       ; 1         ; 0    ; 0            ; |g27_complete_design|g27_lpm_mult:inst16                                                                                              ;              ;
+;       |lpm_mult:lpm_mult_component|             ; 26 (0)            ; 0 (0)        ; 0           ; 3            ; 1       ; 1         ; 0    ; 0            ; |g27_complete_design|g27_lpm_mult:inst16|lpm_mult:lpm_mult_component                                                                  ;              ;
+;          |mult_k9n:auto_generated|              ; 26 (26)           ; 0 (0)        ; 0           ; 3            ; 1       ; 1         ; 0    ; 0            ; |g27_complete_design|g27_lpm_mult:inst16|lpm_mult:lpm_mult_component|mult_k9n:auto_generated                                          ;              ;
+;    |g27_musicbox_controller:inst11|             ; 34 (26)           ; 11 (3)       ; 8192        ; 0            ; 0       ; 0         ; 0    ; 0            ; |g27_complete_design|g27_musicbox_controller:inst11                                                                                   ;              ;
+;       |lpm_counter:note_counter|                ; 8 (0)             ; 8 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g27_complete_design|g27_musicbox_controller:inst11|lpm_counter:note_counter                                                          ;              ;
+;          |cntr_j1k:auto_generated|              ; 8 (8)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g27_complete_design|g27_musicbox_controller:inst11|lpm_counter:note_counter|cntr_j1k:auto_generated                                  ;              ;
+;       |lpm_rom:song_rom1|                       ; 0 (0)             ; 0 (0)        ; 4096        ; 0            ; 0       ; 0         ; 0    ; 0            ; |g27_complete_design|g27_musicbox_controller:inst11|lpm_rom:song_rom1                                                                 ;              ;
+;          |altrom:srom|                          ; 0 (0)             ; 0 (0)        ; 4096        ; 0            ; 0       ; 0         ; 0    ; 0            ; |g27_complete_design|g27_musicbox_controller:inst11|lpm_rom:song_rom1|altrom:srom                                                     ;              ;
+;             |altsyncram:rom_block|              ; 0 (0)             ; 0 (0)        ; 4096        ; 0            ; 0       ; 0         ; 0    ; 0            ; |g27_complete_design|g27_musicbox_controller:inst11|lpm_rom:song_rom1|altrom:srom|altsyncram:rom_block                                ;              ;
+;                |altsyncram_eo01:auto_generated| ; 0 (0)             ; 0 (0)        ; 4096        ; 0            ; 0       ; 0         ; 0    ; 0            ; |g27_complete_design|g27_musicbox_controller:inst11|lpm_rom:song_rom1|altrom:srom|altsyncram:rom_block|altsyncram_eo01:auto_generated ;              ;
+;       |lpm_rom:song_rom2|                       ; 0 (0)             ; 0 (0)        ; 4096        ; 0            ; 0       ; 0         ; 0    ; 0            ; |g27_complete_design|g27_musicbox_controller:inst11|lpm_rom:song_rom2                                                                 ;              ;
+;          |altrom:srom|                          ; 0 (0)             ; 0 (0)        ; 4096        ; 0            ; 0       ; 0         ; 0    ; 0            ; |g27_complete_design|g27_musicbox_controller:inst11|lpm_rom:song_rom2|altrom:srom                                                     ;              ;
+;             |altsyncram:rom_block|              ; 0 (0)             ; 0 (0)        ; 4096        ; 0            ; 0       ; 0         ; 0    ; 0            ; |g27_complete_design|g27_musicbox_controller:inst11|lpm_rom:song_rom2|altrom:srom|altsyncram:rom_block                                ;              ;
+;                |altsyncram_9q01:auto_generated| ; 0 (0)             ; 0 (0)        ; 4096        ; 0            ; 0       ; 0         ; 0    ; 0            ; |g27_complete_design|g27_musicbox_controller:inst11|lpm_rom:song_rom2|altrom:srom|altsyncram:rom_block|altsyncram_9q01:auto_generated ;              ;
+;    |g27_note_timer:inst8|                       ; 42 (42)           ; 10 (10)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g27_complete_design|g27_note_timer:inst8                                                                                             ;              ;
+;    |g27_rest_calculator:inst14|                 ; 9 (9)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g27_complete_design|g27_rest_calculator:inst14                                                                                       ;              ;
+;    |g27_square_wave:inst2|                      ; 114 (94)          ; 22 (22)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g27_complete_design|g27_square_wave:inst2                                                                                            ;              ;
+;       |g27_exp:inst1|                           ; 20 (20)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g27_complete_design|g27_square_wave:inst2|g27_exp:inst1                                                                              ;              ;
+;    |g27_tempo:inst9|                            ; 39 (9)            ; 29 (0)       ; 3072        ; 0            ; 0       ; 0         ; 0    ; 0            ; |g27_complete_design|g27_tempo:inst9                                                                                                  ;              ;
+;       |g27_lpm_ff2:inst3|                       ; 1 (0)             ; 1 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g27_complete_design|g27_tempo:inst9|g27_lpm_ff2:inst3                                                                                ;              ;
+;          |lpm_ff:lpm_ff_component|              ; 1 (1)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g27_complete_design|g27_tempo:inst9|g27_lpm_ff2:inst3|lpm_ff:lpm_ff_component                                                        ;              ;
+;       |lpm_counter:inst1|                       ; 24 (0)            ; 24 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g27_complete_design|g27_tempo:inst9|lpm_counter:inst1                                                                                ;              ;
+;          |cntr_akk:auto_generated|              ; 24 (24)           ; 24 (24)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g27_complete_design|g27_tempo:inst9|lpm_counter:inst1|cntr_akk:auto_generated                                                        ;              ;
+;       |lpm_counter:inst2|                       ; 5 (0)             ; 4 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g27_complete_design|g27_tempo:inst9|lpm_counter:inst2                                                                                ;              ;
+;          |cntr_f7l:auto_generated|              ; 5 (5)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g27_complete_design|g27_tempo:inst9|lpm_counter:inst2|cntr_f7l:auto_generated                                                        ;              ;
+;       |lpm_rom:inst0|                           ; 0 (0)             ; 0 (0)        ; 3072        ; 0            ; 0       ; 0         ; 0    ; 0            ; |g27_complete_design|g27_tempo:inst9|lpm_rom:inst0                                                                                    ;              ;
+;          |altrom:srom|                          ; 0 (0)             ; 0 (0)        ; 3072        ; 0            ; 0       ; 0         ; 0    ; 0            ; |g27_complete_design|g27_tempo:inst9|lpm_rom:inst0|altrom:srom                                                                        ;              ;
+;             |altsyncram:rom_block|              ; 0 (0)             ; 0 (0)        ; 3072        ; 0            ; 0       ; 0         ; 0    ; 0            ; |g27_complete_design|g27_tempo:inst9|lpm_rom:inst0|altrom:srom|altsyncram:rom_block                                                   ;              ;
+;                |altsyncram_q401:auto_generated| ; 0 (0)             ; 0 (0)        ; 3072        ; 0            ; 0       ; 0         ; 0    ; 0            ; |g27_complete_design|g27_tempo:inst9|lpm_rom:inst0|altrom:srom|altsyncram:rom_block|altsyncram_q401:auto_generated                    ;              ;
+;    |g27_updater:inst3|                          ; 15 (4)            ; 11 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g27_complete_design|g27_updater:inst3                                                                                                ;              ;
+;       |lpm_counter:count|                       ; 11 (0)            ; 11 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g27_complete_design|g27_updater:inst3|lpm_counter:count                                                                              ;              ;
+;          |cntr_6kk:auto_generated|              ; 11 (11)           ; 11 (11)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g27_complete_design|g27_updater:inst3|lpm_counter:count|cntr_6kk:auto_generated                                                      ;              ;
+;    |g27_volume_calculator:inst15|               ; 14 (14)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g27_complete_design|g27_volume_calculator:inst15                                                                                     ;              ;
++-------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------------------------------------------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis RAM Summary                                                                                                                                                                                                  ;
++-----------------------------------------------------------------------------------------------------------------------------+------+------+--------------+--------------+--------------+--------------+------+--------------------+
+; Name                                                                                                                        ; Type ; Mode ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size ; MIF                ;
++-----------------------------------------------------------------------------------------------------------------------------+------+------+--------------+--------------+--------------+--------------+------+--------------------+
+; g27_musicbox_controller:inst11|lpm_rom:song_rom1|altrom:srom|altsyncram:rom_block|altsyncram_eo01:auto_generated|ALTSYNCRAM ; AUTO ; ROM  ; 256          ; 16           ; --           ; --           ; 4096 ; g00_demo_song.mif  ;
+; g27_musicbox_controller:inst11|lpm_rom:song_rom2|altrom:srom|altsyncram:rom_block|altsyncram_9q01:auto_generated|ALTSYNCRAM ; AUTO ; ROM  ; 256          ; 16           ; --           ; --           ; 4096 ; g27_demo_song2.mif ;
+; g27_tempo:inst9|lpm_rom:inst0|altrom:srom|altsyncram:rom_block|altsyncram_q401:auto_generated|ALTSYNCRAM                    ; AUTO ; ROM  ; 256          ; 24           ; --           ; --           ; 6144 ; g27_bpm.mif        ;
++-----------------------------------------------------------------------------------------------------------------------------+------+------+--------------+--------------+--------------+--------------+------+--------------------+
+
+
++-----------------------------------------------------+
+; Analysis & Synthesis DSP Block Usage Summary        ;
++---------------------------------------+-------------+
+; Statistic                             ; Number Used ;
++---------------------------------------+-------------+
+; Simple Multipliers (9-bit)            ; 2           ;
+; Simple Multipliers (18-bit)           ; 1           ;
+; Embedded Multiplier Blocks            ; --          ;
+; Embedded Multiplier 9-bit elements    ; 4           ;
+; Signed Embedded Multipliers           ; 1           ;
+; Unsigned Embedded Multipliers         ; 2           ;
+; Mixed Sign Embedded Multipliers       ; 0           ;
+; Variable Sign Embedded Multipliers    ; 0           ;
+; Dedicated Input Shift Register Chains ; 0           ;
++---------------------------------------+-------------+
+Note: number of Embedded Multiplier Blocks used is only available after a successful fit.
+
+
+Encoding Type:  One-Hot
++----------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |g27_complete_design|g27_musicbox_controller:inst11|current_state                                          ;
++-------------------------------+-------------------------------+------------------------------+-----------------------------+
+; Name                          ; current_state.waitForNextNote ; current_state.loadingNewNote ; current_state.playFirstNote ;
++-------------------------------+-------------------------------+------------------------------+-----------------------------+
+; current_state.playFirstNote   ; 0                             ; 0                            ; 0                           ;
+; current_state.loadingNewNote  ; 0                             ; 1                            ; 1                           ;
+; current_state.waitForNextNote ; 1                             ; 0                            ; 1                           ;
++-------------------------------+-------------------------------+------------------------------+-----------------------------+
+
+
+Encoding Type:  One-Hot
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |g27_complete_design|g00_audio_interface:inst|state                                                                                                                                                                                                                                                                                              ;
++----------------+------------+-------------+-------------+-------------+-------------+-------------+-------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+------------+------------+------------+----------+----------+----------+----------------+----------------+
+; Name           ; state.send ; state.sw2b3 ; state.sw2b2 ; state.sw2b1 ; state.sw1b3 ; state.sw1b2 ; state.sw1b1 ; state.sack33 ; state.sack32 ; state.sack31 ; state.sack23 ; state.sack22 ; state.sack21 ; state.sack13 ; state.sack12 ; state.sack11 ; state.sab3 ; state.sab2 ; state.sab1 ; state.s2 ; state.s1 ; state.s0 ; state.sw_init1 ; state.sw_init0 ;
++----------------+------------+-------------+-------------+-------------+-------------+-------------+-------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+------------+------------+------------+----------+----------+----------+----------------+----------------+
+; state.sw_init0 ; 0          ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0          ; 0          ; 0          ; 0        ; 0        ; 0        ; 0              ; 0              ;
+; state.sw_init1 ; 0          ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0          ; 0          ; 0          ; 0        ; 0        ; 0        ; 1              ; 1              ;
+; state.s0       ; 0          ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0          ; 0          ; 0          ; 0        ; 0        ; 1        ; 0              ; 1              ;
+; state.s1       ; 0          ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0          ; 0          ; 0          ; 0        ; 1        ; 0        ; 0              ; 1              ;
+; state.s2       ; 0          ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0          ; 0          ; 0          ; 1        ; 0        ; 0        ; 0              ; 1              ;
+; state.sab1     ; 0          ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0          ; 0          ; 1          ; 0        ; 0        ; 0        ; 0              ; 1              ;
+; state.sab2     ; 0          ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0          ; 1          ; 0          ; 0        ; 0        ; 0        ; 0              ; 1              ;
+; state.sab3     ; 0          ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 1          ; 0          ; 0          ; 0        ; 0        ; 0        ; 0              ; 1              ;
+; state.sack11   ; 0          ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 1            ; 0          ; 0          ; 0          ; 0        ; 0        ; 0        ; 0              ; 1              ;
+; state.sack12   ; 0          ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 1            ; 0            ; 0          ; 0          ; 0          ; 0        ; 0        ; 0        ; 0              ; 1              ;
+; state.sack13   ; 0          ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 1            ; 0            ; 0            ; 0          ; 0          ; 0          ; 0        ; 0        ; 0        ; 0              ; 1              ;
+; state.sack21   ; 0          ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0            ; 0            ; 0            ; 0            ; 0            ; 1            ; 0            ; 0            ; 0            ; 0          ; 0          ; 0          ; 0        ; 0        ; 0        ; 0              ; 1              ;
+; state.sack22   ; 0          ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0            ; 0            ; 0            ; 0            ; 1            ; 0            ; 0            ; 0            ; 0            ; 0          ; 0          ; 0          ; 0        ; 0        ; 0        ; 0              ; 1              ;
+; state.sack23   ; 0          ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0            ; 0            ; 0            ; 1            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0          ; 0          ; 0          ; 0        ; 0        ; 0        ; 0              ; 1              ;
+; state.sack31   ; 0          ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0            ; 0            ; 1            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0          ; 0          ; 0          ; 0        ; 0        ; 0        ; 0              ; 1              ;
+; state.sack32   ; 0          ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0            ; 1            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0          ; 0          ; 0          ; 0        ; 0        ; 0        ; 0              ; 1              ;
+; state.sack33   ; 0          ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 1            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0          ; 0          ; 0          ; 0        ; 0        ; 0        ; 0              ; 1              ;
+; state.sw1b1    ; 0          ; 0           ; 0           ; 0           ; 0           ; 0           ; 1           ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0          ; 0          ; 0          ; 0        ; 0        ; 0        ; 0              ; 1              ;
+; state.sw1b2    ; 0          ; 0           ; 0           ; 0           ; 0           ; 1           ; 0           ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0          ; 0          ; 0          ; 0        ; 0        ; 0        ; 0              ; 1              ;
+; state.sw1b3    ; 0          ; 0           ; 0           ; 0           ; 1           ; 0           ; 0           ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0          ; 0          ; 0          ; 0        ; 0        ; 0        ; 0              ; 1              ;
+; state.sw2b1    ; 0          ; 0           ; 0           ; 1           ; 0           ; 0           ; 0           ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0          ; 0          ; 0          ; 0        ; 0        ; 0        ; 0              ; 1              ;
+; state.sw2b2    ; 0          ; 0           ; 1           ; 0           ; 0           ; 0           ; 0           ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0          ; 0          ; 0          ; 0        ; 0        ; 0        ; 0              ; 1              ;
+; state.sw2b3    ; 0          ; 1           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0          ; 0          ; 0          ; 0        ; 0        ; 0        ; 0              ; 1              ;
+; state.send     ; 1          ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0          ; 0          ; 0          ; 0        ; 0        ; 0        ; 0              ; 1              ;
++----------------+------------+-------------+-------------+-------------+-------------+-------------+-------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+------------+------------+------------+----------+----------+----------+----------------+----------------+
+
+
+Encoding Type:  One-Hot
++-----------------------------------------------------------------------------------------+
+; State Machine - |g27_complete_design|g00_audio_interface:inst|state2                    ;
++-----------------+-----------------+-----------------+-----------------+-----------------+
+; Name            ; state2.sw_write ; state2.sw_ready ; state2.sw_init1 ; state2.sw_init0 ;
++-----------------+-----------------+-----------------+-----------------+-----------------+
+; state2.sw_init0 ; 0               ; 0               ; 0               ; 0               ;
+; state2.sw_init1 ; 0               ; 0               ; 1               ; 1               ;
+; state2.sw_ready ; 0               ; 1               ; 0               ; 1               ;
+; state2.sw_write ; 1               ; 0               ; 0               ; 1               ;
++-----------------+-----------------+-----------------+-----------------+-----------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                                                               ;
++---------------------------------------------------------------+------------------------------------------+------------------------+
+; Latch Name                                                    ; Latch Enable Signal                      ; Free of Timing Hazards ;
++---------------------------------------------------------------+------------------------------------------+------------------------+
+; g27_musicbox_controller:inst11|next_state.playFirstNote_179   ; g27_musicbox_controller:inst11|Selector2 ; yes                    ;
+; g27_musicbox_controller:inst11|next_state.waitForNextNote_157 ; g27_musicbox_controller:inst11|Selector2 ; yes                    ;
+; g27_musicbox_controller:inst11|next_state.loadingNewNote_168  ; g27_musicbox_controller:inst11|Selector2 ; yes                    ;
+; Number of user-specified and inferred latches = 3             ;                                          ;                        ;
++---------------------------------------------------------------+------------------------------------------+------------------------+
+Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
+
+
++----------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                           ;
++------------------------------------------+---------------------------------------------------+
+; Register name                            ; Reason for Removal                                ;
++------------------------------------------+---------------------------------------------------+
+; g00_audio_interface:inst|LRDATA[0..1]    ; Stuck at GND due to stuck port data_in            ;
+; g00_audio_interface:inst|SCI_WORD1[5..7] ; Stuck at GND due to stuck port data_in            ;
+; g00_audio_interface:inst|LRDATA[25]      ; Merged with g00_audio_interface:inst|LRDATA[49]   ;
+; g00_audio_interface:inst|LRDATA[24]      ; Merged with g00_audio_interface:inst|LRDATA[48]   ;
+; g00_audio_interface:inst|LRDATA[23]      ; Merged with g00_audio_interface:inst|LRDATA[47]   ;
+; g00_audio_interface:inst|LRDATA[22]      ; Merged with g00_audio_interface:inst|LRDATA[46]   ;
+; g00_audio_interface:inst|LRDATA[21]      ; Merged with g00_audio_interface:inst|LRDATA[45]   ;
+; g00_audio_interface:inst|LRDATA[20]      ; Merged with g00_audio_interface:inst|LRDATA[44]   ;
+; g00_audio_interface:inst|LRDATA[19]      ; Merged with g00_audio_interface:inst|LRDATA[43]   ;
+; g00_audio_interface:inst|LRDATA[18]      ; Merged with g00_audio_interface:inst|LRDATA[42]   ;
+; g00_audio_interface:inst|LRDATA[17]      ; Merged with g00_audio_interface:inst|LRDATA[41]   ;
+; g00_audio_interface:inst|LRDATA[16]      ; Merged with g00_audio_interface:inst|LRDATA[40]   ;
+; g00_audio_interface:inst|LRDATA[15]      ; Merged with g00_audio_interface:inst|LRDATA[39]   ;
+; g00_audio_interface:inst|LRDATA[14]      ; Merged with g00_audio_interface:inst|LRDATA[38]   ;
+; g00_audio_interface:inst|LRDATA[13]      ; Merged with g00_audio_interface:inst|LRDATA[37]   ;
+; g00_audio_interface:inst|LRDATA[12]      ; Merged with g00_audio_interface:inst|LRDATA[36]   ;
+; g00_audio_interface:inst|LRDATA[11]      ; Merged with g00_audio_interface:inst|LRDATA[35]   ;
+; g00_audio_interface:inst|LRDATA[10]      ; Merged with g00_audio_interface:inst|LRDATA[34]   ;
+; g00_audio_interface:inst|LRDATA[9]       ; Merged with g00_audio_interface:inst|LRDATA[33]   ;
+; g00_audio_interface:inst|LRDATA[8]       ; Merged with g00_audio_interface:inst|LRDATA[32]   ;
+; g00_audio_interface:inst|LRDATA[7]       ; Merged with g00_audio_interface:inst|LRDATA[31]   ;
+; g00_audio_interface:inst|LRDATA[6]       ; Merged with g00_audio_interface:inst|LRDATA[30]   ;
+; g00_audio_interface:inst|LRDATA[5]       ; Merged with g00_audio_interface:inst|LRDATA[29]   ;
+; g00_audio_interface:inst|LRDATA[4]       ; Merged with g00_audio_interface:inst|LRDATA[28]   ;
+; g00_audio_interface:inst|LRDATA[3]       ; Merged with g00_audio_interface:inst|LRDATA[27]   ;
+; g00_audio_interface:inst|LRDATA[2]       ; Merged with g00_audio_interface:inst|LRDATA[26]   ;
+; g00_audio_interface:inst|SCI_WORD2[7]    ; Merged with g00_audio_interface:inst|SCI_WORD1[0] ;
+; g00_audio_interface:inst|SCI_WORD2[5]    ; Merged with g00_audio_interface:inst|SCI_WORD2[6] ;
+; g00_audio_interface:inst|SCI_WORD2[1]    ; Merged with g00_audio_interface:inst|SCI_WORD1[4] ;
+; Total Number of Removed Registers = 32   ;                                                   ;
++------------------------------------------+---------------------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 943   ;
+; Number of registers using Synchronous Clear  ; 8     ;
+; Number of registers using Synchronous Load   ; 62    ;
+; Number of registers using Asynchronous Clear ; 84    ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 617   ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                           ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                 ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------+
+; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |g27_complete_design|g27_square_wave:inst2|count[19]       ;
+; 3:1                ; 12 bits   ; 24 LEs        ; 24 LEs               ; 0 LEs                  ; Yes        ; |g27_complete_design|g27_square_wave:inst2|count[5]        ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |g27_complete_design|g27_square_wave:inst2|count[2]        ;
+; 8:1                ; 2 bits    ; 10 LEs        ; 4 LEs                ; 6 LEs                  ; Yes        ; |g27_complete_design|g00_audio_interface:inst|SCI_WORD1[2] ;
+; 5:1                ; 2 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; Yes        ; |g27_complete_design|g27_square_wave:inst2|count[1]        ;
+; 16:1               ; 8 bits    ; 80 LEs        ; 40 LEs               ; 40 LEs                 ; Yes        ; |g27_complete_design|g00_audio_interface:inst|SCI_WORD1[1] ;
+; 6:1                ; 9 bits    ; 36 LEs        ; 9 LEs                ; 27 LEs                 ; Yes        ; |g27_complete_design|g27_note_timer:inst8|count[1]         ;
+; 6:1                ; 3 bits    ; 12 LEs        ; 3 LEs                ; 9 LEs                  ; Yes        ; |g27_complete_design|g00_audio_interface:inst|bit_count[1] ;
+; 19:1               ; 6 bits    ; 72 LEs        ; 6 LEs                ; 66 LEs                 ; Yes        ; |g27_complete_design|g00_audio_interface:inst|clk_count[3] ;
+; 7:1                ; 2 bits    ; 8 LEs         ; 6 LEs                ; 2 LEs                  ; No         ; |g27_complete_design|g00_audio_interface:inst|Selector7    ;
+; 7:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; No         ; |g27_complete_design|g00_audio_interface:inst|Selector6    ;
+; 12:1               ; 3 bits    ; 24 LEs        ; 9 LEs                ; 15 LEs                 ; No         ; |g27_complete_design|g00_audio_interface:inst|Selector11   ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------+
+; Source assignments for g27_musicbox_controller:inst11|LPM_COUNTER:note_counter ;
++---------------------------+-------+------+-------------------------------------+
+; Assignment                ; Value ; From ; To                                  ;
++---------------------------+-------+------+-------------------------------------+
+; SUPPRESS_DA_RULE_INTERNAL ; a101  ; -    ; -                                   ;
+; SUPPRESS_DA_RULE_INTERNAL ; s102  ; -    ; -                                   ;
+; SUPPRESS_DA_RULE_INTERNAL ; s103  ; -    ; -                                   ;
++---------------------------+-------+------+-------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------+
+; Source assignments for g27_musicbox_controller:inst11|LPM_ROM:song_rom1|altrom:srom|altsyncram:rom_block|altsyncram_eo01:auto_generated ;
++---------------------------------+--------------------+------+---------------------------------------------------------------------------+
+; Assignment                      ; Value              ; From ; To                                                                        ;
++---------------------------------+--------------------+------+---------------------------------------------------------------------------+
+; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                                                         ;
++---------------------------------+--------------------+------+---------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------+
+; Source assignments for g27_musicbox_controller:inst11|LPM_ROM:song_rom2|altrom:srom|altsyncram:rom_block|altsyncram_9q01:auto_generated ;
++---------------------------------+--------------------+------+---------------------------------------------------------------------------+
+; Assignment                      ; Value              ; From ; To                                                                        ;
++---------------------------------+--------------------+------+---------------------------------------------------------------------------+
+; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                                                         ;
++---------------------------------+--------------------+------+---------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Source assignments for g27_tempo:inst9|LPM_ROM:inst0|altrom:srom|altsyncram:rom_block|altsyncram_q401:auto_generated ;
++---------------------------------+--------------------+------+--------------------------------------------------------+
+; Assignment                      ; Value              ; From ; To                                                     ;
++---------------------------------+--------------------+------+--------------------------------------------------------+
+; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                                      ;
++---------------------------------+--------------------+------+--------------------------------------------------------+
+
+
++----------------------------------------------------------+
+; Source assignments for g27_tempo:inst9|LPM_COUNTER:inst1 ;
++---------------------------+-------+------+---------------+
+; Assignment                ; Value ; From ; To            ;
++---------------------------+-------+------+---------------+
+; SUPPRESS_DA_RULE_INTERNAL ; a101  ; -    ; -             ;
+; SUPPRESS_DA_RULE_INTERNAL ; s102  ; -    ; -             ;
+; SUPPRESS_DA_RULE_INTERNAL ; s103  ; -    ; -             ;
++---------------------------+-------+------+---------------+
+
+
++----------------------------------------------------------+
+; Source assignments for g27_tempo:inst9|LPM_COUNTER:inst2 ;
++---------------------------+-------+------+---------------+
+; Assignment                ; Value ; From ; To            ;
++---------------------------+-------+------+---------------+
+; SUPPRESS_DA_RULE_INTERNAL ; a101  ; -    ; -             ;
+; SUPPRESS_DA_RULE_INTERNAL ; s102  ; -    ; -             ;
+; SUPPRESS_DA_RULE_INTERNAL ; s103  ; -    ; -             ;
++---------------------------+-------+------+---------------+
+
+
++------------------------------------------------------------+
+; Source assignments for g27_updater:inst3|LPM_COUNTER:count ;
++---------------------------+-------+------+-----------------+
+; Assignment                ; Value ; From ; To              ;
++---------------------------+-------+------+-----------------+
+; SUPPRESS_DA_RULE_INTERNAL ; a101  ; -    ; -               ;
+; SUPPRESS_DA_RULE_INTERNAL ; s102  ; -    ; -               ;
+; SUPPRESS_DA_RULE_INTERNAL ; s103  ; -    ; -               ;
++---------------------------+-------+------+-----------------+
+
+
++------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: g27_musicbox_controller:inst11|LPM_COUNTER:note_counter ;
++------------------------+-------------+---------------------------------------------------------------+
+; Parameter Name         ; Value       ; Type                                                          ;
++------------------------+-------------+---------------------------------------------------------------+
+; AUTO_CARRY_CHAINS      ; ON          ; AUTO_CARRY                                                    ;
+; IGNORE_CARRY_BUFFERS   ; OFF         ; IGNORE_CARRY                                                  ;
+; AUTO_CASCADE_CHAINS    ; ON          ; AUTO_CASCADE                                                  ;
+; IGNORE_CASCADE_BUFFERS ; OFF         ; IGNORE_CASCADE                                                ;
+; LPM_WIDTH              ; 8           ; Signed Integer                                                ;
+; LPM_DIRECTION          ; UP          ; Untyped                                                       ;
+; LPM_MODULUS            ; 0           ; Signed Integer                                                ;
+; LPM_AVALUE             ; UNUSED      ; Untyped                                                       ;
+; LPM_SVALUE             ; UNUSED      ; Untyped                                                       ;
+; LPM_PORT_UPDOWN        ; PORT_UNUSED ; Untyped                                                       ;
+; DEVICE_FAMILY          ; Cyclone II  ; Untyped                                                       ;
+; CARRY_CHAIN            ; MANUAL      ; Untyped                                                       ;
+; CARRY_CHAIN_LENGTH     ; 48          ; CARRY_CHAIN_LENGTH                                            ;
+; NOT_GATE_PUSH_BACK     ; ON          ; NOT_GATE_PUSH_BACK                                            ;
+; CARRY_CNT_EN           ; SMART       ; Untyped                                                       ;
+; LABWIDE_SCLR           ; ON          ; Untyped                                                       ;
+; USE_NEW_VERSION        ; TRUE        ; Untyped                                                       ;
+; CBXI_PARAMETER         ; cntr_j1k    ; Untyped                                                       ;
++------------------------+-------------+---------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: g27_musicbox_controller:inst11|LPM_ROM:song_rom1 ;
++------------------------+-------------------+--------------------------------------------------+
+; Parameter Name         ; Value             ; Type                                             ;
++------------------------+-------------------+--------------------------------------------------+
+; LPM_WIDTH              ; 16                ; Signed Integer                                   ;
+; LPM_WIDTHAD            ; 8                 ; Signed Integer                                   ;
+; LPM_NUMWORDS           ; 256               ; Signed Integer                                   ;
+; LPM_ADDRESS_CONTROL    ; REGISTERED        ; Untyped                                          ;
+; LPM_OUTDATA            ; UNREGISTERED      ; Untyped                                          ;
+; LPM_FILE               ; g00_demo_song.mif ; Untyped                                          ;
+; DEVICE_FAMILY          ; Cyclone II        ; Untyped                                          ;
+; AUTO_CARRY_CHAINS      ; ON                ; AUTO_CARRY                                       ;
+; IGNORE_CARRY_BUFFERS   ; OFF               ; IGNORE_CARRY                                     ;
+; AUTO_CASCADE_CHAINS    ; ON                ; AUTO_CASCADE                                     ;
+; IGNORE_CASCADE_BUFFERS ; OFF               ; IGNORE_CASCADE                                   ;
++------------------------+-------------------+--------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: g27_musicbox_controller:inst11|LPM_ROM:song_rom2 ;
++------------------------+--------------------+-------------------------------------------------+
+; Parameter Name         ; Value              ; Type                                            ;
++------------------------+--------------------+-------------------------------------------------+
+; LPM_WIDTH              ; 16                 ; Signed Integer                                  ;
+; LPM_WIDTHAD            ; 8                  ; Signed Integer                                  ;
+; LPM_NUMWORDS           ; 256                ; Signed Integer                                  ;
+; LPM_ADDRESS_CONTROL    ; REGISTERED         ; Untyped                                         ;
+; LPM_OUTDATA            ; UNREGISTERED       ; Untyped                                         ;
+; LPM_FILE               ; g27_demo_song2.mif ; Untyped                                         ;
+; DEVICE_FAMILY          ; Cyclone II         ; Untyped                                         ;
+; AUTO_CARRY_CHAINS      ; ON                 ; AUTO_CARRY                                      ;
+; IGNORE_CARRY_BUFFERS   ; OFF                ; IGNORE_CARRY                                    ;
+; AUTO_CASCADE_CHAINS    ; ON                 ; AUTO_CASCADE                                    ;
+; IGNORE_CASCADE_BUFFERS ; OFF                ; IGNORE_CASCADE                                  ;
++------------------------+--------------------+-------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: g27_tempo:inst9|LPM_ROM:inst0 ;
++------------------------+--------------+------------------------------------+
+; Parameter Name         ; Value        ; Type                               ;
++------------------------+--------------+------------------------------------+
+; LPM_WIDTH              ; 24           ; Signed Integer                     ;
+; LPM_WIDTHAD            ; 8            ; Signed Integer                     ;
+; LPM_NUMWORDS           ; 256          ; Signed Integer                     ;
+; LPM_ADDRESS_CONTROL    ; REGISTERED   ; Untyped                            ;
+; LPM_OUTDATA            ; UNREGISTERED ; Untyped                            ;
+; LPM_FILE               ; g27_bpm.mif  ; Untyped                            ;
+; DEVICE_FAMILY          ; Cyclone II   ; Untyped                            ;
+; AUTO_CARRY_CHAINS      ; ON           ; AUTO_CARRY                         ;
+; IGNORE_CARRY_BUFFERS   ; OFF          ; IGNORE_CARRY                       ;
+; AUTO_CASCADE_CHAINS    ; ON           ; AUTO_CASCADE                       ;
+; IGNORE_CASCADE_BUFFERS ; OFF          ; IGNORE_CASCADE                     ;
++------------------------+--------------+------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: g27_tempo:inst9|LPM_COUNTER:inst1 ;
++------------------------+-------------+-----------------------------------------+
+; Parameter Name         ; Value       ; Type                                    ;
++------------------------+-------------+-----------------------------------------+
+; AUTO_CARRY_CHAINS      ; ON          ; AUTO_CARRY                              ;
+; IGNORE_CARRY_BUFFERS   ; OFF         ; IGNORE_CARRY                            ;
+; AUTO_CASCADE_CHAINS    ; ON          ; AUTO_CASCADE                            ;
+; IGNORE_CASCADE_BUFFERS ; OFF         ; IGNORE_CASCADE                          ;
+; LPM_WIDTH              ; 24          ; Signed Integer                          ;
+; LPM_DIRECTION          ; DOWN        ; Untyped                                 ;
+; LPM_MODULUS            ; 0           ; Signed Integer                          ;
+; LPM_AVALUE             ; UNUSED      ; Untyped                                 ;
+; LPM_SVALUE             ; UNUSED      ; Untyped                                 ;
+; LPM_PORT_UPDOWN        ; PORT_UNUSED ; Untyped                                 ;
+; DEVICE_FAMILY          ; Cyclone II  ; Untyped                                 ;
+; CARRY_CHAIN            ; MANUAL      ; Untyped                                 ;
+; CARRY_CHAIN_LENGTH     ; 48          ; CARRY_CHAIN_LENGTH                      ;
+; NOT_GATE_PUSH_BACK     ; ON          ; NOT_GATE_PUSH_BACK                      ;
+; CARRY_CNT_EN           ; SMART       ; Untyped                                 ;
+; LABWIDE_SCLR           ; ON          ; Untyped                                 ;
+; USE_NEW_VERSION        ; TRUE        ; Untyped                                 ;
+; CBXI_PARAMETER         ; cntr_akk    ; Untyped                                 ;
++------------------------+-------------+-----------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: g27_tempo:inst9|LPM_COUNTER:inst2 ;
++------------------------+-------------+-----------------------------------------+
+; Parameter Name         ; Value       ; Type                                    ;
++------------------------+-------------+-----------------------------------------+
+; AUTO_CARRY_CHAINS      ; ON          ; AUTO_CARRY                              ;
+; IGNORE_CARRY_BUFFERS   ; OFF         ; IGNORE_CARRY                            ;
+; AUTO_CASCADE_CHAINS    ; ON          ; AUTO_CASCADE                            ;
+; IGNORE_CASCADE_BUFFERS ; OFF         ; IGNORE_CASCADE                          ;
+; LPM_WIDTH              ; 4           ; Signed Integer                          ;
+; LPM_DIRECTION          ; DOWN        ; Untyped                                 ;
+; LPM_MODULUS            ; 0           ; Signed Integer                          ;
+; LPM_AVALUE             ; UNUSED      ; Untyped                                 ;
+; LPM_SVALUE             ; UNUSED      ; Untyped                                 ;
+; LPM_PORT_UPDOWN        ; PORT_UNUSED ; Untyped                                 ;
+; DEVICE_FAMILY          ; Cyclone II  ; Untyped                                 ;
+; CARRY_CHAIN            ; MANUAL      ; Untyped                                 ;
+; CARRY_CHAIN_LENGTH     ; 48          ; CARRY_CHAIN_LENGTH                      ;
+; NOT_GATE_PUSH_BACK     ; ON          ; NOT_GATE_PUSH_BACK                      ;
+; CARRY_CNT_EN           ; SMART       ; Untyped                                 ;
+; LABWIDE_SCLR           ; ON          ; Untyped                                 ;
+; USE_NEW_VERSION        ; TRUE        ; Untyped                                 ;
+; CBXI_PARAMETER         ; cntr_f7l    ; Untyped                                 ;
++------------------------+-------------+-----------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: g27_tempo:inst9|g27_lpm_ff2:inst3|lpm_ff:lpm_ff_component ;
++------------------------+------------+------------------------------------------------------------------+
+; Parameter Name         ; Value      ; Type                                                             ;
++------------------------+------------+------------------------------------------------------------------+
+; LPM_WIDTH              ; 1          ; Signed Integer                                                   ;
+; LPM_AVALUE             ; UNUSED     ; Untyped                                                          ;
+; LPM_SVALUE             ; UNUSED     ; Untyped                                                          ;
+; LPM_FFTYPE             ; TFF        ; Untyped                                                          ;
+; DEVICE_FAMILY          ; Cyclone II ; Untyped                                                          ;
+; CBXI_PARAMETER         ; NOTHING    ; Untyped                                                          ;
+; AUTO_CARRY_CHAINS      ; ON         ; AUTO_CARRY                                                       ;
+; IGNORE_CARRY_BUFFERS   ; OFF        ; IGNORE_CARRY                                                     ;
+; AUTO_CASCADE_CHAINS    ; ON         ; AUTO_CASCADE                                                     ;
+; IGNORE_CASCADE_BUFFERS ; OFF        ; IGNORE_CASCADE                                                   ;
++------------------------+------------+------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: g27_lpm_mult:inst16|lpm_mult:lpm_mult_component ;
++------------------------------------------------+------------+--------------------------------+
+; Parameter Name                                 ; Value      ; Type                           ;
++------------------------------------------------+------------+--------------------------------+
+; AUTO_CARRY_CHAINS                              ; ON         ; AUTO_CARRY                     ;
+; IGNORE_CARRY_BUFFERS                           ; OFF        ; IGNORE_CARRY                   ;
+; AUTO_CASCADE_CHAINS                            ; ON         ; AUTO_CASCADE                   ;
+; IGNORE_CASCADE_BUFFERS                         ; OFF        ; IGNORE_CASCADE                 ;
+; LPM_WIDTHA                                     ; 8          ; Signed Integer                 ;
+; LPM_WIDTHB                                     ; 23         ; Signed Integer                 ;
+; LPM_WIDTHP                                     ; 31         ; Signed Integer                 ;
+; LPM_WIDTHR                                     ; 0          ; Untyped                        ;
+; LPM_WIDTHS                                     ; 1          ; Untyped                        ;
+; LPM_REPRESENTATION                             ; UNSIGNED   ; Untyped                        ;
+; LPM_PIPELINE                                   ; 0          ; Untyped                        ;
+; LATENCY                                        ; 0          ; Untyped                        ;
+; INPUT_A_IS_CONSTANT                            ; NO         ; Untyped                        ;
+; INPUT_B_IS_CONSTANT                            ; NO         ; Untyped                        ;
+; USE_EAB                                        ; OFF        ; Untyped                        ;
+; MAXIMIZE_SPEED                                 ; 5          ; Untyped                        ;
+; DEVICE_FAMILY                                  ; Cyclone II ; Untyped                        ;
+; CARRY_CHAIN                                    ; MANUAL     ; Untyped                        ;
+; APEX20K_TECHNOLOGY_MAPPER                      ; LUT        ; TECH_MAPPER_APEX20K            ;
+; DEDICATED_MULTIPLIER_CIRCUITRY                 ; AUTO       ; Untyped                        ;
+; DEDICATED_MULTIPLIER_MIN_INPUT_WIDTH_FOR_AUTO  ; 0          ; Untyped                        ;
+; DEDICATED_MULTIPLIER_MIN_OUTPUT_WIDTH_FOR_AUTO ; 0          ; Untyped                        ;
+; CBXI_PARAMETER                                 ; mult_k9n   ; Untyped                        ;
+; INPUT_A_FIXED_VALUE                            ; Bx         ; Untyped                        ;
+; INPUT_B_FIXED_VALUE                            ; Bx         ; Untyped                        ;
+; USE_AHDL_IMPLEMENTATION                        ; OFF        ; Untyped                        ;
++------------------------------------------------+------------+--------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: g27_Envelope:inst4|I0_mux:mux1|LPM_MUX:lpm_mux_component ;
++------------------------+------------+-----------------------------------------------------------------+
+; Parameter Name         ; Value      ; Type                                                            ;
++------------------------+------------+-----------------------------------------------------------------+
+; AUTO_CARRY_CHAINS      ; ON         ; AUTO_CARRY                                                      ;
+; IGNORE_CARRY_BUFFERS   ; OFF        ; IGNORE_CARRY                                                    ;
+; AUTO_CASCADE_CHAINS    ; ON         ; AUTO_CASCADE                                                    ;
+; IGNORE_CASCADE_BUFFERS ; OFF        ; IGNORE_CASCADE                                                  ;
+; LPM_WIDTH              ; 9          ; Signed Integer                                                  ;
+; LPM_SIZE               ; 2          ; Signed Integer                                                  ;
+; LPM_WIDTHS             ; 1          ; Signed Integer                                                  ;
+; LPM_PIPELINE           ; 0          ; Signed Integer                                                  ;
+; CBXI_PARAMETER         ; mux_83e    ; Untyped                                                         ;
+; DEVICE_FAMILY          ; Cyclone II ; Untyped                                                         ;
++------------------------+------------+-----------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: g27_Envelope:inst4|I0_mux:mux2|LPM_MUX:lpm_mux_component ;
++------------------------+------------+-----------------------------------------------------------------+
+; Parameter Name         ; Value      ; Type                                                            ;
++------------------------+------------+-----------------------------------------------------------------+
+; AUTO_CARRY_CHAINS      ; ON         ; AUTO_CARRY                                                      ;
+; IGNORE_CARRY_BUFFERS   ; OFF        ; IGNORE_CARRY                                                    ;
+; AUTO_CASCADE_CHAINS    ; ON         ; AUTO_CASCADE                                                    ;
+; IGNORE_CASCADE_BUFFERS ; OFF        ; IGNORE_CASCADE                                                  ;
+; LPM_WIDTH              ; 9          ; Signed Integer                                                  ;
+; LPM_SIZE               ; 2          ; Signed Integer                                                  ;
+; LPM_WIDTHS             ; 1          ; Signed Integer                                                  ;
+; LPM_PIPELINE           ; 0          ; Signed Integer                                                  ;
+; CBXI_PARAMETER         ; mux_83e    ; Untyped                                                         ;
+; DEVICE_FAMILY          ; Cyclone II ; Untyped                                                         ;
++------------------------+------------+-----------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: g27_Envelope:inst4|LPM_ADD_SUB:sub ;
++------------------------+-------------+------------------------------------------+
+; Parameter Name         ; Value       ; Type                                     ;
++------------------------+-------------+------------------------------------------+
+; LPM_WIDTH              ; 9           ; Signed Integer                           ;
+; LPM_REPRESENTATION     ; SIGNED      ; Untyped                                  ;
+; LPM_DIRECTION          ; SUB         ; Untyped                                  ;
+; ONE_INPUT_IS_CONSTANT  ; NO          ; Untyped                                  ;
+; LPM_PIPELINE           ; 0           ; Signed Integer                           ;
+; MAXIMIZE_SPEED         ; 5           ; Untyped                                  ;
+; REGISTERED_AT_END      ; 0           ; Untyped                                  ;
+; OPTIMIZE_FOR_SPEED     ; 5           ; Untyped                                  ;
+; USE_CS_BUFFERS         ; 1           ; Untyped                                  ;
+; CARRY_CHAIN            ; MANUAL      ; Untyped                                  ;
+; CARRY_CHAIN_LENGTH     ; 48          ; CARRY_CHAIN_LENGTH                       ;
+; DEVICE_FAMILY          ; Cyclone II  ; Untyped                                  ;
+; USE_WYS                ; OFF         ; Untyped                                  ;
+; STYLE                  ; FAST        ; Untyped                                  ;
+; CBXI_PARAMETER         ; add_sub_mqi ; Untyped                                  ;
+; AUTO_CARRY_CHAINS      ; ON          ; AUTO_CARRY                               ;
+; IGNORE_CARRY_BUFFERS   ; OFF         ; IGNORE_CARRY                             ;
+; AUTO_CASCADE_CHAINS    ; ON          ; AUTO_CASCADE                             ;
+; IGNORE_CASCADE_BUFFERS ; OFF         ; IGNORE_CASCADE                           ;
++------------------------+-------------+------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: g27_Envelope:inst4|lpm_mult:mult     ;
++------------------------------------------------+------------+---------------------+
+; Parameter Name                                 ; Value      ; Type                ;
++------------------------------------------------+------------+---------------------+
+; AUTO_CARRY_CHAINS                              ; ON         ; AUTO_CARRY          ;
+; IGNORE_CARRY_BUFFERS                           ; OFF        ; IGNORE_CARRY        ;
+; AUTO_CASCADE_CHAINS                            ; ON         ; AUTO_CASCADE        ;
+; IGNORE_CASCADE_BUFFERS                         ; OFF        ; IGNORE_CASCADE      ;
+; LPM_WIDTHA                                     ; 9          ; Signed Integer      ;
+; LPM_WIDTHB                                     ; 9          ; Signed Integer      ;
+; LPM_WIDTHP                                     ; 24         ; Signed Integer      ;
+; LPM_WIDTHR                                     ; 0          ; Untyped             ;
+; LPM_WIDTHS                                     ; 1          ; Signed Integer      ;
+; LPM_REPRESENTATION                             ; SIGNED     ; Untyped             ;
+; LPM_PIPELINE                                   ; 0          ; Signed Integer      ;
+; LATENCY                                        ; 0          ; Untyped             ;
+; INPUT_A_IS_CONSTANT                            ; NO         ; Untyped             ;
+; INPUT_B_IS_CONSTANT                            ; NO         ; Untyped             ;
+; USE_EAB                                        ; OFF        ; Untyped             ;
+; MAXIMIZE_SPEED                                 ; 5          ; Untyped             ;
+; DEVICE_FAMILY                                  ; Cyclone II ; Untyped             ;
+; CARRY_CHAIN                                    ; MANUAL     ; Untyped             ;
+; APEX20K_TECHNOLOGY_MAPPER                      ; LUT        ; TECH_MAPPER_APEX20K ;
+; DEDICATED_MULTIPLIER_CIRCUITRY                 ; AUTO       ; Untyped             ;
+; DEDICATED_MULTIPLIER_MIN_INPUT_WIDTH_FOR_AUTO  ; 0          ; Untyped             ;
+; DEDICATED_MULTIPLIER_MIN_OUTPUT_WIDTH_FOR_AUTO ; 0          ; Untyped             ;
+; CBXI_PARAMETER                                 ; mult_sjp   ; Untyped             ;
+; INPUT_A_FIXED_VALUE                            ; Bx         ; Untyped             ;
+; INPUT_B_FIXED_VALUE                            ; Bx         ; Untyped             ;
+; USE_AHDL_IMPLEMENTATION                        ; OFF        ; Untyped             ;
++------------------------------------------------+------------+---------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: g27_Envelope:inst4|LPM_ADD_SUB:add ;
++------------------------+-------------+------------------------------------------+
+; Parameter Name         ; Value       ; Type                                     ;
++------------------------+-------------+------------------------------------------+
+; LPM_WIDTH              ; 24          ; Signed Integer                           ;
+; LPM_REPRESENTATION     ; UNSIGNED    ; Untyped                                  ;
+; LPM_DIRECTION          ; ADD         ; Untyped                                  ;
+; ONE_INPUT_IS_CONSTANT  ; NO          ; Untyped                                  ;
+; LPM_PIPELINE           ; 0           ; Signed Integer                           ;
+; MAXIMIZE_SPEED         ; 5           ; Untyped                                  ;
+; REGISTERED_AT_END      ; 0           ; Untyped                                  ;
+; OPTIMIZE_FOR_SPEED     ; 5           ; Untyped                                  ;
+; USE_CS_BUFFERS         ; 1           ; Untyped                                  ;
+; CARRY_CHAIN            ; MANUAL      ; Untyped                                  ;
+; CARRY_CHAIN_LENGTH     ; 48          ; CARRY_CHAIN_LENGTH                       ;
+; DEVICE_FAMILY          ; Cyclone II  ; Untyped                                  ;
+; USE_WYS                ; OFF         ; Untyped                                  ;
+; STYLE                  ; FAST        ; Untyped                                  ;
+; CBXI_PARAMETER         ; add_sub_52j ; Untyped                                  ;
+; AUTO_CARRY_CHAINS      ; ON          ; AUTO_CARRY                               ;
+; IGNORE_CARRY_BUFFERS   ; OFF         ; IGNORE_CARRY                             ;
+; AUTO_CASCADE_CHAINS    ; ON          ; AUTO_CASCADE                             ;
+; IGNORE_CASCADE_BUFFERS ; OFF         ; IGNORE_CASCADE                           ;
++------------------------+-------------+------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: g27_Envelope:inst4|lpm_ff:reg ;
++------------------------+------------+--------------------------------------+
+; Parameter Name         ; Value      ; Type                                 ;
++------------------------+------------+--------------------------------------+
+; LPM_WIDTH              ; 24         ; Signed Integer                       ;
+; LPM_AVALUE             ; UNUSED     ; Untyped                              ;
+; LPM_SVALUE             ; UNUSED     ; Untyped                              ;
+; LPM_FFTYPE             ; DFF        ; Untyped                              ;
+; DEVICE_FAMILY          ; Cyclone II ; Untyped                              ;
+; CBXI_PARAMETER         ; NOTHING    ; Untyped                              ;
+; AUTO_CARRY_CHAINS      ; ON         ; AUTO_CARRY                           ;
+; IGNORE_CARRY_BUFFERS   ; OFF        ; IGNORE_CARRY                         ;
+; AUTO_CASCADE_CHAINS    ; ON         ; AUTO_CASCADE                         ;
+; IGNORE_CASCADE_BUFFERS ; OFF        ; IGNORE_CASCADE                       ;
++------------------------+------------+--------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: g27_updater:inst3|LPM_COUNTER:count ;
++------------------------+-------------+-------------------------------------------+
+; Parameter Name         ; Value       ; Type                                      ;
++------------------------+-------------+-------------------------------------------+
+; AUTO_CARRY_CHAINS      ; ON          ; AUTO_CARRY                                ;
+; IGNORE_CARRY_BUFFERS   ; OFF         ; IGNORE_CARRY                              ;
+; AUTO_CASCADE_CHAINS    ; ON          ; AUTO_CASCADE                              ;
+; IGNORE_CASCADE_BUFFERS ; OFF         ; IGNORE_CASCADE                            ;
+; LPM_WIDTH              ; 11          ; Signed Integer                            ;
+; LPM_DIRECTION          ; DOWN        ; Untyped                                   ;
+; LPM_MODULUS            ; 0           ; Signed Integer                            ;
+; LPM_AVALUE             ; UNUSED      ; Untyped                                   ;
+; LPM_SVALUE             ; UNUSED      ; Untyped                                   ;
+; LPM_PORT_UPDOWN        ; PORT_UNUSED ; Untyped                                   ;
+; DEVICE_FAMILY          ; Cyclone II  ; Untyped                                   ;
+; CARRY_CHAIN            ; MANUAL      ; Untyped                                   ;
+; CARRY_CHAIN_LENGTH     ; 48          ; CARRY_CHAIN_LENGTH                        ;
+; NOT_GATE_PUSH_BACK     ; ON          ; NOT_GATE_PUSH_BACK                        ;
+; CARRY_CNT_EN           ; SMART       ; Untyped                                   ;
+; LABWIDE_SCLR           ; ON          ; Untyped                                   ;
+; USE_NEW_VERSION        ; TRUE        ; Untyped                                   ;
+; CBXI_PARAMETER         ; cntr_6kk    ; Untyped                                   ;
++------------------------+-------------+-------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------+
+; lpm_mult Parameter Settings by Entity Instance                                          ;
++---------------------------------------+-------------------------------------------------+
+; Name                                  ; Value                                           ;
++---------------------------------------+-------------------------------------------------+
+; Number of entity instances            ; 2                                               ;
+; Entity Instance                       ; g27_lpm_mult:inst16|lpm_mult:lpm_mult_component ;
+;     -- LPM_WIDTHA                     ; 8                                               ;
+;     -- LPM_WIDTHB                     ; 23                                              ;
+;     -- LPM_WIDTHP                     ; 31                                              ;
+;     -- LPM_REPRESENTATION             ; UNSIGNED                                        ;
+;     -- INPUT_A_IS_CONSTANT            ; NO                                              ;
+;     -- INPUT_B_IS_CONSTANT            ; NO                                              ;
+;     -- USE_EAB                        ; OFF                                             ;
+;     -- DEDICATED_MULTIPLIER_CIRCUITRY ; AUTO                                            ;
+;     -- INPUT_A_FIXED_VALUE            ; Bx                                              ;
+;     -- INPUT_B_FIXED_VALUE            ; Bx                                              ;
+; Entity Instance                       ; g27_Envelope:inst4|lpm_mult:mult                ;
+;     -- LPM_WIDTHA                     ; 9                                               ;
+;     -- LPM_WIDTHB                     ; 9                                               ;
+;     -- LPM_WIDTHP                     ; 24                                              ;
+;     -- LPM_REPRESENTATION             ; SIGNED                                          ;
+;     -- INPUT_A_IS_CONSTANT            ; NO                                              ;
+;     -- INPUT_B_IS_CONSTANT            ; NO                                              ;
+;     -- USE_EAB                        ; OFF                                             ;
+;     -- DEDICATED_MULTIPLIER_CIRCUITRY ; AUTO                                            ;
+;     -- INPUT_A_FIXED_VALUE            ; Bx                                              ;
+;     -- INPUT_B_FIXED_VALUE            ; Bx                                              ;
++---------------------------------------+-------------------------------------------------+
+
+
++------------------------------------------------------------+
+; Port Connectivity Checks: "g27_Envelope:inst4|I0_mux:mux2" ;
++-----------+-------+----------+-----------------------------+
+; Port      ; Type  ; Severity ; Details                     ;
++-----------+-------+----------+-----------------------------+
+; data0x[8] ; Input ; Info     ; Stuck at GND                ;
+; data1x[8] ; Input ; Info     ; Stuck at GND                ;
++-----------+-------+----------+-----------------------------+
+
+
++------------------------------------------------------------+
+; Port Connectivity Checks: "g27_Envelope:inst4|I0_mux:mux1" ;
++--------------+-------+----------+--------------------------+
+; Port         ; Type  ; Severity ; Details                  ;
++--------------+-------+----------+--------------------------+
+; data0x       ; Input ; Info     ; Stuck at GND             ;
+; data1x[7..0] ; Input ; Info     ; Stuck at VCC             ;
+; data1x[8]    ; Input ; Info     ; Stuck at GND             ;
++--------------+-------+----------+--------------------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit Analysis & Synthesis
+    Info: Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Full Version
+    Info: Processing started: Mon Dec 02 02:23:27 2013
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off g27_lab5 -c g27_lab5
+Info: Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info: Found 2 design units, including 1 entities, in source file g00_audio_interface.vhd
+    Info: Found design unit 1: g00_audio_interface-a
+    Info: Found entity 1: g00_audio_interface
+Info: Found 2 design units, including 1 entities, in source file g00_decimator.vhd
+    Info: Found design unit 1: g00_decimator-a
+    Info: Found entity 1: g00_decimator
+Info: Found 2 design units, including 1 entities, in source file g27_envelope.vhd
+    Info: Found design unit 1: g27_Envelope-inside
+    Info: Found entity 1: g27_Envelope
+Info: Found 2 design units, including 1 entities, in source file g27_level_display.vhd
+    Info: Found design unit 1: g27_level_display-inside
+    Info: Found entity 1: g27_level_display
+Info: Found 2 design units, including 1 entities, in source file g27_note_timer.vhd
+    Info: Found design unit 1: g27_note_timer-inside
+    Info: Found entity 1: g27_note_timer
+Info: Found 2 design units, including 1 entities, in source file g27_square_wave.vhd
+    Info: Found design unit 1: g27_square_wave-inside
+    Info: Found entity 1: g27_square_wave
+Info: Found 2 design units, including 1 entities, in source file g27_tempo.vhd
+    Info: Found design unit 1: g27_tempo-inside
+    Info: Found entity 1: g27_tempo
+Info: Found 2 design units, including 1 entities, in source file g27_updater.vhd
+    Info: Found design unit 1: g27_updater-inside
+    Info: Found entity 1: g27_updater
+Info: Found 1 design units, including 1 entities, in source file g27_complete_design.bdf
+    Info: Found entity 1: g27_complete_design
+Info: Found 2 design units, including 1 entities, in source file g27_lpm_mult.vhd
+    Info: Found design unit 1: g27_lpm_mult-SYN
+    Info: Found entity 1: g27_lpm_mult
+Info: Found 2 design units, including 1 entities, in source file g27_musicbox_controller.vhd
+    Info: Found design unit 1: g27_musicbox_controller-inside
+    Info: Found entity 1: g27_musicbox_controller
+Warning: Can't analyze file -- file ../Lab4/g27_volume_calculator.vhd is missing
+Info: Found 2 design units, including 1 entities, in source file g27_volume_calculator.vhd
+    Info: Found design unit 1: g27_volume_calculator-inside
+    Info: Found entity 1: g27_volume_calculator
+Info: Found 2 design units, including 1 entities, in source file g27_musicbox_controller2.vhd
+    Info: Found design unit 1: g27_musicbox_controller2-inside
+    Info: Found entity 1: g27_musicbox_controller2
+Info: Found 2 design units, including 1 entities, in source file g27_rest_calculator.vhd
+    Info: Found design unit 1: g27_rest_calculator-inside
+    Info: Found entity 1: g27_rest_calculator
+Info: Found 2 design units, including 1 entities, in source file g27_envelope_controller.vhd
+    Info: Found design unit 1: g27_envelope_controller-inside
+    Info: Found entity 1: g27_envelope_controller
+Info: Found 2 design units, including 1 entities, in source file g27_status_display_controller.vhd
+    Info: Found design unit 1: g27_status_display_controller-inside
+    Info: Found entity 1: g27_status_display_controller
+Info: Elaborating entity "g27_complete_design" for the top level hierarchy
+Warning: Pin "pin_name22" is missing source
+Warning: Pin "test_input" not connected
+Warning: Pin "test_tempo_enable" not connected
+Info: Elaborating entity "g00_audio_interface" for hierarchy "g00_audio_interface:inst"
+Info: Elaborating entity "g00_decimator" for hierarchy "g00_decimator:inst1"
+Info: Elaborating entity "g27_square_wave" for hierarchy "g27_square_wave:inst2"
+Warning: Using design file g27_exp.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info: Found design unit 1: g27_exp-exp
+    Info: Found entity 1: g27_exp
+Info: Elaborating entity "g27_exp" for hierarchy "g27_square_wave:inst2|g27_exp:inst1"
+Info: Elaborating entity "g27_musicbox_controller" for hierarchy "g27_musicbox_controller:inst11"
+Warning (10492): VHDL Process Statement warning at g27_musicbox_controller.vhd(94): signal "song_done" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at g27_musicbox_controller.vhd(108): signal "loop_mode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10631): VHDL Process Statement warning at g27_musicbox_controller.vhd(61): inferring latch(es) for signal or variable "next_state", which holds its previous value in one or more paths through the process
+Info (10041): Inferred latch for "next_state.waitForNextNote" at g27_musicbox_controller.vhd(61)
+Info (10041): Inferred latch for "next_state.loadingNewNote" at g27_musicbox_controller.vhd(61)
+Info (10041): Inferred latch for "next_state.playFirstNote" at g27_musicbox_controller.vhd(61)
+Info: Elaborating entity "LPM_COUNTER" for hierarchy "g27_musicbox_controller:inst11|LPM_COUNTER:note_counter"
+Info: Elaborated megafunction instantiation "g27_musicbox_controller:inst11|LPM_COUNTER:note_counter"
+Info: Instantiated megafunction "g27_musicbox_controller:inst11|LPM_COUNTER:note_counter" with the following parameter:
+    Info: Parameter "LPM_WIDTH" = "8"
+    Info: Parameter "LPM_MODULUS" = "0"
+    Info: Parameter "LPM_DIRECTION" = "UP"
+    Info: Parameter "LPM_AVALUE" = "UNUSED"
+    Info: Parameter "LPM_SVALUE" = "UNUSED"
+    Info: Parameter "LPM_PORT_UPDOWN" = "PORT_UNUSED"
+    Info: Parameter "LPM_PVALUE" = "UNUSED"
+    Info: Parameter "LPM_TYPE" = "LPM_COUNTER"
+    Info: Parameter "LPM_HINT" = "UNUSED"
+Info: Found 1 design units, including 1 entities, in source file db/cntr_j1k.tdf
+    Info: Found entity 1: cntr_j1k
+Info: Elaborating entity "cntr_j1k" for hierarchy "g27_musicbox_controller:inst11|LPM_COUNTER:note_counter|cntr_j1k:auto_generated"
+Info: Elaborating entity "LPM_ROM" for hierarchy "g27_musicbox_controller:inst11|LPM_ROM:song_rom1"
+Info: Elaborated megafunction instantiation "g27_musicbox_controller:inst11|LPM_ROM:song_rom1"
+Info: Instantiated megafunction "g27_musicbox_controller:inst11|LPM_ROM:song_rom1" with the following parameter:
+    Info: Parameter "LPM_WIDTH" = "16"
+    Info: Parameter "LPM_WIDTHAD" = "8"
+    Info: Parameter "LPM_NUMWORDS" = "256"
+    Info: Parameter "LPM_ADDRESS_CONTROL" = "REGISTERED"
+    Info: Parameter "LPM_OUTDATA" = "UNREGISTERED"
+    Info: Parameter "LPM_FILE" = "g00_demo_song.mif"
+    Info: Parameter "LPM_TYPE" = "LPM_ROM"
+    Info: Parameter "INTENDED_DEVICE_FAMILY" = "UNUSED"
+    Info: Parameter "LPM_HINT" = "UNUSED"
+Info: Elaborating entity "altrom" for hierarchy "g27_musicbox_controller:inst11|LPM_ROM:song_rom1|altrom:srom"
+Info: Elaborated megafunction instantiation "g27_musicbox_controller:inst11|LPM_ROM:song_rom1|altrom:srom", which is child of megafunction instantiation "g27_musicbox_controller:inst11|LPM_ROM:song_rom1"
+Info: Elaborating entity "altsyncram" for hierarchy "g27_musicbox_controller:inst11|LPM_ROM:song_rom1|altrom:srom|altsyncram:rom_block"
+Info: Elaborated megafunction instantiation "g27_musicbox_controller:inst11|LPM_ROM:song_rom1|altrom:srom|altsyncram:rom_block", which is child of megafunction instantiation "g27_musicbox_controller:inst11|LPM_ROM:song_rom1"
+Info: Found 1 design units, including 1 entities, in source file db/altsyncram_eo01.tdf
+    Info: Found entity 1: altsyncram_eo01
+Info: Elaborating entity "altsyncram_eo01" for hierarchy "g27_musicbox_controller:inst11|LPM_ROM:song_rom1|altrom:srom|altsyncram:rom_block|altsyncram_eo01:auto_generated"
+Info: Elaborating entity "LPM_ROM" for hierarchy "g27_musicbox_controller:inst11|LPM_ROM:song_rom2"
+Info: Elaborated megafunction instantiation "g27_musicbox_controller:inst11|LPM_ROM:song_rom2"
+Info: Instantiated megafunction "g27_musicbox_controller:inst11|LPM_ROM:song_rom2" with the following parameter:
+    Info: Parameter "LPM_WIDTH" = "16"
+    Info: Parameter "LPM_WIDTHAD" = "8"
+    Info: Parameter "LPM_NUMWORDS" = "256"
+    Info: Parameter "LPM_ADDRESS_CONTROL" = "REGISTERED"
+    Info: Parameter "LPM_OUTDATA" = "UNREGISTERED"
+    Info: Parameter "LPM_FILE" = "g27_demo_song2.mif"
+    Info: Parameter "LPM_TYPE" = "LPM_ROM"
+    Info: Parameter "INTENDED_DEVICE_FAMILY" = "UNUSED"
+    Info: Parameter "LPM_HINT" = "UNUSED"
+Info: Elaborating entity "altrom" for hierarchy "g27_musicbox_controller:inst11|LPM_ROM:song_rom2|altrom:srom"
+Info: Elaborated megafunction instantiation "g27_musicbox_controller:inst11|LPM_ROM:song_rom2|altrom:srom", which is child of megafunction instantiation "g27_musicbox_controller:inst11|LPM_ROM:song_rom2"
+Info: Elaborating entity "altsyncram" for hierarchy "g27_musicbox_controller:inst11|LPM_ROM:song_rom2|altrom:srom|altsyncram:rom_block"
+Info: Elaborated megafunction instantiation "g27_musicbox_controller:inst11|LPM_ROM:song_rom2|altrom:srom|altsyncram:rom_block", which is child of megafunction instantiation "g27_musicbox_controller:inst11|LPM_ROM:song_rom2"
+Info: Found 1 design units, including 1 entities, in source file db/altsyncram_9q01.tdf
+    Info: Found entity 1: altsyncram_9q01
+Info: Elaborating entity "altsyncram_9q01" for hierarchy "g27_musicbox_controller:inst11|LPM_ROM:song_rom2|altrom:srom|altsyncram:rom_block|altsyncram_9q01:auto_generated"
+Info: Elaborating entity "g27_note_timer" for hierarchy "g27_note_timer:inst8"
+Info: Elaborating entity "g27_tempo" for hierarchy "g27_tempo:inst9"
+Info: Elaborating entity "LPM_ROM" for hierarchy "g27_tempo:inst9|LPM_ROM:inst0"
+Info: Elaborated megafunction instantiation "g27_tempo:inst9|LPM_ROM:inst0"
+Info: Instantiated megafunction "g27_tempo:inst9|LPM_ROM:inst0" with the following parameter:
+    Info: Parameter "LPM_WIDTH" = "24"
+    Info: Parameter "LPM_WIDTHAD" = "8"
+    Info: Parameter "LPM_NUMWORDS" = "256"
+    Info: Parameter "LPM_ADDRESS_CONTROL" = "REGISTERED"
+    Info: Parameter "LPM_OUTDATA" = "UNREGISTERED"
+    Info: Parameter "LPM_FILE" = "g27_bpm.mif"
+    Info: Parameter "LPM_TYPE" = "LPM_ROM"
+    Info: Parameter "INTENDED_DEVICE_FAMILY" = "UNUSED"
+    Info: Parameter "LPM_HINT" = "UNUSED"
+Info: Elaborating entity "altrom" for hierarchy "g27_tempo:inst9|LPM_ROM:inst0|altrom:srom"
+Info: Elaborated megafunction instantiation "g27_tempo:inst9|LPM_ROM:inst0|altrom:srom", which is child of megafunction instantiation "g27_tempo:inst9|LPM_ROM:inst0"
+Info: Elaborating entity "altsyncram" for hierarchy "g27_tempo:inst9|LPM_ROM:inst0|altrom:srom|altsyncram:rom_block"
+Info: Elaborated megafunction instantiation "g27_tempo:inst9|LPM_ROM:inst0|altrom:srom|altsyncram:rom_block", which is child of megafunction instantiation "g27_tempo:inst9|LPM_ROM:inst0"
+Info: Found 1 design units, including 1 entities, in source file db/altsyncram_q401.tdf
+    Info: Found entity 1: altsyncram_q401
+Info: Elaborating entity "altsyncram_q401" for hierarchy "g27_tempo:inst9|LPM_ROM:inst0|altrom:srom|altsyncram:rom_block|altsyncram_q401:auto_generated"
+Info: Elaborating entity "LPM_COUNTER" for hierarchy "g27_tempo:inst9|LPM_COUNTER:inst1"
+Info: Elaborated megafunction instantiation "g27_tempo:inst9|LPM_COUNTER:inst1"
+Info: Instantiated megafunction "g27_tempo:inst9|LPM_COUNTER:inst1" with the following parameter:
+    Info: Parameter "LPM_WIDTH" = "24"
+    Info: Parameter "LPM_MODULUS" = "0"
+    Info: Parameter "LPM_DIRECTION" = "DOWN"
+    Info: Parameter "LPM_AVALUE" = "UNUSED"
+    Info: Parameter "LPM_SVALUE" = "UNUSED"
+    Info: Parameter "LPM_PORT_UPDOWN" = "PORT_UNUSED"
+    Info: Parameter "LPM_PVALUE" = "UNUSED"
+    Info: Parameter "LPM_TYPE" = "LPM_COUNTER"
+    Info: Parameter "LPM_HINT" = "UNUSED"
+Info: Found 1 design units, including 1 entities, in source file db/cntr_akk.tdf
+    Info: Found entity 1: cntr_akk
+Info: Elaborating entity "cntr_akk" for hierarchy "g27_tempo:inst9|LPM_COUNTER:inst1|cntr_akk:auto_generated"
+Info: Elaborating entity "LPM_COUNTER" for hierarchy "g27_tempo:inst9|LPM_COUNTER:inst2"
+Info: Elaborated megafunction instantiation "g27_tempo:inst9|LPM_COUNTER:inst2"
+Info: Instantiated megafunction "g27_tempo:inst9|LPM_COUNTER:inst2" with the following parameter:
+    Info: Parameter "LPM_WIDTH" = "4"
+    Info: Parameter "LPM_MODULUS" = "0"
+    Info: Parameter "LPM_DIRECTION" = "DOWN"
+    Info: Parameter "LPM_AVALUE" = "UNUSED"
+    Info: Parameter "LPM_SVALUE" = "UNUSED"
+    Info: Parameter "LPM_PORT_UPDOWN" = "PORT_UNUSED"
+    Info: Parameter "LPM_PVALUE" = "UNUSED"
+    Info: Parameter "LPM_TYPE" = "LPM_COUNTER"
+    Info: Parameter "LPM_HINT" = "UNUSED"
+Info: Found 1 design units, including 1 entities, in source file db/cntr_f7l.tdf
+    Info: Found entity 1: cntr_f7l
+Info: Elaborating entity "cntr_f7l" for hierarchy "g27_tempo:inst9|LPM_COUNTER:inst2|cntr_f7l:auto_generated"
+Warning: Using design file g27_lpm_ff2.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info: Found design unit 1: g27_lpm_ff2-SYN
+    Info: Found entity 1: g27_lpm_ff2
+Info: Elaborating entity "g27_lpm_ff2" for hierarchy "g27_tempo:inst9|g27_lpm_ff2:inst3"
+Info: Elaborating entity "lpm_ff" for hierarchy "g27_tempo:inst9|g27_lpm_ff2:inst3|lpm_ff:lpm_ff_component"
+Info: Elaborated megafunction instantiation "g27_tempo:inst9|g27_lpm_ff2:inst3|lpm_ff:lpm_ff_component"
+Info: Instantiated megafunction "g27_tempo:inst9|g27_lpm_ff2:inst3|lpm_ff:lpm_ff_component" with the following parameter:
+    Info: Parameter "lpm_fftype" = "TFF"
+    Info: Parameter "lpm_type" = "LPM_FF"
+    Info: Parameter "lpm_width" = "1"
+Info: Elaborating entity "g27_rest_calculator" for hierarchy "g27_rest_calculator:inst14"
+Info: Elaborating entity "g27_lpm_mult" for hierarchy "g27_lpm_mult:inst16"
+Info: Elaborating entity "lpm_mult" for hierarchy "g27_lpm_mult:inst16|lpm_mult:lpm_mult_component"
+Info: Elaborated megafunction instantiation "g27_lpm_mult:inst16|lpm_mult:lpm_mult_component"
+Info: Instantiated megafunction "g27_lpm_mult:inst16|lpm_mult:lpm_mult_component" with the following parameter:
+    Info: Parameter "lpm_hint" = "MAXIMIZE_SPEED=5"
+    Info: Parameter "lpm_representation" = "UNSIGNED"
+    Info: Parameter "lpm_type" = "LPM_MULT"
+    Info: Parameter "lpm_widtha" = "8"
+    Info: Parameter "lpm_widthb" = "23"
+    Info: Parameter "lpm_widthp" = "31"
+Info: Found 1 design units, including 1 entities, in source file db/mult_k9n.tdf
+    Info: Found entity 1: mult_k9n
+Info: Elaborating entity "mult_k9n" for hierarchy "g27_lpm_mult:inst16|lpm_mult:lpm_mult_component|mult_k9n:auto_generated"
+Info: Elaborating entity "g27_Envelope" for hierarchy "g27_Envelope:inst4"
+Warning: Using design file i0_mux.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info: Found design unit 1: i0_mux-SYN
+    Info: Found entity 1: I0_mux
+Info: Elaborating entity "I0_mux" for hierarchy "g27_Envelope:inst4|I0_mux:mux1"
+Info: Elaborating entity "LPM_MUX" for hierarchy "g27_Envelope:inst4|I0_mux:mux1|LPM_MUX:lpm_mux_component"
+Info: Elaborated megafunction instantiation "g27_Envelope:inst4|I0_mux:mux1|LPM_MUX:lpm_mux_component"
+Info: Instantiated megafunction "g27_Envelope:inst4|I0_mux:mux1|LPM_MUX:lpm_mux_component" with the following parameter:
+    Info: Parameter "LPM_WIDTH" = "9"
+    Info: Parameter "LPM_SIZE" = "2"
+    Info: Parameter "LPM_WIDTHS" = "1"
+    Info: Parameter "LPM_PIPELINE" = "0"
+    Info: Parameter "LPM_TYPE" = "LPM_MUX"
+    Info: Parameter "LPM_HINT" = "UNUSED"
+Info: Found 1 design units, including 1 entities, in source file db/mux_83e.tdf
+    Info: Found entity 1: mux_83e
+Info: Elaborating entity "mux_83e" for hierarchy "g27_Envelope:inst4|I0_mux:mux1|LPM_MUX:lpm_mux_component|mux_83e:auto_generated"
+Info: Elaborating entity "LPM_ADD_SUB" for hierarchy "g27_Envelope:inst4|LPM_ADD_SUB:sub"
+Info: Elaborated megafunction instantiation "g27_Envelope:inst4|LPM_ADD_SUB:sub"
+Info: Instantiated megafunction "g27_Envelope:inst4|LPM_ADD_SUB:sub" with the following parameter:
+    Info: Parameter "LPM_WIDTH" = "9"
+    Info: Parameter "LPM_DIRECTION" = "SUB"
+    Info: Parameter "LPM_REPRESENTATION" = "SIGNED"
+    Info: Parameter "LPM_PIPELINE" = "0"
+    Info: Parameter "LPM_TYPE" = "LPM_ADD_SUB"
+    Info: Parameter "LPM_HINT" = "ONE_INPUT_IS_CONSTANT=NO,CIN_USED=NO"
+Info: Found 1 design units, including 1 entities, in source file db/add_sub_mqi.tdf
+    Info: Found entity 1: add_sub_mqi
+Info: Elaborating entity "add_sub_mqi" for hierarchy "g27_Envelope:inst4|LPM_ADD_SUB:sub|add_sub_mqi:auto_generated"
+Info: Elaborating entity "lpm_mult" for hierarchy "g27_Envelope:inst4|lpm_mult:mult"
+Info: Elaborated megafunction instantiation "g27_Envelope:inst4|lpm_mult:mult"
+Info: Instantiated megafunction "g27_Envelope:inst4|lpm_mult:mult" with the following parameter:
+    Info: Parameter "LPM_WIDTHA" = "9"
+    Info: Parameter "LPM_WIDTHB" = "9"
+    Info: Parameter "LPM_WIDTHS" = "1"
+    Info: Parameter "LPM_WIDTHP" = "24"
+    Info: Parameter "LPM_REPRESENTATION" = "SIGNED"
+    Info: Parameter "LPM_PIPELINE" = "0"
+    Info: Parameter "LPM_TYPE" = "LPM_MULT"
+    Info: Parameter "LPM_HINT" = "MAXIMIZE_SPEED=5"
+Info: Found 1 design units, including 1 entities, in source file db/mult_sjp.tdf
+    Info: Found entity 1: mult_sjp
+Info: Elaborating entity "mult_sjp" for hierarchy "g27_Envelope:inst4|lpm_mult:mult|mult_sjp:auto_generated"
+Info: Elaborating entity "LPM_ADD_SUB" for hierarchy "g27_Envelope:inst4|LPM_ADD_SUB:add"
+Info: Elaborated megafunction instantiation "g27_Envelope:inst4|LPM_ADD_SUB:add"
+Info: Instantiated megafunction "g27_Envelope:inst4|LPM_ADD_SUB:add" with the following parameter:
+    Info: Parameter "LPM_WIDTH" = "24"
+    Info: Parameter "LPM_DIRECTION" = "ADD"
+    Info: Parameter "LPM_REPRESENTATION" = "UNSIGNED"
+    Info: Parameter "LPM_PIPELINE" = "0"
+    Info: Parameter "LPM_TYPE" = "LPM_ADD_SUB"
+    Info: Parameter "LPM_HINT" = "ONE_INPUT_IS_CONSTANT=NO,CIN_USED=NO"
+Info: Found 1 design units, including 1 entities, in source file db/add_sub_52j.tdf
+    Info: Found entity 1: add_sub_52j
+Info: Elaborating entity "add_sub_52j" for hierarchy "g27_Envelope:inst4|LPM_ADD_SUB:add|add_sub_52j:auto_generated"
+Info: Elaborating entity "lpm_ff" for hierarchy "g27_Envelope:inst4|lpm_ff:reg"
+Info: Elaborated megafunction instantiation "g27_Envelope:inst4|lpm_ff:reg"
+Info: Instantiated megafunction "g27_Envelope:inst4|lpm_ff:reg" with the following parameter:
+    Info: Parameter "LPM_WIDTH" = "24"
+    Info: Parameter "LPM_AVALUE" = "UNUSED"
+    Info: Parameter "LPM_SVALUE" = "UNUSED"
+    Info: Parameter "LPM_PVALUE" = "UNUSED"
+    Info: Parameter "LPM_FFTYPE" = "DFF"
+    Info: Parameter "LPM_TYPE" = "LPM_FF"
+    Info: Parameter "LPM_HINT" = "UNUSED"
+Info: Elaborating entity "g27_updater" for hierarchy "g27_updater:inst3"
+Info: Elaborating entity "LPM_COUNTER" for hierarchy "g27_updater:inst3|LPM_COUNTER:count"
+Info: Elaborated megafunction instantiation "g27_updater:inst3|LPM_COUNTER:count"
+Info: Instantiated megafunction "g27_updater:inst3|LPM_COUNTER:count" with the following parameter:
+    Info: Parameter "LPM_WIDTH" = "11"
+    Info: Parameter "LPM_MODULUS" = "0"
+    Info: Parameter "LPM_DIRECTION" = "DOWN"
+    Info: Parameter "LPM_AVALUE" = "UNUSED"
+    Info: Parameter "LPM_SVALUE" = "UNUSED"
+    Info: Parameter "LPM_PORT_UPDOWN" = "PORT_UNUSED"
+    Info: Parameter "LPM_PVALUE" = "UNUSED"
+    Info: Parameter "LPM_TYPE" = "LPM_COUNTER"
+    Info: Parameter "LPM_HINT" = "UNUSED"
+Info: Found 1 design units, including 1 entities, in source file db/cntr_6kk.tdf
+    Info: Found entity 1: cntr_6kk
+Info: Elaborating entity "cntr_6kk" for hierarchy "g27_updater:inst3|LPM_COUNTER:count|cntr_6kk:auto_generated"
+Info: Elaborating entity "g27_envelope_controller" for hierarchy "g27_envelope_controller:inst26"
+Info: Elaborating entity "g27_volume_calculator" for hierarchy "g27_volume_calculator:inst15"
+Info: Elaborating entity "g27_status_display_controller" for hierarchy "g27_status_display_controller:inst27"
+Info: Ignored 34 buffer(s)
+    Info: Ignored 34 SOFT buffer(s)
+Warning: Tri-state node(s) do not directly drive top-level pin(s)
+    Warning: Converted tri-state buffer "g27_tempo:inst9|lpm_rom:inst0|otri[23]" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "g27_tempo:inst9|lpm_rom:inst0|otri[22]" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "g27_tempo:inst9|lpm_rom:inst0|otri[21]" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "g27_tempo:inst9|lpm_rom:inst0|otri[20]" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "g27_tempo:inst9|lpm_rom:inst0|otri[19]" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "g27_tempo:inst9|lpm_rom:inst0|otri[18]" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "g27_tempo:inst9|lpm_rom:inst0|otri[17]" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "g27_tempo:inst9|lpm_rom:inst0|otri[16]" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "g27_tempo:inst9|lpm_rom:inst0|otri[15]" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "g27_tempo:inst9|lpm_rom:inst0|otri[14]" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "g27_tempo:inst9|lpm_rom:inst0|otri[13]" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "g27_tempo:inst9|lpm_rom:inst0|otri[12]" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "g27_tempo:inst9|lpm_rom:inst0|otri[11]" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "g27_tempo:inst9|lpm_rom:inst0|otri[10]" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "g27_tempo:inst9|lpm_rom:inst0|otri[9]" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "g27_tempo:inst9|lpm_rom:inst0|otri[8]" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "g27_tempo:inst9|lpm_rom:inst0|otri[7]" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "g27_tempo:inst9|lpm_rom:inst0|otri[6]" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "g27_tempo:inst9|lpm_rom:inst0|otri[5]" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "g27_tempo:inst9|lpm_rom:inst0|otri[4]" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "g27_tempo:inst9|lpm_rom:inst0|otri[3]" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "g27_tempo:inst9|lpm_rom:inst0|otri[2]" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "g27_tempo:inst9|lpm_rom:inst0|otri[1]" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "g27_tempo:inst9|lpm_rom:inst0|otri[0]" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "g27_musicbox_controller:inst11|lpm_rom:song_rom2|otri[15]" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "g27_musicbox_controller:inst11|lpm_rom:song_rom2|otri[14]" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "g27_musicbox_controller:inst11|lpm_rom:song_rom2|otri[13]" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "g27_musicbox_controller:inst11|lpm_rom:song_rom2|otri[12]" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "g27_musicbox_controller:inst11|lpm_rom:song_rom2|otri[11]" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "g27_musicbox_controller:inst11|lpm_rom:song_rom2|otri[10]" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "g27_musicbox_controller:inst11|lpm_rom:song_rom2|otri[9]" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "g27_musicbox_controller:inst11|lpm_rom:song_rom2|otri[8]" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "g27_musicbox_controller:inst11|lpm_rom:song_rom2|otri[7]" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "g27_musicbox_controller:inst11|lpm_rom:song_rom2|otri[6]" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "g27_musicbox_controller:inst11|lpm_rom:song_rom2|otri[5]" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "g27_musicbox_controller:inst11|lpm_rom:song_rom2|otri[4]" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "g27_musicbox_controller:inst11|lpm_rom:song_rom2|otri[3]" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "g27_musicbox_controller:inst11|lpm_rom:song_rom2|otri[2]" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "g27_musicbox_controller:inst11|lpm_rom:song_rom2|otri[1]" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "g27_musicbox_controller:inst11|lpm_rom:song_rom2|otri[0]" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "g27_musicbox_controller:inst11|lpm_rom:song_rom1|otri[15]" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "g27_musicbox_controller:inst11|lpm_rom:song_rom1|otri[14]" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "g27_musicbox_controller:inst11|lpm_rom:song_rom1|otri[13]" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "g27_musicbox_controller:inst11|lpm_rom:song_rom1|otri[12]" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "g27_musicbox_controller:inst11|lpm_rom:song_rom1|otri[11]" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "g27_musicbox_controller:inst11|lpm_rom:song_rom1|otri[10]" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "g27_musicbox_controller:inst11|lpm_rom:song_rom1|otri[9]" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "g27_musicbox_controller:inst11|lpm_rom:song_rom1|otri[8]" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "g27_musicbox_controller:inst11|lpm_rom:song_rom1|otri[7]" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "g27_musicbox_controller:inst11|lpm_rom:song_rom1|otri[6]" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "g27_musicbox_controller:inst11|lpm_rom:song_rom1|otri[5]" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "g27_musicbox_controller:inst11|lpm_rom:song_rom1|otri[4]" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "g27_musicbox_controller:inst11|lpm_rom:song_rom1|otri[3]" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "g27_musicbox_controller:inst11|lpm_rom:song_rom1|otri[2]" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "g27_musicbox_controller:inst11|lpm_rom:song_rom1|otri[1]" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "g27_musicbox_controller:inst11|lpm_rom:song_rom1|otri[0]" feeding internal logic into a wire
+Warning: Latch g27_musicbox_controller:inst11|next_state.playFirstNote_179 has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal g27_musicbox_controller:inst11|current_state.waitForNextNote
+Warning: Latch g27_musicbox_controller:inst11|next_state.waitForNextNote_157 has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal g27_musicbox_controller:inst11|current_state.waitForNextNote
+Warning: Latch g27_musicbox_controller:inst11|next_state.loadingNewNote_168 has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal g27_note_timer:inst8|GATE
+Warning: Output pins are stuck at VCC or GND
+    Warning (13410): Pin "pin_name22" is stuck at GND
+    Warning (13410): Pin "SS0[3]" is stuck at VCC
+    Warning (13410): Pin "SS0[2]" is stuck at VCC
+    Warning (13410): Pin "SS1[6]" is stuck at VCC
+    Warning (13410): Pin "SS1[2]" is stuck at VCC
+    Warning (13410): Pin "SS1[1]" is stuck at VCC
+    Warning (13410): Pin "SS1[0]" is stuck at VCC
+    Warning (13410): Pin "SS2[6]" is stuck at VCC
+    Warning (13410): Pin "SS2[5]" is stuck at VCC
+    Warning (13410): Pin "SS2[4]" is stuck at VCC
+    Warning (13410): Pin "SS2[3]" is stuck at VCC
+    Warning (13410): Pin "SS2[2]" is stuck at VCC
+    Warning (13410): Pin "SS2[1]" is stuck at VCC
+    Warning (13410): Pin "SS2[0]" is stuck at VCC
+    Warning (13410): Pin "SS3[6]" is stuck at VCC
+    Warning (13410): Pin "SS3[5]" is stuck at VCC
+    Warning (13410): Pin "SS3[4]" is stuck at VCC
+    Warning (13410): Pin "SS3[3]" is stuck at VCC
+    Warning (13410): Pin "SS3[2]" is stuck at VCC
+    Warning (13410): Pin "SS3[1]" is stuck at VCC
+    Warning (13410): Pin "SS3[0]" is stuck at VCC
+Info: Removed 1 MSB VCC or GND address nodes from RAM block "g27_tempo:inst9|lpm_rom:inst0|altrom:srom|altsyncram:rom_block|altsyncram_q401:auto_generated|ALTSYNCRAM"
+Warning: Ignored assignments for entity "g27_lab5" -- entity does not exist in design
+    Warning: Assignment for entity set_global_assignment -name LL_ROOT_REGION ON -entity g27_lab5 -section_id "Root Region" was ignored
+    Warning: Assignment for entity set_global_assignment -name LL_MEMBER_STATE LOCKED -entity g27_lab5 -section_id "Root Region" was ignored
+Warning: Design contains 2 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "test_input"
+    Warning (15610): No output dependent on input pin "test_tempo_enable"
+Info: Implemented 1416 device resources after synthesis - the final resource count might be different
+    Info: Implemented 17 input pins
+    Info: Implemented 53 output pins
+    Info: Implemented 1286 logic cells
+    Info: Implemented 56 RAM segments
+    Info: Implemented 4 DSP elements
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 101 warnings
+    Info: Peak virtual memory: 348 megabytes
+    Info: Processing ended: Mon Dec 02 02:23:40 2013
+    Info: Elapsed time: 00:00:13
+    Info: Total CPU time (on all processors): 00:00:06
+
+

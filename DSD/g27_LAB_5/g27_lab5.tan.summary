@@ -1,0 +1,86 @@
+--------------------------------------------------------------------------------------
+Timing Analyzer Summary
+--------------------------------------------------------------------------------------
+
+Type           : Worst-case tsu
+Slack          : N/A
+Required Time  : None
+Actual Time    : 12.295 ns
+From           : song_select
+To             : g00_decimator:inst1|x[23]
+From Clock     : --
+To Clock       : clk50
+Failed Paths   : 0
+
+Type           : Worst-case tco
+Slack          : N/A
+Required Time  : None
+Actual Time    : 13.767 ns
+From           : g27_musicbox_controller:inst11|lpm_rom:song_rom1|altrom:srom|altsyncram:rom_block|altsyncram_eo01:auto_generated|ram_block1a0~porta_address_reg7
+To             : Q[3]
+From Clock     : clk50
+To Clock       : --
+Failed Paths   : 0
+
+Type           : Worst-case tpd
+Slack          : N/A
+Required Time  : None
+Actual Time    : 11.063 ns
+From           : reset1
+To             : SS0[1]
+From Clock     : --
+To Clock       : --
+Failed Paths   : 0
+
+Type           : Worst-case th
+Slack          : N/A
+Required Time  : None
+Actual Time    : 8.434 ns
+From           : loop_mode
+To             : g27_musicbox_controller:inst11|next_state.waitForNextNote_157
+From Clock     : --
+To Clock       : clk50
+Failed Paths   : 0
+
+Type           : Clock Setup: 'clk50'
+Slack          : N/A
+Required Time  : None
+Actual Time    : 50.01 MHz ( period = 19.998 ns )
+From           : g27_musicbox_controller:inst11|next_state.waitForNextNote_157
+To             : g27_musicbox_controller:inst11|current_state.waitForNextNote
+From Clock     : clk50
+To Clock       : clk50
+Failed Paths   : 0
+
+Type           : Clock Setup: 'clk24'
+Slack          : N/A
+Required Time  : None
+Actual Time    : 202.22 MHz ( period = 4.945 ns )
+From           : g00_audio_interface:inst|clk_count[1]
+To             : g00_audio_interface:inst|clk_count[0]
+From Clock     : clk24
+To Clock       : clk24
+Failed Paths   : 0
+
+Type           : Clock Hold: 'clk50'
+Slack          : Not operational: Clock Skew > Data Delay
+Required Time  : None
+Actual Time    : N/A
+From           : g27_musicbox_controller:inst11|current_state.waitForNextNote
+To             : g27_musicbox_controller:inst11|next_state.playFirstNote_179
+From Clock     : clk50
+To Clock       : clk50
+Failed Paths   : 50
+
+Type           : Total number of failed paths
+Slack          : 
+Required Time  : 
+Actual Time    : 
+From           : 
+To             : 
+From Clock     : 
+To Clock       : 
+Failed Paths   : 50
+
+--------------------------------------------------------------------------------------
+
