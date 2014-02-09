@@ -1,0 +1,13 @@
+% analysis synthesis script
+
+% test_signal = square(1:1/100:10);
+% test_signal = sin(1:1/100:10);
+test_signal = triangle(1:1/100:10);
+A = analysis_bank(test_signal);
+Y = downsample_bank(A);
+B = upsample_bank(Y);
+Xhat_bank = synthesis_bank(B);
+
+for n = 1:length(Xhat_bank(1,:))
+    Xhat(n) = sum(Xhat_bank(:,n));
+end

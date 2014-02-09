@@ -1,0 +1,31 @@
+function quoi = entropy_calculator(X, num_levels)
+
+prob_level_m = zeros([1,num_levels]);
+sum_level_m = zeros([1,num_levels]);
+value_of_level_m = zeros([1,num_levels]);
+
+for m = 1:num_levels
+   value_of_level_m(m) = (m*2/num_levels) - 1;
+end
+
+for q = 1:num_levels
+   for r = 1:length(X)
+       if (X(r) == value_of_level_m(q))
+           sum_level_m(q) = sum_level_m(q) + 1;
+       end
+   end
+   prob_level_m(q) =  sum_level_m(q) / length(X);
+end
+
+entropy = 0;
+sum = 0;
+plogp = 0;
+
+for i = 1:num_levels
+    plogp = -prob_level_m(i) * log2(prob_level_m(i));
+    sum = sum + plogp;
+end
+
+entropy = sum;
+
+end
