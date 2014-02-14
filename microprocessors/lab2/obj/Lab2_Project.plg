@@ -1,0 +1,1004 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Project:</h2>
+C:\Users\llugos\Downloads\lab2\lab2\Lab2_Project.uvproj
+Project File Date:  02/13/2014
+
+<h2>Output:</h2>
+Load "C:\\Users\\llugos\\Downloads\\lab2\\lab2\\obj\\Lab2_Project.axf" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'Target 1'
+assembling startup_stm32f40xx.s...
+compiling fputc_debug.c...
+compiling main.c...
+src\main.c(61): warning:  #177-D: variable "vsense" was declared but never referenced
+src\main.c(269): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+compiling system_stm32f4xx.c...
+compiling misc.c...
+compiling stm32f4xx_adc.c...
+compiling stm32f4xx_can.c...
+compiling stm32f4xx_crc.c...
+compiling stm32f4xx_cryp.c...
+compiling stm32f4xx_cryp_aes.c...
+compiling stm32f4xx_cryp_des.c...
+compiling stm32f4xx_cryp_tdes.c...
+compiling stm32f4xx_dac.c...
+compiling stm32f4xx_dbgmcu.c...
+compiling stm32f4xx_dcmi.c...
+compiling stm32f4xx_dma.c...
+compiling stm32f4xx_exti.c...
+compiling stm32f4xx_flash.c...
+compiling stm32f4xx_fsmc.c...
+compiling stm32f4xx_gpio.c...
+compiling stm32f4xx_hash.c...
+compiling stm32f4xx_hash_md5.c...
+compiling stm32f4xx_hash_sha1.c...
+compiling stm32f4xx_i2c.c...
+compiling stm32f4xx_iwdg.c...
+compiling stm32f4xx_pwr.c...
+compiling stm32f4xx_rcc.c...
+compiling stm32f4xx_rng.c...
+compiling stm32f4xx_rtc.c...
+compiling stm32f4xx_sdio.c...
+compiling stm32f4xx_spi.c...
+compiling stm32f4xx_syscfg.c...
+compiling stm32f4xx_tim.c...
+compiling stm32f4xx_usart.c...
+compiling stm32f4xx_wwdg.c...
+linking...
+Program Size: Code=11124 RO-data=600 RW-data=68 ZI-data=1652  
+".\obj\Lab2_Project.axf" - 0 Error(s), 2 Warning(s).
+Load "C:\\Users\\llugos\\Downloads\\lab2\\lab2\\obj\\Lab2_Project.axf" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'Target 1'
+compiling main.c...
+src\main.c(79): warning:  #177-D: variable "vsense" was declared but never referenced
+src\main.c(325): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+linking...
+Program Size: Code=11124 RO-data=600 RW-data=68 ZI-data=1652  
+".\obj\Lab2_Project.axf" - 0 Error(s), 2 Warning(s).
+Load "C:\\Users\\llugos\\Downloads\\lab2\\lab2\\obj\\Lab2_Project.axf" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'Target 1'
+compiling main.c...
+src\main.c(79): warning:  #177-D: variable "vsense" was declared but never referenced
+src\main.c(330): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+linking...
+Program Size: Code=11124 RO-data=600 RW-data=68 ZI-data=1652  
+".\obj\Lab2_Project.axf" - 0 Error(s), 2 Warning(s).
+Load "C:\\Users\\llugos\\Downloads\\lab2\\lab2\\obj\\Lab2_Project.axf" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'Target 1'
+compiling main.c...
+src\main.c(79): warning:  #177-D: variable "vsense" was declared but never referenced
+src\main.c(330): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+linking...
+Program Size: Code=11124 RO-data=600 RW-data=68 ZI-data=1652  
+".\obj\Lab2_Project.axf" - 0 Error(s), 2 Warning(s).
+Load "C:\\Users\\llugos\\Downloads\\lab2\\lab2\\obj\\Lab2_Project.axf" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'Target 1'
+compiling main.c...
+src\main.c(79): warning:  #177-D: variable "vsense" was declared but never referenced
+src\main.c(330): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+linking...
+Program Size: Code=11124 RO-data=600 RW-data=68 ZI-data=1652  
+".\obj\Lab2_Project.axf" - 0 Error(s), 2 Warning(s).
+Load "C:\\Users\\llugos\\Downloads\\lab2\\lab2\\obj\\Lab2_Project.axf" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'Target 1'
+compiling main.c...
+src\main.c(79): warning:  #177-D: variable "vsense" was declared but never referenced
+src\main.c(331): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+linking...
+Program Size: Code=11132 RO-data=600 RW-data=68 ZI-data=1652  
+".\obj\Lab2_Project.axf" - 0 Error(s), 2 Warning(s).
+Build target 'Target 1'
+linking...
+Program Size: Code=11132 RO-data=600 RW-data=68 ZI-data=1652  
+".\obj\Lab2_Project.axf" - 0 Error(s), 0 Warning(s).
+Load "C:\\Users\\llugos\\Downloads\\lab2\\lab2\\obj\\Lab2_Project.axf" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'Target 1'
+compiling main.c...
+src\main.c(79): warning:  #177-D: variable "vsense" was declared but never referenced
+src\main.c(331): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+linking...
+Program Size: Code=11124 RO-data=600 RW-data=68 ZI-data=1652  
+".\obj\Lab2_Project.axf" - 0 Error(s), 2 Warning(s).
+Load "C:\\Users\\llugos\\Downloads\\lab2\\lab2\\obj\\Lab2_Project.axf" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'Target 1'
+compiling main.c...
+src\main.c(79): warning:  #177-D: variable "vsense" was declared but never referenced
+src\main.c(331): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+linking...
+Program Size: Code=11132 RO-data=600 RW-data=68 ZI-data=1652  
+".\obj\Lab2_Project.axf" - 0 Error(s), 2 Warning(s).
+Load "C:\\Users\\llugos\\Downloads\\lab2\\lab2\\obj\\Lab2_Project.axf" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'Target 1'
+compiling main.c...
+src\main.c(79): warning:  #177-D: variable "vsense" was declared but never referenced
+src\main.c(332): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+linking...
+Program Size: Code=11140 RO-data=600 RW-data=68 ZI-data=1652  
+".\obj\Lab2_Project.axf" - 0 Error(s), 2 Warning(s).
+Load "C:\\Users\\llugos\\Downloads\\lab2\\lab2\\obj\\Lab2_Project.axf" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'Target 1'
+compiling main.c...
+src\main.c(79): warning:  #177-D: variable "vsense" was declared but never referenced
+src\main.c(332): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+linking...
+Program Size: Code=11140 RO-data=600 RW-data=68 ZI-data=1652  
+".\obj\Lab2_Project.axf" - 0 Error(s), 2 Warning(s).
+Load "C:\\Users\\llugos\\Downloads\\lab2\\lab2\\obj\\Lab2_Project.axf" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'Target 1'
+compiling main.c...
+src\main.c(79): warning:  #177-D: variable "vsense" was declared but never referenced
+src\main.c(332): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+linking...
+Program Size: Code=11132 RO-data=600 RW-data=68 ZI-data=1652  
+".\obj\Lab2_Project.axf" - 0 Error(s), 2 Warning(s).
+Load "C:\\Users\\llugos\\Downloads\\lab2\\lab2\\obj\\Lab2_Project.axf" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'Target 1'
+compiling main.c...
+src\main.c(79): warning:  #177-D: variable "vsense" was declared but never referenced
+src\main.c(332): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+linking...
+Program Size: Code=11132 RO-data=600 RW-data=68 ZI-data=1652  
+".\obj\Lab2_Project.axf" - 0 Error(s), 2 Warning(s).
+Load "C:\\Users\\llugos\\Downloads\\lab2\\lab2\\obj\\Lab2_Project.axf" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'Target 1'
+compiling main.c...
+src\main.c(79): warning:  #177-D: variable "vsense" was declared but never referenced
+src\main.c(332): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+linking...
+Program Size: Code=11132 RO-data=600 RW-data=68 ZI-data=1652  
+".\obj\Lab2_Project.axf" - 0 Error(s), 2 Warning(s).
+Load "C:\\Users\\llugos\\Downloads\\lab2\\lab2\\obj\\Lab2_Project.axf" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'Target 1'
+compiling main.c...
+src\main.c(79): warning:  #177-D: variable "vsense" was declared but never referenced
+src\main.c(332): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+linking...
+Program Size: Code=11128 RO-data=600 RW-data=68 ZI-data=1652  
+".\obj\Lab2_Project.axf" - 0 Error(s), 2 Warning(s).
+Build target 'Target 1'
+linking...
+Program Size: Code=11128 RO-data=600 RW-data=68 ZI-data=1652  
+".\obj\Lab2_Project.axf" - 0 Error(s), 0 Warning(s).
+Load "C:\\Users\\llugos\\Downloads\\lab2\\lab2\\obj\\Lab2_Project.axf" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'Target 1'
+compiling main.c...
+src\main.c(79): warning:  #177-D: variable "vsense" was declared but never referenced
+src\main.c(332): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+linking...
+Program Size: Code=11128 RO-data=600 RW-data=68 ZI-data=1652  
+".\obj\Lab2_Project.axf" - 0 Error(s), 2 Warning(s).
+Build target 'Target 1'
+linking...
+Program Size: Code=11128 RO-data=600 RW-data=68 ZI-data=1652  
+".\obj\Lab2_Project.axf" - 0 Error(s), 0 Warning(s).
+Load "C:\\Users\\llugos\\Downloads\\lab2\\lab2\\obj\\Lab2_Project.axf" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'Target 1'
+compiling main.c...
+src\main.c(79): warning:  #177-D: variable "vsense" was declared but never referenced
+src\main.c(332): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+linking...
+Program Size: Code=11128 RO-data=600 RW-data=68 ZI-data=1652  
+".\obj\Lab2_Project.axf" - 0 Error(s), 2 Warning(s).
+Load "C:\\Users\\llugos\\Downloads\\lab2\\lab2\\obj\\Lab2_Project.axf" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'Target 1'
+compiling main.c...
+src\main.c(79): warning:  #177-D: variable "vsense" was declared but never referenced
+src\main.c(332): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+linking...
+Program Size: Code=11128 RO-data=600 RW-data=68 ZI-data=1652  
+".\obj\Lab2_Project.axf" - 0 Error(s), 2 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+src\main.c(79): warning:  #177-D: variable "vsense" was declared but never referenced
+src\main.c(332): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+linking...
+Program Size: Code=11128 RO-data=600 RW-data=68 ZI-data=1652  
+".\obj\Lab2_Project.axf" - 0 Error(s), 2 Warning(s).
+Load "C:\\Users\\llugos\\Downloads\\lab2\\lab2\\obj\\Lab2_Project.axf" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'Target 1'
+compiling main.c...
+src\main.c(79): warning:  #177-D: variable "vsense" was declared but never referenced
+src\main.c(332): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+linking...
+Program Size: Code=11116 RO-data=600 RW-data=68 ZI-data=1652  
+".\obj\Lab2_Project.axf" - 0 Error(s), 2 Warning(s).
+Load "C:\\Users\\llugos\\Downloads\\lab2\\lab2\\obj\\Lab2_Project.axf" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'Target 1'
+compiling main.c...
+src\main.c(79): warning:  #177-D: variable "vsense" was declared but never referenced
+src\main.c(332): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+linking...
+Program Size: Code=11128 RO-data=600 RW-data=68 ZI-data=1652  
+".\obj\Lab2_Project.axf" - 0 Error(s), 2 Warning(s).
+Load "C:\\Users\\llugos\\Downloads\\lab2\\lab2\\obj\\Lab2_Project.axf" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'Target 1'
+compiling main.c...
+src\main.c(79): warning:  #177-D: variable "vsense" was declared but never referenced
+src\main.c(332): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+linking...
+Program Size: Code=11128 RO-data=600 RW-data=68 ZI-data=1652  
+".\obj\Lab2_Project.axf" - 0 Error(s), 2 Warning(s).
+Load "C:\\Users\\llugos\\Downloads\\lab2\\lab2\\obj\\Lab2_Project.axf" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'Target 1'
+compiling main.c...
+src\main.c(79): warning:  #177-D: variable "vsense" was declared but never referenced
+src\main.c(332): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+linking...
+Program Size: Code=11128 RO-data=600 RW-data=68 ZI-data=1652  
+".\obj\Lab2_Project.axf" - 0 Error(s), 2 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+src\display.h(19): warning:  #1-D: last line of file ends without a newline
+src\main.c(80): warning:  #177-D: variable "vsense" was declared but never referenced
+src\main.c(333): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+linking...
+.\obj\Lab2_Project.axf: Error: L6218E: Undefined symbol clear_display (referred from main.o).
+.\obj\Lab2_Project.axf: Error: L6218E: Undefined symbol delay (referred from main.o).
+.\obj\Lab2_Project.axf: Error: L6218E: Undefined symbol display_multidigit_number (referred from main.o).
+.\obj\Lab2_Project.axf: Error: L6218E: Undefined symbol seven_segment_GPIO_setup (referred from main.o).
+Target not created
+Build target 'Target 1'
+compiling display.c...
+src\display.h(19): warning:  #1-D: last line of file ends without a newline
+src\display.c(234): warning:  #1-D: last line of file ends without a newline
+linking...
+Program Size: Code=11116 RO-data=600 RW-data=68 ZI-data=1652  
+".\obj\Lab2_Project.axf" - 0 Error(s), 2 Warning(s).
+Load "C:\\Users\\llugos\\Downloads\\lab2\\lab2\\obj\\Lab2_Project.axf" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'Target 1'
+compiling main.c...
+src\display.h(19): warning:  #1-D: last line of file ends without a newline
+src\main.c(60): warning:  #177-D: variable "vsense" was declared but never referenced
+src\main.c(121): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+linking...
+Program Size: Code=11116 RO-data=600 RW-data=68 ZI-data=1652  
+".\obj\Lab2_Project.axf" - 0 Error(s), 3 Warning(s).
+Load "C:\\Users\\llugos\\Downloads\\lab2\\lab2\\obj\\Lab2_Project.axf" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'Target 1'
+compiling main.c...
+src\display.h(21): warning:  #1-D: last line of file ends without a newline
+src\main.c(81): error:  #20: identifier "HEAT_THRESHOLD" is undefined
+src\main.c(62): warning:  #177-D: variable "vsense" was declared but never referenced
+src\main.c(123): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+compiling display.c...
+src\display.h(21): warning:  #1-D: last line of file ends without a newline
+src\display.c(234): warning:  #1-D: last line of file ends without a newline
+Target not created
+Build target 'Target 1'
+compiling main.c...
+src\display.h(21): warning:  #1-D: last line of file ends without a newline
+src\main.c(62): warning:  #177-D: variable "vsense" was declared but never referenced
+src\main.c(123): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+linking...
+Program Size: Code=11112 RO-data=600 RW-data=68 ZI-data=1652  
+".\obj\Lab2_Project.axf" - 0 Error(s), 3 Warning(s).
+Build target 'Target 1'
+linking...
+Program Size: Code=11112 RO-data=600 RW-data=68 ZI-data=1652  
+".\obj\Lab2_Project.axf" - 0 Error(s), 0 Warning(s).
+Load "C:\\Users\\llugos\\Downloads\\lab2\\lab2\\obj\\Lab2_Project.axf" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'Target 1'
+compiling main.c...
+src\display.h(21): warning:  #1-D: last line of file ends without a newline
+src\main.c(62): warning:  #177-D: variable "vsense" was declared but never referenced
+src\main.c(123): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+linking...
+Program Size: Code=11116 RO-data=600 RW-data=68 ZI-data=1652  
+".\obj\Lab2_Project.axf" - 0 Error(s), 3 Warning(s).
+Load "C:\\Users\\llugos\\Downloads\\lab2\\lab2\\obj\\Lab2_Project.axf" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'Target 1'
+compiling main.c...
+src\display.h(21): warning:  #1-D: last line of file ends without a newline
+src\main.c(62): warning:  #177-D: variable "vsense" was declared but never referenced
+src\main.c(123): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+linking...
+Program Size: Code=11116 RO-data=600 RW-data=68 ZI-data=1652  
+".\obj\Lab2_Project.axf" - 0 Error(s), 3 Warning(s).
+Load "C:\\Users\\llugos\\Downloads\\lab2\\lab2\\obj\\Lab2_Project.axf" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'Target 1'
+compiling main.c...
+src\display.h(21): warning:  #1-D: last line of file ends without a newline
+src\main.c(60): warning:  #177-D: variable "vsense" was declared but never referenced
+src\main.c(121): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+linking...
+Program Size: Code=11116 RO-data=600 RW-data=68 ZI-data=1652  
+".\obj\Lab2_Project.axf" - 0 Error(s), 3 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+src\display.h(21): warning:  #1-D: last line of file ends without a newline
+src\main.c(120): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+linking...
+Program Size: Code=11116 RO-data=600 RW-data=68 ZI-data=1652  
+".\obj\Lab2_Project.axf" - 0 Error(s), 2 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+src\main.c(120): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+compiling display.c...
+src\display.c(234): warning:  #1-D: last line of file ends without a newline
+linking...
+Program Size: Code=11116 RO-data=600 RW-data=68 ZI-data=1652  
+".\obj\Lab2_Project.axf" - 0 Error(s), 2 Warning(s).
+Build target 'Target 1'
+compiling display.c...
+linking...
+Program Size: Code=11116 RO-data=600 RW-data=68 ZI-data=1652  
+".\obj\Lab2_Project.axf" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+src\main.c(120): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+compiling t2_display.c...
+linking...
+Program Size: Code=11116 RO-data=600 RW-data=68 ZI-data=1652  
+".\obj\Lab2_Project.axf" - 0 Error(s), 1 Warning(s).
+Load "C:\\Users\\llugos\\Downloads\\lab2\\lab2\\obj\\Lab2_Project.axf" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'Target 1'
+compiling main.c...
+src\t2_adc.h(5): warning:  #1-D: last line of file ends without a newline
+src\main.c(121): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+linking...
+.\obj\Lab2_Project.axf: Error: L6218E: Undefined symbol ADC_setup (referred from main.o).
+.\obj\Lab2_Project.axf: Error: L6218E: Undefined symbol readADC (referred from main.o).
+Target not created
+Build target 'Target 1'
+compiling t2_adc.c...
+src\t2_adc.h(5): warning:  #1-D: last line of file ends without a newline
+linking...
+Program Size: Code=11116 RO-data=600 RW-data=68 ZI-data=1652  
+".\obj\Lab2_Project.axf" - 0 Error(s), 1 Warning(s).
+Build target 'Target 1'
+linking...
+Program Size: Code=11116 RO-data=600 RW-data=68 ZI-data=1652  
+".\obj\Lab2_Project.axf" - 0 Error(s), 0 Warning(s).
+Load "C:\\Users\\llugos\\Downloads\\lab2\\lab2\\obj\\Lab2_Project.axf" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'Target 1'
+compiling main.c...
+src\t2_adc.h(4): warning:  #1-D: last line of file ends without a newline
+src\main.c(119): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+compiling t2_adc.c...
+src\t2_adc.h(4): warning:  #1-D: last line of file ends without a newline
+linking...
+Program Size: Code=11116 RO-data=600 RW-data=68 ZI-data=1652  
+".\obj\Lab2_Project.axf" - 0 Error(s), 3 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+src\main.c(119): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+compiling t2_adc.c...
+linking...
+Program Size: Code=11116 RO-data=600 RW-data=68 ZI-data=1652  
+".\obj\Lab2_Project.axf" - 0 Error(s), 1 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+src\main.c(119): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+linking...
+Program Size: Code=11116 RO-data=600 RW-data=68 ZI-data=1652  
+".\obj\Lab2_Project.axf" - 0 Error(s), 1 Warning(s).
+Load "C:\\Users\\llugos\\Downloads\\lab2\\lab2\\obj\\Lab2_Project.axf" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'Target 1'
+compiling main.c...
+src\main.c(119): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+linking...
+Program Size: Code=11116 RO-data=600 RW-data=68 ZI-data=1652  
+".\obj\Lab2_Project.axf" - 0 Error(s), 1 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+src\main.c(120): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+linking...
+Program Size: Code=11832 RO-data=600 RW-data=68 ZI-data=1652  
+".\obj\Lab2_Project.axf" - 0 Error(s), 1 Warning(s).
+Load "C:\\Users\\llugos\\Downloads\\lab2\\lab2\\obj\\Lab2_Project.axf" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'Target 1'
+compiling main.c...
+src\main.c(120): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+linking...
+Program Size: Code=11828 RO-data=600 RW-data=68 ZI-data=1652  
+".\obj\Lab2_Project.axf" - 0 Error(s), 1 Warning(s).
+Load "C:\\Users\\llugos\\Downloads\\lab2\\lab2\\obj\\Lab2_Project.axf" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'Target 1'
+compiling main.c...
+src\main.c(120): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+linking...
+Program Size: Code=11828 RO-data=600 RW-data=68 ZI-data=1652  
+".\obj\Lab2_Project.axf" - 0 Error(s), 1 Warning(s).
+Load "C:\\Users\\llugos\\Downloads\\lab2\\lab2\\obj\\Lab2_Project.axf" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'Target 1'
+compiling main.c...
+src\main.c(120): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+linking...
+Program Size: Code=11828 RO-data=600 RW-data=68 ZI-data=1652  
+".\obj\Lab2_Project.axf" - 0 Error(s), 1 Warning(s).
+Load "C:\\Users\\llugos\\Downloads\\lab2\\lab2\\obj\\Lab2_Project.axf" 
+Erase Done.
+Programming Done.
+Verify OK.
+Load "C:\\Users\\llugos\\Downloads\\lab2\\lab2\\obj\\Lab2_Project.axf" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'Target 1'
+compiling main.c...
+src\main.c(120): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+linking...
+Program Size: Code=11828 RO-data=600 RW-data=68 ZI-data=1652  
+".\obj\Lab2_Project.axf" - 0 Error(s), 1 Warning(s).
+Load "C:\\Users\\llugos\\Downloads\\lab2\\lab2\\obj\\Lab2_Project.axf" 
+Erase Done.
+Programming Done.
+Verify OK.
+Load "C:\\Users\\llugos\\Downloads\\lab2\\lab2\\obj\\Lab2_Project.axf" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'Target 1'
+compiling main.c...
+src\main.c(120): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+linking...
+Program Size: Code=11828 RO-data=600 RW-data=68 ZI-data=1652  
+".\obj\Lab2_Project.axf" - 0 Error(s), 1 Warning(s).
+Load "C:\\Users\\llugos\\Downloads\\lab2\\lab2\\obj\\Lab2_Project.axf" 
+Erase Done.
+Programming Done.
+Verify OK.
+Load "C:\\Users\\llugos\\Downloads\\lab2\\lab2\\obj\\Lab2_Project.axf" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'Target 1'
+compiling main.c...
+src\main.c(120): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+linking...
+Program Size: Code=11828 RO-data=600 RW-data=68 ZI-data=1652  
+".\obj\Lab2_Project.axf" - 0 Error(s), 1 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+src\main.c(120): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+linking...
+Program Size: Code=11828 RO-data=600 RW-data=68 ZI-data=1652  
+".\obj\Lab2_Project.axf" - 0 Error(s), 1 Warning(s).
+Load "C:\\Users\\llugos\\Downloads\\lab2\\lab2\\obj\\Lab2_Project.axf" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'Target 1'
+compiling main.c...
+src\main.c(120): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+linking...
+Program Size: Code=11828 RO-data=600 RW-data=68 ZI-data=1652  
+".\obj\Lab2_Project.axf" - 0 Error(s), 1 Warning(s).
+Load "C:\\Users\\llugos\\Downloads\\lab2\\lab2\\obj\\Lab2_Project.axf" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'Target 1'
+compiling main.c...
+src\main.c(120): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+linking...
+Program Size: Code=11828 RO-data=600 RW-data=68 ZI-data=1652  
+".\obj\Lab2_Project.axf" - 0 Error(s), 1 Warning(s).
+Load "C:\\Users\\llugos\\Downloads\\lab2\\lab2\\obj\\Lab2_Project.axf" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'Target 1'
+compiling main.c...
+src\main.c(120): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+linking...
+Program Size: Code=11832 RO-data=600 RW-data=68 ZI-data=1652  
+".\obj\Lab2_Project.axf" - 0 Error(s), 1 Warning(s).
+Load "C:\\Users\\llugos\\Downloads\\lab2\\lab2\\obj\\Lab2_Project.axf" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'Target 1'
+compiling main.c...
+src\main.c(120): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+linking...
+Program Size: Code=11832 RO-data=600 RW-data=68 ZI-data=1652  
+".\obj\Lab2_Project.axf" - 0 Error(s), 1 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+src\main.c(120): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+linking...
+Program Size: Code=11832 RO-data=600 RW-data=68 ZI-data=1652  
+".\obj\Lab2_Project.axf" - 0 Error(s), 1 Warning(s).
+Load "C:\\Users\\llugos\\Downloads\\lab2\\lab2\\obj\\Lab2_Project.axf" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'Target 1'
+compiling main.c...
+src\main.c(121): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+linking...
+Program Size: Code=11832 RO-data=600 RW-data=68 ZI-data=1652  
+".\obj\Lab2_Project.axf" - 0 Error(s), 1 Warning(s).
+Load "C:\\Users\\llugos\\Downloads\\lab2\\lab2\\obj\\Lab2_Project.axf" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'Target 1'
+compiling main.c...
+src\main.c(121): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+linking...
+Program Size: Code=11832 RO-data=600 RW-data=68 ZI-data=1652  
+".\obj\Lab2_Project.axf" - 0 Error(s), 1 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+src\main.c(121): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+linking...
+Program Size: Code=11832 RO-data=600 RW-data=68 ZI-data=1652  
+".\obj\Lab2_Project.axf" - 0 Error(s), 1 Warning(s).
+Build target 'Target 1'
+linking...
+Program Size: Code=11832 RO-data=600 RW-data=68 ZI-data=1652  
+".\obj\Lab2_Project.axf" - 0 Error(s), 0 Warning(s).
+Load "C:\\Users\\llugos\\Downloads\\lab2\\lab2\\obj\\Lab2_Project.axf" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'Target 1'
+compiling main.c...
+src\main.c(121): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+linking...
+Program Size: Code=11832 RO-data=600 RW-data=68 ZI-data=1652  
+".\obj\Lab2_Project.axf" - 0 Error(s), 1 Warning(s).
+Load "C:\\Users\\llugos\\Downloads\\lab2\\lab2\\obj\\Lab2_Project.axf" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'Target 1'
+compiling main.c...
+src\main.c(121): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+linking...
+Program Size: Code=11836 RO-data=600 RW-data=68 ZI-data=1652  
+".\obj\Lab2_Project.axf" - 0 Error(s), 1 Warning(s).
+Load "C:\\Users\\llugos\\Downloads\\lab2\\lab2\\obj\\Lab2_Project.axf" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'Target 1'
+compiling main.c...
+src\main.c(121): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+linking...
+Program Size: Code=11848 RO-data=600 RW-data=68 ZI-data=1652  
+".\obj\Lab2_Project.axf" - 0 Error(s), 1 Warning(s).
+Build target 'Target 1'
+linking...
+Program Size: Code=11848 RO-data=600 RW-data=68 ZI-data=1652  
+".\obj\Lab2_Project.axf" - 0 Error(s), 0 Warning(s).
+Load "C:\\Users\\llugos\\Downloads\\lab2\\lab2\\obj\\Lab2_Project.axf" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'Target 1'
+compiling main.c...
+src\main.c(121): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+linking...
+Program Size: Code=11848 RO-data=600 RW-data=68 ZI-data=1652  
+".\obj\Lab2_Project.axf" - 0 Error(s), 1 Warning(s).
+Load "C:\\Users\\llugos\\Downloads\\lab2\\lab2\\obj\\Lab2_Project.axf" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'Target 1'
+compiling main.c...
+src\main.c(121): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+linking...
+Program Size: Code=11848 RO-data=600 RW-data=68 ZI-data=1652  
+".\obj\Lab2_Project.axf" - 0 Error(s), 1 Warning(s).
+Load "C:\\Users\\llugos\\Downloads\\lab2\\lab2\\obj\\Lab2_Project.axf" 
+Erase Done.
+Programming Done.
+Verify OK.
+Load "C:\\Users\\llugos\\Downloads\\lab2\\lab2\\obj\\Lab2_Project.axf" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'Target 1'
+compiling main.c...
+src\main.c(121): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+linking...
+Program Size: Code=11848 RO-data=600 RW-data=68 ZI-data=1652  
+".\obj\Lab2_Project.axf" - 0 Error(s), 1 Warning(s).
+Load "C:\\Users\\llugos\\Downloads\\lab2\\lab2\\obj\\Lab2_Project.axf" 
+Erase Done.
+Programming Done.
+Verify OK.
+Load "C:\\Users\\llugos\\Downloads\\lab2\\lab2\\obj\\Lab2_Project.axf" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'Target 1'
+compiling main.c...
+src\main.c(121): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+linking...
+Program Size: Code=11848 RO-data=600 RW-data=68 ZI-data=1652  
+".\obj\Lab2_Project.axf" - 0 Error(s), 1 Warning(s).
+Load "C:\\Users\\llugos\\Downloads\\lab2\\lab2\\obj\\Lab2_Project.axf" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'Target 1'
+compiling main.c...
+src\main.c(121): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+linking...
+Program Size: Code=11848 RO-data=600 RW-data=68 ZI-data=1652  
+".\obj\Lab2_Project.axf" - 0 Error(s), 1 Warning(s).
+Load "C:\\Users\\llugos\\Downloads\\lab2\\lab2\\obj\\Lab2_Project.axf" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'Target 1'
+compiling main.c...
+src\main.c(121): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+linking...
+Program Size: Code=11848 RO-data=600 RW-data=68 ZI-data=1652  
+".\obj\Lab2_Project.axf" - 0 Error(s), 1 Warning(s).
+Load "C:\\Users\\llugos\\Downloads\\lab2\\lab2\\obj\\Lab2_Project.axf" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'Target 1'
+compiling main.c...
+src\main.c(121): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+linking...
+Program Size: Code=11848 RO-data=600 RW-data=68 ZI-data=1652  
+".\obj\Lab2_Project.axf" - 0 Error(s), 1 Warning(s).
+Load "C:\\Users\\llugos\\Downloads\\lab2\\lab2\\obj\\Lab2_Project.axf" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'Target 1'
+compiling main.c...
+src\main.c(121): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+linking...
+Program Size: Code=11848 RO-data=600 RW-data=68 ZI-data=1652  
+".\obj\Lab2_Project.axf" - 0 Error(s), 1 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+src\main.c(121): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+compiling t2_adc.c...
+linking...
+Program Size: Code=11848 RO-data=600 RW-data=68 ZI-data=1652  
+".\obj\Lab2_Project.axf" - 0 Error(s), 1 Warning(s).
+Load "C:\\Users\\llugos\\Downloads\\lab2\\lab2\\obj\\Lab2_Project.axf" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'Target 1'
+compiling main.c...
+compiling t2_adc.c...
+src\t2_adc.c(72): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+src\t2_adc.c(74): warning:  #1-D: last line of file ends without a newline
+linking...
+Program Size: Code=11852 RO-data=600 RW-data=68 ZI-data=1652  
+".\obj\Lab2_Project.axf" - 0 Error(s), 2 Warning(s).
+Load "C:\\Users\\llugos\\Downloads\\lab2\\lab2\\obj\\Lab2_Project.axf" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'Target 1'
+compiling main.c...
+compiling t2_adc.c...
+src\t2_adc.c(69): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+src\t2_adc.c(71): warning:  #1-D: last line of file ends without a newline
+linking...
+.\obj\Lab2_Project.axf: Error: L6218E: Undefined symbol pwm_alarm (referred from main.o).
+Target not created
+Build target 'Target 1'
+compiling main.c...
+compiling t2_pwm.c...
+src\t2_pwm.h(1): warning:  #1-D: last line of file ends without a newline
+src\t2_pwm.c(4): error:  #20: identifier "INCREMENT" is undefined
+src\t2_pwm.c(18): warning:  #223-D: function "GPIO_WriteBit" declared implicitly
+src\t2_pwm.c(18): error:  #20: identifier "GPIOD" is undefined
+src\t2_pwm.c(18): error:  #20: identifier "GPIO_Pin_12" is undefined
+src\t2_pwm.c(18): error:  #20: identifier "Bit_SET" is undefined
+src\t2_pwm.c(19): warning:  #223-D: function "delay" declared implicitly
+src\t2_pwm.c(20): warning:  #223-D: function "GPIO_ToggleBits" declared implicitly
+src\t2_pwm.c(24): error:  #20: identifier "MAX_PWM" is undefined
+Target not created
+Build target 'Target 1'
+compiling main.c...
+src\main.c(72): warning:  #223-D: function "pwm_alarm" declared implicitly
+compiling t2_pwm.c...
+src\t2_pwm.h(1): warning:  #1-D: last line of file ends without a newline
+src\t2_pwm.c(23): warning:  #223-D: function "delay" declared implicitly
+linking...
+.\obj\Lab2_Project.axf: Error: L6218E: Undefined symbol onboard_LED_GPIO_setup (referred from main.o).
+Target not created
+Build target 'Target 1'
+compiling main.c...
+src\t2_pwm.h(1): warning:  #1-D: last line of file ends without a newline
+src\t2_gpio.h(1): warning:  #1-D: last line of file ends without a newline
+src\main.c(65): warning:  #223-D: function "convert_to_celsius" declared implicitly
+compiling t2_pwm.c...
+src\t2_pwm.h(1): warning:  #1-D: last line of file ends without a newline
+linking...
+.\obj\Lab2_Project.axf: Error: L6218E: Undefined symbol onboard_LED_GPIO_setup (referred from main.o).
+Target not created
+Build target 'Target 1'
+compiling t2_gpio.c...
+src\t2_gpio.h(1): warning:  #1-D: last line of file ends without a newline
+src\t2_gpio.c(13): error:  #20: identifier "GPIO_InitTypeDef" is undefined
+src\t2_gpio.c(15): warning:  #223-D: function "RCC_AHB1PeriphClockCmd" declared implicitly
+src\t2_gpio.c(15): error:  #20: identifier "RCC_AHB1Periph_GPIOD" is undefined
+src\t2_gpio.c(15): error:  #20: identifier "ENABLE" is undefined
+src\t2_gpio.c(17): error:  #20: identifier "GPIO_Pin_12" is undefined
+src\t2_gpio.c(18): error:  #20: identifier "GPIO_Mode_OUT" is undefined
+src\t2_gpio.c(19): error:  #20: identifier "GPIO_Speed_100MHz" is undefined
+src\t2_gpio.c(20): error:  #20: identifier "GPIO_OType_PP" is undefined
+src\t2_gpio.c(21): error:  #20: identifier "GPIO_PuPd_NOPULL" is undefined
+src\t2_gpio.c(23): warning:  #223-D: function "GPIO_Init" declared implicitly
+src\t2_gpio.c(23): error:  #20: identifier "GPIOD" is undefined
+Target not created
+Build target 'Target 1'
+compiling t2_gpio.c...
+src\t2_gpio.h(1): warning:  #1-D: last line of file ends without a newline
+linking...
+Program Size: Code=11856 RO-data=600 RW-data=68 ZI-data=1652  
+".\obj\Lab2_Project.axf" - 0 Error(s), 1 Warning(s).
+Load "C:\\Users\\llugos\\Downloads\\lab2\\lab2\\obj\\Lab2_Project.axf" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'Target 1'
+compiling main.c...
+src\t2_pwm.h(1): warning:  #1-D: last line of file ends without a newline
+src\t2_gpio.h(1): warning:  #1-D: last line of file ends without a newline
+compiling t2_adc.c...
+src\t2_adc.c(69): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+src\t2_adc.c(71): warning:  #1-D: last line of file ends without a newline
+linking...
+Program Size: Code=11856 RO-data=600 RW-data=68 ZI-data=1652  
+".\obj\Lab2_Project.axf" - 0 Error(s), 4 Warning(s).
+Build target 'Target 1'
+linking...
+Program Size: Code=11856 RO-data=600 RW-data=68 ZI-data=1652  
+".\obj\Lab2_Project.axf" - 0 Error(s), 0 Warning(s).
+Load "C:\\Users\\llugos\\Downloads\\lab2\\lab2\\obj\\Lab2_Project.axf" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'Target 1'
+compiling main.c...
+src\t2_pwm.h(1): warning:  #1-D: last line of file ends without a newline
+src\t2_gpio.h(1): warning:  #1-D: last line of file ends without a newline
+linking...
+Program Size: Code=11852 RO-data=600 RW-data=68 ZI-data=1652  
+".\obj\Lab2_Project.axf" - 0 Error(s), 2 Warning(s).
+Load "C:\\Users\\llugos\\Downloads\\lab2\\lab2\\obj\\Lab2_Project.axf" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'Target 1'
+compiling main.c...
+src\t2_pwm.h(1): warning:  #1-D: last line of file ends without a newline
+compiling t2_gpio.c...
+linking...
+Program Size: Code=11852 RO-data=600 RW-data=68 ZI-data=1652  
+".\obj\Lab2_Project.axf" - 0 Error(s), 1 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+src\t2_pwm.h(1): warning:  #1-D: last line of file ends without a newline
+compiling t2_filtering.c...
+linking...
+Program Size: Code=11852 RO-data=600 RW-data=68 ZI-data=1652  
+".\obj\Lab2_Project.axf" - 0 Error(s), 1 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+src\t2_pwm.h(1): warning:  #1-D: last line of file ends without a newline
+linking...
+Program Size: Code=11852 RO-data=600 RW-data=68 ZI-data=1652  
+".\obj\Lab2_Project.axf" - 0 Error(s), 1 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+src\t2_pwm.h(1): warning:  #1-D: last line of file ends without a newline
+compiling t2_display.c...
+compiling t2_gpio.c...
+compiling t2_filtering.c...
+linking...
+Program Size: Code=11852 RO-data=600 RW-data=68 ZI-data=1652  
+".\obj\Lab2_Project.axf" - 0 Error(s), 1 Warning(s).
+Load "C:\\Users\\llugos\\Downloads\\lab2\\lab2\\obj\\Lab2_Project.axf" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'Target 1'
+compiling main.c...
+src\t2_pwm.h(1): warning:  #1-D: last line of file ends without a newline
+src\main.c(49): warning:  #223-D: function "zero_initialize" declared implicitly
+compiling t2_pwm.c...
+src\t2_pwm.h(1): warning:  #1-D: last line of file ends without a newline
+compiling t2_filtering.c...
+linking...
+Program Size: Code=11860 RO-data=600 RW-data=68 ZI-data=1652  
+".\obj\Lab2_Project.axf" - 0 Error(s), 3 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+compiling t2_pwm.c...
+linking...
+Program Size: Code=11864 RO-data=600 RW-data=68 ZI-data=1652  
+".\obj\Lab2_Project.axf" - 0 Error(s), 0 Warning(s).
+Load "C:\\Users\\llugos\\Downloads\\lab2\\lab2\\obj\\Lab2_Project.axf" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'Target 1'
+compiling main.c...
+compiling t2_adc.c...
+src\t2_adc.c(69): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+src\t2_adc.c(71): warning:  #1-D: last line of file ends without a newline
+linking...
+Program Size: Code=11864 RO-data=600 RW-data=68 ZI-data=1652  
+".\obj\Lab2_Project.axf" - 0 Error(s), 2 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+linking...
+Program Size: Code=7880 RO-data=424 RW-data=60 ZI-data=1652  
+".\obj\Lab2_Project.axf" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+compiling t2_filtering.c...
+linking...
+Program Size: Code=7876 RO-data=424 RW-data=60 ZI-data=1652  
+".\obj\Lab2_Project.axf" - 0 Error(s), 0 Warning(s).
+Load "C:\\Users\\llugos\\Downloads\\lab2\\lab2\\obj\\Lab2_Project.axf" 
+Erase Done.
+Programming Done.
+Verify OK.
+Load "C:\\Users\\llugos\\Downloads\\lab2\\lab2\\obj\\Lab2_Project.axf" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'Target 1'
+compiling main.c...
+compiling t2_display.c...
+linking...
+Program Size: Code=7880 RO-data=424 RW-data=60 ZI-data=1652  
+".\obj\Lab2_Project.axf" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+linking...
+Program Size: Code=7880 RO-data=424 RW-data=60 ZI-data=1652  
+".\obj\Lab2_Project.axf" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+linking...
+Program Size: Code=7880 RO-data=424 RW-data=60 ZI-data=1652  
+".\obj\Lab2_Project.axf" - 0 Error(s), 0 Warning(s).
+Load "C:\\Users\\llugos\\Downloads\\lab2\\lab2\\obj\\Lab2_Project.axf" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'Target 1'
+compiling main.c...
+linking...
+Program Size: Code=7880 RO-data=424 RW-data=60 ZI-data=1676  
+".\obj\Lab2_Project.axf" - 0 Error(s), 0 Warning(s).
+Load "C:\\Users\\llugos\\Downloads\\lab2\\lab2\\obj\\Lab2_Project.axf" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'Target 1'
+compiling main.c...
+linking...
+Program Size: Code=7880 RO-data=424 RW-data=60 ZI-data=1652  
+".\obj\Lab2_Project.axf" - 0 Error(s), 0 Warning(s).
+Load "C:\\Users\\llugos\\Downloads\\lab2\\lab2\\obj\\Lab2_Project.axf" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'Target 1'
+compiling main.c...
+compiling t2_display.c...
+compiling t2_adc.c...
+src\t2_adc.c(76): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+src\t2_adc.c(78): warning:  #1-D: last line of file ends without a newline
+compiling t2_pwm.c...
+compiling t2_gpio.c...
+linking...
+Program Size: Code=7880 RO-data=424 RW-data=60 ZI-data=1652  
+".\obj\Lab2_Project.axf" - 0 Error(s), 2 Warning(s).
+Build target 'Target 1'
+compiling t2_adc.c...
+src\t2_adc.c(76): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+linking...
+Program Size: Code=7880 RO-data=424 RW-data=60 ZI-data=1652  
+".\obj\Lab2_Project.axf" - 0 Error(s), 1 Warning(s).
