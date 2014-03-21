@@ -122,8 +122,8 @@ void thread_display (void const *argument)
 	t2_lcd_command(LCD_FUNCTION_SET);
 	t2_lcd_command(LCD_DISPLAY_ON);
 	
-	char buffer [100];
-	int buf_size;
+	char string [100];
+	int str_size;
 	
 	while(1){
 		//displays the value corresponding to the correct mode (only when value changes)
@@ -135,19 +135,19 @@ void thread_display (void const *argument)
 		
 		// display temperature
 		if (mode == TEMP_MODE) {
-			buf_size = sprintf(buffer,"Temperature: %4.1f",average_temp_in_celsius);
-			t2_lcd_draw_string(buffer,buf_size);
+			str_size = sprintf(string,"Temperature: %4.1f",average_temp_in_celsius);
+			t2_lcd_draw_string(string,str_size);
 		}
 		
 		// display pitch, roll
 		else {
-			buf_size = sprintf(buffer,"Pitch: %4.1f",pitch);
-			t2_lcd_draw_string(buffer,buf_size);
+			str_size = sprintf(string,"Pitch: %4.1f",pitch);
+			t2_lcd_draw_string(string,str_size);
 			
 			t2_lcd_command(LCD_CR); //carriage return
 			
-			buf_size = sprintf(buffer,"Roll: %4.1f",roll);
-			t2_lcd_draw_string(buffer,buf_size);
+			str_size = sprintf(string,"Roll: %4.1f",roll);
+			t2_lcd_draw_string(string,str_size);
 			
  		}
 	}
