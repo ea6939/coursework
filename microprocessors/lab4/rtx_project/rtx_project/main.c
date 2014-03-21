@@ -95,6 +95,8 @@ void TIM5_IRQHandler(void){
  @brief Program entry point
  */
 int main (void) {
+	// Activate user button
+	button_interrupt_setup();
 	
 	// Start threads
 	tid_thread_display = osThreadCreate(osThread(thread_display), NULL);
@@ -103,8 +105,6 @@ int main (void) {
 	tid_thread_overheat_alarm = osThreadCreate(osThread(thread_overheat_alarm), NULL);
 	tid_thread_display_update = osThreadCreate(osThread(thread_display_update), NULL);
 
-	button_interrupt_setup();
-	
 	// The below doesn't really need to be in a loop
 	while(1){
 		osDelay(osWaitForever);
